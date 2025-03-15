@@ -1,5 +1,11 @@
 'use client';
 
+
+
+
+
+
+
 import * as Accordion from '@radix-ui/react-accordion';
 import { motion, useInView } from 'framer-motion';
 import type { ReactNode } from 'react';
