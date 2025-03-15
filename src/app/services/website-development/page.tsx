@@ -27,8 +27,6 @@ export default function GetInTouch() {
   );
 }
 
-
-
 //spotlight
 
 export function SpotlightSection() {
