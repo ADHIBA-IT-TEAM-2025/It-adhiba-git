@@ -2,6 +2,8 @@
 import '../../styles/home.css';
 import { motion } from 'framer-motion';
 import React from 'react';
+
+// import input
 import { Label } from '../../components/ui/label';
 import { Input } from '../../components/ui/input';
 import { cn } from '@/lib/utils';
@@ -31,6 +33,7 @@ export default function GetInTouch() {
     </>
   );
 }
+
 
 export function GlobeDemo() {
   const globeConfig = {
@@ -452,6 +455,7 @@ export function GlobeDemo() {
   );
 }
 
+
 //
 function Supportleft() {
   return (
@@ -556,6 +560,7 @@ function Supportleft() {
     </>
   );
 }
+
 
 export function SignupFormDemo() {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
