@@ -2,13 +2,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { PackageSearchIcon, Settings2Icon, EyeClosed, ArrowUpRight, ArrowUpRightFromCircle } from 'lucide-react';
 import { Features } from './Features';
-
-
-
-
-
-
-
 import { Spotlight } from '../../../components/ui/spotlight';
 import whyus from '../../../assets/testiimg.jpg';
 import whyus2 from '../../../assets/Animation - 1741936606753.gif';

@@ -11,11 +11,7 @@ export const metadata: Metadata = {
     'IT Adhiba specializes in cutting-edge website, app, and software development, along with innovative digital marketing and signage solutions to elevate your brand.',
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children, }: { children: React.ReactNode; }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body>
