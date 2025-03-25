@@ -234,6 +234,13 @@ html {
 
 
 /*  */
+.spline-container {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/*  */
 .animate-marquee {
   animation: marquee var(--duration) linear infinite;
 }
@@ -336,3 +343,130 @@ html {
   .animate-scroll {
     animation: scroll var(--animation-duration, 20s) linear infinite var(--animation-direction, forwards);
   }
+
+  /*  */
+  :root {
+  --gray-50: #f9fafb;
+  --gray-100: #f3f4f6;
+  --gray-200: #e5e7eb;
+  --gray-300: #d1d5db;
+  --gray-400: #9ca3af;
+  --gray-500: #6b7280;
+  --gray-600: #4b5563;
+  --gray-700: #374151;
+  --gray-800: #1f2937;
+  --gray-900: #111827;
+  --gray-950: #030712;
+  /* Add more colors as needed based on your Tailwind theme */
+}
+
+/* Aurora Animation */
+@keyframes aurora {
+  from {
+    background-position: 50% 50%, 50% 50%;
+  }
+  to {
+    background-position: 350% 50%, 350% 50%;
+  }
+}
+
+.aurora {
+  animation: aurora 60s linear infinite;
+}
+
+
+
+/* css */
+:root {
+  --duration: 12;
+  /* Animation duration in seconds */
+  --angle: 45;
+  /* Initial angle in degrees */
+  --radius: 100;
+  /* Radius in pixels */
+}
+
+@keyframes orbit {
+  0% {
+    transform:
+      rotate(calc(var(--angle) * 1deg)) translateY(calc(var(--radius) * 1px)) rotate(calc(var(--angle) * -1deg));
+  }
+
+  100% {
+    transform:
+      rotate(calc(var(--angle) * 1deg + 360deg)) translateY(calc(var(--radius) * 1px)) rotate(calc((var(--angle) * -1deg) - 360deg));
+  }
+}
+
+.orbit {
+  animation: orbit calc(var(--duration) * 3s) linear infinite;
+}
+
+/*  */
+@media (min-width: 840px) {
+  .TeamsHeader_headerContent__ceTPP {
+    margin: 296px 0;
+  }
+}
+
+.TeamsHeader_headerContent__ceTPP {
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: center;
+  max-width: 520px;
+  margin: 128px 0;
+  text-align: center;
+}
+@media (min-width: 840px) {
+  .TeamsHeader_headerContent__ceTPP h1 {
+    font-size: 72px;
+    line-height: 84px;
+  }
+}
+
+.TeamsHeader_headerContent__ceTPP h1 {
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 51px;
+  background: linear-gradient(94.34deg, #fff -.89%, #9bd0f5);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@media (min-width: 840px) {
+  .TeamsHeader_headerContent__ceTPP p {
+    font-size: 18px;
+    line-height: 28px;
+  }
+}
+
+.TeamsHeader_headerContent__ceTPP p {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  opacity: .6;
+}
+.TeamsHeader_learnMore__Tce6T {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 500;
+  color: hsla(0, 0%, 100%, .4);
+  transition: color .2s;
+}
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  font-size: inherit;
+}
+
+.TeamsHeader_arrowDown__rKHtB {
+  font-size: 16px;
+  transition: transform .2s;
+  transform: rotate(90deg);
+}

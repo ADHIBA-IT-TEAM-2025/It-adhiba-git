@@ -1,19 +1,25 @@
 'use client';
 import React, { useEffect, useRef, useState } from 'react';
-import { PackageSearchIcon, Settings2Icon, EyeClosed, ArrowUpRight, ArrowUpRightFromCircle } from 'lucide-react';
+import {
+  PackageSearchIcon,
+  Settings2Icon,
+  EyeClosed,
+  ArrowUpRight,
+  ArrowUpRightFromCircle,
+} from 'lucide-react';
 import { Features } from './Features';
 import { Spotlight } from '../../../components/ui/spotlight';
 import whyus from '../../../assets/testiimg.jpg';
 import whyus2 from '../../../assets/Animation - 1741936606753.gif';
 import whyus3 from '../../../assets/Contact us Banner.png';
 import whyus4 from '../../../assets/cardfooter.png';
-import whyus5 from '../../../assets/Services page UIUX Images_Mesa de trabajo 1 copia 4.png';
+import whyus5 from '../../../assets/GALLERY (14).png';
 import { Transition } from '@headlessui/react';
 import Image, { StaticImageData } from 'next/image';
 import { InfiniteImageScroller } from '../../../components/ui/infinite-moving-cards';
 import { AuroraText } from '../../../components/magicui/aurora-text';
 
-export default function GetInTouch() {
+export default function Webdevelopment() {
   return (
     <>
       <SpotlightSection />
@@ -55,7 +61,6 @@ export function SpotlightSection() {
             of the page.we are drawing the attention towards the text section of
             the page.
           </p>
-
         </div>
       </div>
     </div>

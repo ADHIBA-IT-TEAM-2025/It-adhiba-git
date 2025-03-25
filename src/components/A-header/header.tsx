@@ -2,11 +2,10 @@
 import * as React from 'react';
 import { MegaphoneIcon, Moon, Sun } from 'lucide-react';
 import { useTheme } from 'next-themes';
-import { useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
-import blacklogo from '../../assets/adhiba.png'; 
-import whitelogo from '../../assets/Adhiba Logo  White.png'; 
+import blacklogo from '../../assets/adhiba.png';
+import whitelogo from '../../assets/Adhiba Logo  White.png';
 import Link from 'next/link';
 import {
   DropdownMenu,
@@ -27,17 +26,12 @@ import {
   PopoverPanel,
 } from '@headlessui/react';
 import {
-  ArrowPathIcon,
   Bars3Icon,
-  ChartPieIcon,
   CodeBracketIcon,
-  CursorArrowRaysIcon,
   DevicePhoneMobileIcon,
-  FingerPrintIcon,
   GlobeAltIcon,
   PaintBrushIcon,
   PencilSquareIcon,
-  SquaresPlusIcon,
   XMarkIcon,
 } from '@heroicons/react/24/outline';
 import {
@@ -58,17 +52,12 @@ const products = [
     icon: MegaphoneIcon,
   },
   {
-    name: 'GRAPHIC DESIGN',
+    name: 'WEB DESIGNING',
     href: '/services/graphic-design',
     icon: PaintBrushIcon,
   },
   {
-    name: 'UI/UX DESIGN',
-    href: '/services/ui-ux-design',
-    icon: PencilSquareIcon,
-  },
-  {
-    name: 'APP DEVELOPMENT',
+    name: 'APPLICATION DEVELOPMENT',
     href: '/services/app-development',
     icon: DevicePhoneMobileIcon,
   },
@@ -77,49 +66,73 @@ const products = [
     href: '/services/software-development',
     icon: CodeBracketIcon,
   },
+  {
+    name: 'WEB / CLOUD HOSTING',
+    href: '/services/ui-ux-design',
+    icon: PencilSquareIcon,
+  }
 ];
-
 
 const callsToAction = [
-  { name: 'Watch demo', href: '#', icon: PlayCircleIcon },
-  { name: 'Contact sales', href: '#', icon: PhoneIcon },
+  { name: 'BOOK demo', href: '#', icon: PlayCircleIcon },
+  { name: 'GET IN TOUCH', href: '#', icon: PhoneIcon },
 ];
+
+
+import { useRouter } from 'next/navigation';
+
+
 function ModeToggle() {
   const { setTheme } = useTheme();
 
   return (
-    <DropdownMenu>
-      <DropdownMenuTrigger asChild>
-        <Button variant="outline" size="icon">
-          <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-          <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-          <span className="sr-only">Toggle theme</span>
-        </Button>
-      </DropdownMenuTrigger>
-      <DropdownMenuContent align="end">
-        <DropdownMenuItem onClick={() => setTheme('light')}>
-          Light
-        </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme('dark')}>
-          Dark
-        </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme('system')}>
-          System
-        </DropdownMenuItem>
-      </DropdownMenuContent>
-    </DropdownMenu>
+    <>
+      <DropdownMenu>
+        <DropdownMenuTrigger asChild>
+          <Button variant="outline" size="icon">
+            <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+            <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+            <span className="sr-only">Toggle theme</span>
+          </Button>
+        </DropdownMenuTrigger>
+        <DropdownMenuContent align="end">
+          <DropdownMenuItem onClick={() => setTheme('light')}>
+            Light
+          </DropdownMenuItem>
+          <DropdownMenuItem onClick={() => setTheme('dark')}>
+            Dark
+          </DropdownMenuItem>
+          <DropdownMenuItem onClick={() => setTheme('system')}>
+            System
+          </DropdownMenuItem>
+        </DropdownMenuContent>
+      </DropdownMenu>
+    </>
   );
 }
 
 export default function HEADERIT() {
-   const { theme, resolvedTheme } = useTheme();
-   const [mounted, setMounted] = React.useState(false);
+  const { theme, resolvedTheme } = useTheme();
+  const [mounted, setMounted] = React.useState(false);
 
-   React.useEffect(() => {
-     setMounted(true);
-   }, []);
+  React.useEffect(() => {
+    setMounted(true);
+  }, []);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
+
+  const router = useRouter();   // Initialize router
+
+
+  const [isOpen, setIsOpen] = useState(false);  // State to control dropdown visibility
+
+
+  const [open, setOpen] = useState(false);
+
+  const handleNavigation = (href) => {
+    router.push(href);         // Navigate to the page
+    setOpen(false);             // Close the dropdown
+  };
   return (
     <header className="sticky top-0 z-50 bg-white text-gray-900 dark:bg-gray-900 dark:text-white border-t border-b border-gray-300 dark:border-gray-700 transition-colors duration-300 text-transform: uppercase">
       <nav
@@ -180,7 +193,8 @@ export default function HEADERIT() {
                 {products.map(item => (
                   <div
                     key={item.name}
-                    className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6 hover:bg-gray-50 dark:hover:bg-gray-800"
+                    className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6 hover:bg-gray-50 dark:hover:bg-gray-800 cursor-pointer"
+                    onClick={() => handleNavigation(item.href)}  // Faster navigation
                   >
                     <div className="flex size-11 flex-none items-center justify-center rounded-lg bg-gray-50 dark:bg-gray-800 group-hover:bg-white dark:group-hover:bg-gray-700">
                       <item.icon
@@ -189,13 +203,9 @@ export default function HEADERIT() {
                       />
                     </div>
                     <div className="flex-auto">
-                      <a
-                        href={item.href}
-                        className="block font-semibold text-gray-900 dark:text-white"
-                      >
+                      <span className="block font-semibold text-gray-900 dark:text-white">
                         {item.name}
-                        <span className="absolute inset-0" />
-                      </a>
+                      </span>
                     </div>
                   </div>
                 ))}
@@ -217,30 +227,30 @@ export default function HEADERIT() {
               </div>
             </PopoverPanel>
           </Popover>
-          <Link
-            href="/Knowus"
+          <a onClick={() => handleNavigation('/knowus')}
             className="text-sm/6 font-semibold text-gray-900 dark:text-white"
           >
             Know us
-          </Link>
-          <Link
-            href="/Pricing"
+          </a>
+          <a onClick={() => handleNavigation('/common/Pricing')}
             className="text-sm/6 font-semibold text-gray-900 dark:text-white"
           >
             Pricing
-          </Link>
-          <Link
-            href="/Career"
+          </a>
+          <a onClick={() => handleNavigation('/gallery')} className="text-sm/6 font-semibold text-gray-900 dark:text-white">
+            Gallery
+          </a>
+
+          <a onClick={() => handleNavigation('/common/career')}
             className="text-sm/6 font-semibold text-gray-900 dark:text-white"
           >
             Career
-          </Link>
-          <Link
-            href="/getintouch"
+          </a>
+          <a onClick={() => handleNavigation('/getintouch')}
             className="text-sm/6 font-semibold text-gray-900 dark:text-white"
           >
             Get in Touch
-          </Link>
+          </a>
         </PopoverGroup>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end items-center">
           <ModeToggle />
