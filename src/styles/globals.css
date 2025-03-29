@@ -20,6 +20,9 @@ body {
   font-family: 'Kabob', sans-serif;
 }
 
+a {
+  cursor: pointer;
+}
 
 @theme {
   --font-sans: var(--font-geist-sans);

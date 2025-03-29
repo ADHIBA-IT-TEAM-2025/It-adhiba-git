@@ -458,7 +458,7 @@ function Supportleft() {
   return (
     <>
       <section className="flex container">
-        <div className="relative w-full lg:w-2/4 mx-4 sm:mx-8 md:mx-12 lg:mx-28 xl:mx-32 my-6 sm:my-8 md:my-10 lg:my-12 xl:my-14 before:content-[''] before:absolute before:w-full before:h-[100%] before:-z-10 before:rounded-[25px] before:bg-[radial-gradient(170%_130%_at_50%_100%,transparent_0%,#6633ee_100%,#ffffff_0px)] dark:before:bg-[radial-gradient(170%_130%_at_50%_100%,transparent_0%,#4422cc_100%,#222222_0px)]">
+        <div className="relative w-full lg:w-2/4 mx-4 sm:mx-8 md:mx-12 lg:mx-28 xl:mx-32 my-6 sm:my-8 md:my-10 lg:my-12 xl:my-14 before:content-[''] before:absolute before:w-full before:h-[100%] before:-z-10 before:rounded-[25px] before:bg-[radial-gradient(170%_130%_at_50%_100%,transparent_6%,#6633ee_100%,#000000_0px)] dark:before:bg-[radial-gradient(170%_130%_at_50%_100%,transparent_0%,#4422cc_100%,#222222_0px)]">
           <div className="p-7 xs:p-[70px] sm:p-[70px] md:p-[70px] lg:p-[70px] xl:p-[70px]">
             <h2 className="uppercase text-[55px] text-white text-gray-900 dark:text-white" >
               Contact info

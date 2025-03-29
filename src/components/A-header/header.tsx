@@ -39,6 +39,7 @@ import {
   PhoneIcon,
   PlayCircleIcon,
 } from '@heroicons/react/20/solid';
+import { useEffect } from "react";
 
 const products = [
   {
@@ -53,7 +54,7 @@ const products = [
   },
   {
     name: 'WEB DESIGNING',
-    href: '/services/graphic-design',
+    href: '/services/design-development',
     icon: PaintBrushIcon,
   },
   {
@@ -78,38 +79,39 @@ const callsToAction = [
   { name: 'GET IN TOUCH', href: '#', icon: PhoneIcon },
 ];
 
-
 import { useRouter } from 'next/navigation';
 
+export function ModeToggle() {
+  const { theme, setTheme } = useTheme();
+  const [isDark, setIsDark] = useState(false);
 
-function ModeToggle() {
-  const { setTheme } = useTheme();
+  useEffect(() => {
+    setIsDark(theme === "dark");
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme(isDark ? "light" : "dark");
+    setIsDark(!isDark);
+  };
 
   return (
-    <>
-      <DropdownMenu>
-        <DropdownMenuTrigger asChild>
-          <Button variant="outline" size="icon">
-            <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-            <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-            <span className="sr-only">Toggle theme</span>
-          </Button>
-        </DropdownMenuTrigger>
-        <DropdownMenuContent align="end">
-          <DropdownMenuItem onClick={() => setTheme('light')}>
-            Light
-          </DropdownMenuItem>
-          <DropdownMenuItem onClick={() => setTheme('dark')}>
-            Dark
-          </DropdownMenuItem>
-          <DropdownMenuItem onClick={() => setTheme('system')}>
-            System
-          </DropdownMenuItem>
-        </DropdownMenuContent>
-      </DropdownMenu>
-    </>
+    <Button
+      onClick={toggleTheme}
+      variant="outline"
+      size="icon"
+      className="relative"
+    >
+      <Moon
+        className={`h-[1.2rem] w-[1.2rem] transition-all ${isDark ? "scale-0 rotate-90" : "scale-100 rotate-0"}`}
+      />
+      <Sun
+        className={`absolute h-[1.2rem] w-[1.2rem] transition-all ${isDark ? "scale-100 rotate-0" : "scale-0 rotate-90"}`}
+      />
+      <span className="sr-only">Toggle theme</span>
+    </Button>
   );
 }
+
 
 export default function HEADERIT() {
   const { theme, resolvedTheme } = useTheme();

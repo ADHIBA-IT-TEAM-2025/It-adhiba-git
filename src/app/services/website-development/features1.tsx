@@ -1,35 +1,13 @@
 import Image from "next/image";
-import BlurredShapeGray from "@/public/images/blurred-shape-gray.svg";
-import BlurredShape from "@/public/images/blurred-shape.svg";
-import FeaturesImage from "@/public/images/features.png";
+import BlurredShapeGray from "../assets/Adhiba Logo  White.png";
+import BlurredShape from "../assets/Adhiba Logo  White.png";
+import FeaturesImage from "../assets/Adhiba Logo  White.png";
 
-export default function Features() {
+export default function Textdivide() {
   return (
     <section className="relative">
-      <div
-        className="pointer-events-none absolute left-1/2 top-0 -z-10 -mt-20 -translate-x-1/2"
-        aria-hidden="true"
-      >
-        <Image
-          className="max-w-none"
-          src={BlurredShapeGray}
-          width={760}
-          height={668}
-          alt="Blurred shape"
-        />
-      </div>
-      <div
-        className="pointer-events-none absolute bottom-0 left-1/2 -z-10 -mb-80 -translate-x-[120%] opacity-50"
-        aria-hidden="true"
-      >
-        <Image
-          className="max-w-none"
-          src={BlurredShape}
-          width={760}
-          height={668}
-          alt="Blurred shape"
-        />
-      </div>
+
+
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="border-t py-12 [border-image:linear-gradient(to_right,transparent,--theme(--color-slate-400/.25),transparent)1] md:py-20">
           {/* Section header */}
@@ -47,15 +25,6 @@ export default function Features() {
               than a single line of feedback, so you can go further than the
               speed of thought.
             </p>
-          </div>
-          <div className="flex justify-center pb-4 md:pb-12" data-aos="fade-up">
-            <Image
-              className="max-w-none"
-              src={FeaturesImage}
-              width={1104}
-              height={384}
-              alt="Features"
-            />
           </div>
           {/* Items */}
           <div className="mx-auto grid max-w-sm gap-12 sm:max-w-none sm:grid-cols-2 md:gap-x-14 md:gap-y-16 lg:grid-cols-3">

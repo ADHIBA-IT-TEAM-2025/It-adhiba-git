@@ -15,25 +15,28 @@ import { Transition } from '@headlessui/react';
 import '../../../styles/home.css';
 import { Sparkles } from '../../magicui/Sparkles';
 import whyus from '../../../assets/testiimg.jpg';
- import {
-   Code,
-   TrendingUp,
-   Cloud,
-   Server,
-   Terminal,
-   Brush,
-   PhoneOutgoing,
- } from 'lucide-react';
+import {
+  Code,
+  TrendingUp,
+  Cloud,
+  Server,
+  Terminal,
+  Brush,
+  PhoneOutgoing,
+} from 'lucide-react';
 import { AnimatedList } from '@/components/magicui/animated-list';
+import Features from '@/app/services/website-development/features1';
+import Workflows from '../../shadcn/ui/workflows';
 
 // MAIN
 export default function Landingit() {
   return (
     <>
       <Landing />
+      <Workflows />
+      <Features />
       <Index />
       <FeaturesSection />
-      <AnimatedListDemo />
       <Whatweoffer />
       <Whyus />
     </>
@@ -79,44 +82,44 @@ const ReviewCard = ({
 
 export function Landing() {
 
- const reviews = [
-   {
-     name: 'Web Development',
-     username: '@jack',
-     body: 'Custom websites, optimized for user experience.',
-     icon: <Code />, // Web development icon
-   },
-   {
-     name: 'Digital Marketing',
-     username: '@jill',
-     body: 'Traffic-boosting strategies to enhance brand visibility.',
-     icon: <TrendingUp />, // Digital Marketing icon
-   },
-   {
-     name: 'Cloud Hosting',
-     username: '@john',
-     body: 'Secure, scalable cloud solutions for optimal performance.',
-     icon: <Cloud />, // Cloud Hosting icon
-   },
-   {
-     name: 'Web Hosting',
-     username: '@jane',
-     body: 'Reliable hosting solutions for high-performance websites.',
-     icon: <Server />, // Web Hosting icon
-   },
-   {
-     name: 'Software Development',
-     username: '@jenny',
-     body: 'Custom software to streamline operations and improve efficiency.',
-     icon: <Terminal />, // Software Development icon
-   },
-   {
-     name: 'UI/UX',
-     username: '@jenny1',
-     body: 'Our UI/UX designs enhance user satisfaction on functionality.',
-     icon: <Brush />, // UI/UX Design icon
-   },
- ];
+  const reviews = [
+    {
+      name: 'Web Development',
+      username: '@jack',
+      body: 'Custom websites, optimized for user experience.',
+      icon: <Code />, // Web development icon
+    },
+    {
+      name: 'Digital Marketing',
+      username: '@jill',
+      body: 'Traffic-boosting strategies to enhance brand visibility.',
+      icon: <TrendingUp />, // Digital Marketing icon
+    },
+    {
+      name: 'Cloud Hosting',
+      username: '@john',
+      body: 'Secure, scalable cloud solutions for optimal performance.',
+      icon: <Cloud />, // Cloud Hosting icon
+    },
+    {
+      name: 'Web Hosting',
+      username: '@jane',
+      body: 'Reliable hosting solutions for high-performance websites.',
+      icon: <Server />, // Web Hosting icon
+    },
+    {
+      name: 'Software Development',
+      username: '@jenny',
+      body: 'Custom software to streamline operations and improve efficiency.',
+      icon: <Terminal />, // Software Development icon
+    },
+    {
+      name: 'UI/UX',
+      username: '@jenny1',
+      body: 'Our UI/UX designs enhance user satisfaction on functionality.',
+      icon: <Brush />, // UI/UX Design icon
+    },
+  ];
 
 
   const firstRow = reviews.slice(0, reviews.length / 2);
@@ -279,7 +282,7 @@ export function Whyus() {
             className=" mx-auto text-center text-[3.25rem] leading-none tracking-[-0.02em] mb-6 last:mb-0 bg-clip-text text-transparent bg-gradient-to-b from-black via-black/70 to-black/40 dark:from-white dark:via-white/50 dark:to-white/30"
             style={{ paddingTop: '5rem' }}
           >
-           
+
             Why Trust Us?
           </h2>
 
@@ -354,11 +357,10 @@ export function Whyus() {
               {testimonials.map((testimonial, index) => (
                 <button
                   key={index}
-                  className={`m-1.5 inline-flex justify-center whitespace-nowrap rounded-full px-3 py-1.5 text-xs shadow-sm transition-colors duration-150 focus-visible:outline-none focus-visible:ring focus-visible:ring-[#313985]/50 dark:focus-visible:ring-[#aab0ff] ${
-                    active === index
-                      ? 'bg-[#313985] text-white shadow-[#313985]/10 dark:bg-[#aab0ff] dark:text-[#313985]'
-                      : 'bg-white text-[#313985] hover:bg-[#e0e3ff] dark:bg-[#1c1c2b] dark:text-[#aab0ff] dark:hover:bg-[#313985]/20'
-                  }`}
+                  className={`m-1.5 inline-flex justify-center whitespace-nowrap rounded-full px-3 py-1.5 text-xs shadow-sm transition-colors duration-150 focus-visible:outline-none focus-visible:ring focus-visible:ring-[#313985]/50 dark:focus-visible:ring-[#aab0ff] ${active === index
+                    ? 'bg-[#313985] text-white shadow-[#313985]/10 dark:bg-[#aab0ff] dark:text-[#313985]'
+                    : 'bg-white text-[#313985] hover:bg-[#e0e3ff] dark:bg-[#1c1c2b] dark:text-[#aab0ff] dark:hover:bg-[#313985]/20'
+                    }`}
                   onClick={() => {
                     setActive(index);
                     setAutorotate(false);
@@ -366,9 +368,8 @@ export function Whyus() {
                 >
                   <span>{testimonial.name}</span>
                   <span
-                    className={`${
-                      active === index ? 'text-[#e0e3ff]' : 'text-[#aab0ff]'
-                    }`}
+                    className={`${active === index ? 'text-[#e0e3ff]' : 'text-[#aab0ff]'
+                      }`}
                   >
                     -
                   </span>
@@ -618,7 +619,7 @@ const FeaturesSection = () => {
   return (
     <div className="relative mb-25 rounded-[50px] bg-[radial-gradient(130%_130%_at_50%_20%,transparent_40%,#6633EE_100%,#FFFFFF_0px)] py-32">
       <div className="container mx-auto max-w-[1100px]">
- 
+
         <div className="flex flex-col items-center justify-center text-center mb-[44.8px]">
           <h2 className="text-white text-[3.25rem] leading-[1.1] mb-8">
             Secure, Compliant and Fully<br /> Customizable
@@ -628,11 +629,11 @@ const FeaturesSection = () => {
             They're flexible, secure and fully compliant under PCI DSS.
           </p>
         </div>
- 
+
         <div className="w-full h-[1px] bg-[#2a2b3a] my-12"></div>
- 
+
         <div className="grid md:grid-cols-3 gap-8 ">
-         
+
           <div className="mb-4 text-white">
             <div className="flex items-center gap-3">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" className="w-5 h-5 fill-current">
@@ -644,7 +645,7 @@ const FeaturesSection = () => {
               Expert web development: Fast, responsive, modern, scalable, secure, and SEO-friendly.
             </p>
           </div>
- 
+
           <div className="mb-4 text-white">
             <div className="flex items-center gap-3">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" className="w-5 h-5 fill-current">
@@ -656,7 +657,7 @@ const FeaturesSection = () => {
               Custom app development: Fast, scalable, secure, user-friendly, and feature-rich.
             </p>
           </div>
- 
+
           <div className="mb-4 text-white">
             <div className="flex items-center gap-3">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" className="w-5 h-5 fill-current">
@@ -668,13 +669,13 @@ const FeaturesSection = () => {
               Powerful software development: Scalable, secure, efficient, innovative, and user-centric solutions.
             </p>
           </div>
- 
+
         </div>
- 
+
         <div className="w-full h-[1px] bg-[#2a2b3a] my-12"></div>
- 
+
         <div className="grid md:grid-cols-3 gap-8">
- 
+
           <div className="mb-4 text-white">
             <div className="flex items-center gap-3">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" className="w-5 h-5 fill-current">
@@ -686,7 +687,7 @@ const FeaturesSection = () => {
               Results-driven digital marketing: SEO, social media, PPC, branding, and growth.
             </p>
           </div>
- 
+
           <div className="mb-4 text-white">
             <div className="flex items-center gap-3">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" className="w-5 h-5 fill-current">
@@ -698,7 +699,7 @@ const FeaturesSection = () => {
               Reliable cloud hosting: Secure, scalable, fast, cost-effective, and high-performance.
             </p>
           </div>
- 
+
           <div className="mb-4 text-white">
             <div className="flex items-center gap-3">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" className="w-5 h-5 fill-current">
@@ -710,9 +711,9 @@ const FeaturesSection = () => {
               Fast and secure web hosting: Reliable, scalable, affordable, and high-performance.
             </p>
           </div>
- 
+
         </div>
- 
+
       </div>
     </div>
   );

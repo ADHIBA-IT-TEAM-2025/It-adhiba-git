@@ -1,13 +1,13 @@
 import Image from "next/image";
-import WorflowImg01 from "@/public/images/workflow-01.png";
-import WorflowImg02 from "@/public/images/workflow-02.png";
-import WorflowImg03 from "@/public/images/workflow-03.png";
-import Spotlight from "@/components/spotlight";
+import WorflowImg01 from "../../../assets/GALLERY (1).png";
+import WorflowImg02 from "../../../assets/GALLERY (1).png";
+import WorflowImg03 from "../../../assets/GALLERY (1).png";
+import Spotlight from "./spotlight";
 
 export default function Workflows() {
   return (
     <section>
-      <div className="mx-auto max-w-6xl px-4 sm:px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 pt-12">
         <div className="pb-12 md:pb-20">
           {/* Section header */}
           <div className="mx-auto max-w-3xl pb-12 text-center md:pb-20">

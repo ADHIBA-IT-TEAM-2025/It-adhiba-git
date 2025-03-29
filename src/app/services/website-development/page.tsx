@@ -13,22 +13,22 @@ import whyus from '../../../assets/testiimg.jpg';
 import whyus2 from '../../../assets/Animation - 1741936606753.gif';
 import whyus3 from '../../../assets/Contact us Banner.png';
 import whyus4 from '../../../assets/cardfooter.png';
-import whyus5 from '../../../assets/GALLERY (14).png';
+import whyus5 from '../../../assets/website 1.png';
 import { Transition } from '@headlessui/react';
 import Image, { StaticImageData } from 'next/image';
 import { InfiniteImageScroller } from '../../../components/ui/infinite-moving-cards';
 import { AuroraText } from '../../../components/magicui/aurora-text';
+import Textdivide from './features1';
 
 export default function Webdevelopment() {
   return (
     <>
       <SpotlightSection />
       <InfiniteImageScrollerDemo />
-      <section className="support-body">
-        <Component />
-        <FeaturesSection />
-        <Whyus />
-      </section>
+      <Textdivide />
+      <Component />
+      <FeaturesSection />
+      <Whyus />
     </>
   );
 }
@@ -424,11 +424,10 @@ export function Whyus() {
               {testimonials.map((testimonial, index) => (
                 <button
                   key={index}
-                  className={`m-1.5 inline-flex justify-center whitespace-nowrap rounded-full px-3 py-1.5 text-xs shadow-sm transition-colors duration-150 focus-visible:outline-none focus-visible:ring focus-visible:ring-[#313985]/50 dark:focus-visible:ring-[#aab0ff] ${
-                    active === index
+                  className={`m-1.5 inline-flex justify-center whitespace-nowrap rounded-full px-3 py-1.5 text-xs shadow-sm transition-colors duration-150 focus-visible:outline-none focus-visible:ring focus-visible:ring-[#313985]/50 dark:focus-visible:ring-[#aab0ff] ${active === index
                       ? 'bg-[#313985] text-white shadow-[#313985]/10 dark:bg-[#aab0ff] dark:text-[#313985]'
                       : 'bg-white text-[#313985] hover:bg-[#e0e3ff] dark:bg-[#1c1c2b] dark:text-[#aab0ff] dark:hover:bg-[#313985]/20'
-                  }`}
+                    }`}
                   onClick={() => {
                     setActive(index);
                     setAutorotate(false);
@@ -436,9 +435,8 @@ export function Whyus() {
                 >
                   <span>{testimonial.name}</span>
                   <span
-                    className={`${
-                      active === index ? 'text-[#e0e3ff]' : 'text-[#aab0ff]'
-                    }`}
+                    className={`${active === index ? 'text-[#e0e3ff]' : 'text-[#aab0ff]'
+                      }`}
                   >
                     -
                   </span>

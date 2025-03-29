@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { Check, ChevronRightIcon, LinkIcon } from "lucide-react";
 import './pricing.css'
@@ -9,6 +9,7 @@ import { AnimatedGradientText } from "@/components/magicui/animated-gradient-tex
 import dynamic from "next/dynamic";
 import { Canvas } from "@react-three/fiber";
 import { Environment, OrbitControls } from "@react-three/drei";
+import { useTheme } from "next-themes";
 
 export default function PricingPlans() {
     return (
@@ -21,68 +22,98 @@ export default function PricingPlans() {
 // 
 export function AnimatedGradientTextDemo() {
     return (
-        <div className="group relative mx-auto flex items-center justify-center rounded-full px-4 py-1.5 shadow-[inset_0_-8px_10px_#8fdfff1f] transition-shadow duration-500 ease-out hover:shadow-[inset_0_-5px_10px_#8fdfff3f] ">
-            <span
-                className={cn(
-                    "absolute inset-0 block h-full w-full animate-gradient rounded-[inherit] bg-gradient-to-r from-[#ffaa40]/50 via-[#9c40ff]/50 to-[#ffaa40]/50 bg-[length:300%_100%] p-[1px]",
-                )}
-                style={{
-                    WebkitMask:
-                        "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
-                    WebkitMaskComposite: "destination-out",
-                    mask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
-                    maskComposite: "subtract",
-                    WebkitClipPath: "padding-box",
-                }}
-            />
-            🎉 <hr className="mx-2 h-4 w-px shrink-0 bg-neutral-500" />
-            <AnimatedGradientText className="text-sm font-medium">
-                Introducing Magic UI
-            </AnimatedGradientText>
-            <ChevronRightIcon
-                className="ml-1 size-4 stroke-neutral-500 transition-transformduration-300 ease-in-out group-hover:translate-x-0.5"
-            />
-        </div>
+        <>
+
+            <div className="TeamsHeader_headerContent__ceTPP">
+                <div className="group relative mx-auto flex items-center justify-center rounded-full px-4 py-1.5 shadow-[inset_0_-8px_10px_#8fdfff1f] transition-shadow duration-500 ease-out hover:shadow-[inset_0_-5px_10px_#8fdfff3f] ">
+                    <span
+                        className={cn(
+                            "absolute inset-0 block h-full w-full animate-gradient rounded-[inherit] bg-gradient-to-r from-[#ffaa40]/50 via-[#9c40ff]/50 to-[#ffaa40]/50 bg-[length:300%_100%] p-[1px]",
+                        )}
+                        style={{
+                            WebkitMask:
+                                "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                            WebkitMaskComposite: "destination-out",
+                            mask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                            maskComposite: "subtract",
+                            WebkitClipPath: "padding-box",
+                        }}
+                    />
+                    🎉 <hr className="mx-2 h-4 w-px shrink-0 bg-neutral-500" />
+                    <AnimatedGradientText className="text-sm font-medium">
+                        Introducing Magic UI
+                    </AnimatedGradientText>
+                    <ChevronRightIcon
+                        className="ml-1 size-4 stroke-neutral-500 transition-transformduration-300 ease-in-out group-hover:translate-x-0.5"
+                    />
+                </div>
+                <h1>Your team, reimagined.</h1><p>Take your team up a level with easy-to-use tools, effortless templates and efficient workflows.</p><a className="Button_button__JJiqJ Button_light__KdYEB" aria-disabled="false" href="/settings/organizations/new?open=true">Get started today</a><a href="#learn-more" className="TeamsHeader_learnMore__Tce6T">Learn more <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16" className="icon TeamsHeader_arrowDown__rKHtB"><path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M9.75 4.75 13.25 8m0 0-3.5 3.25M13.25 8H2.75"></path></svg></a></div>
+        </>
     );
 }
 
 export function OrbitingCirclesDemo() {
+    const { theme, resolvedTheme } = useTheme();
+    const [mounted, setMounted] = useState(false);
+
+    // Prevent hydration mismatch by ensuring the component is mounted
+    useEffect(() => {
+        setMounted(true);
+    }, []);
+
+    if (!mounted) return null; // Avoid rendering until mounted
     return (
-        <div className="relative flex h-[900px] w-full flex-col items-center justify-center overflow-hidden">
-            {/* Larger orbit */}
-            <OrbitingCircles iconSize={40} radius={270}>
-                <Icons.whatsapp />
-                <Icons.notion />
-                <Icons.openai />
-                <Icons.googleDrive />
-                <Icons.whatsapp />
-            </OrbitingCircles>
+        <>
+            <div
+                className="relative flex min-h-[90vh] w-full items-center justify-center overflow-hidden"
+                style={{
+                    background: `radial-gradient(circle at center, #313985, ${theme === 'dark' ? '#000' : '#fff'})`,
+                    maskImage: `linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.1))`,
+                    WebkitMaskImage: `linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.1))`
+                }}
+            >
+                {/* Larger orbit */}
+                <OrbitingCircles iconSize={40} radius={270}>
+                    <Icons.whatsapp />
+                    <Icons.notion />
+                    <Icons.openai />
+                    <Icons.googleDrive />
+                    <Icons.whatsapp />
+                </OrbitingCircles>
 
-            {/* Even larger orbit */}
-            <OrbitingCircles iconSize={30} radius={350} reverse speed={2}>
-                <Icons.whatsapp />
-                <Icons.notion />
-                <Icons.openai />
-                <Icons.googleDrive />
-            </OrbitingCircles>
+                {/* Even larger orbit */}
+                <OrbitingCircles iconSize={30} radius={350} reverse speed={2}>
+                    <Icons.whatsapp />
+                    <Icons.notion />
+                    <Icons.openai />
+                    <Icons.googleDrive />
+                </OrbitingCircles>
 
-            {/* Larger orbit */}
-            <OrbitingCircles iconSize={40} radius={450}>
-                <Icons.whatsapp />
-                <Icons.notion />
-                <Icons.openai />
-                <Icons.googleDrive />
-                <Icons.whatsapp />
-            </OrbitingCircles>
+                {/* Larger orbit */}
+                <OrbitingCircles iconSize={40} radius={450}>
+                    <Icons.whatsapp />
+                    <Icons.notion />
+                    <Icons.openai />
+                    <Icons.googleDrive />
+                    <Icons.whatsapp />
+                </OrbitingCircles>
 
-            {/* Largest orbit */}
-            <OrbitingCircles iconSize={30} radius={550} reverse speed={2}>
-                <Icons.whatsapp />
-                <Icons.notion />
-                <Icons.openai />
-                <Icons.googleDrive />
-            </OrbitingCircles>
-        </div>
+                {/* Largest orbit */}
+                <OrbitingCircles iconSize={30} radius={550} reverse speed={2}>
+                    <Icons.whatsapp />
+                    <Icons.notion />
+                    <Icons.openai />
+                    <Icons.googleDrive />
+                </OrbitingCircles>
+
+                <div className="relative z-10">
+                    <AnimatedGradientTextDemo />
+                </div>
+
+            </div>
+
+
+        </>
     );
 }
 
