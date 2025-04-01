@@ -13,17 +13,24 @@ import whyus from '../../../assets/testiimg.jpg';
 import whyus2 from '../../../assets/Animation - 1741936606753.gif';
 import whyus3 from '../../../assets/Contact us Banner.png';
 import whyus4 from '../../../assets/cardfooter.png';
-import whyus5 from '../../../assets/website 1.png';
+import whyus5 from '../../../assets/GALLERY (14).png';
 import { Transition } from '@headlessui/react';
 import Image, { StaticImageData } from 'next/image';
 import { InfiniteImageScroller } from '../../../components/ui/infinite-moving-cards';
 import { AuroraText } from '../../../components/magicui/aurora-text';
 import Textdivide from './features1';
+import { useTheme } from "next-themes";
+import { OrbitingCircles } from "@/components/ui/OrbitingCircles";
+import { cn } from "@/lib/utils";
+import { AnimatedGradientText } from "@/components/magicui/animated-gradient-text";
+import { Check, ChevronRightIcon, LinkIcon } from "lucide-react";
+import { CardHoverEffectDemo, Landingtwo } from './Webdev';
 
 export default function Webdevelopment() {
   return (
     <>
-      <SpotlightSection />
+      <Landingtwo/>
+      <SpotlightSection/>
       <InfiniteImageScrollerDemo />
       <Textdivide />
       <Component />
@@ -33,15 +40,28 @@ export default function Webdevelopment() {
   );
 }
 
+// 
+// 
+
 //spotlight
 
 export function SpotlightSection() {
+  const { theme, resolvedTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  // Prevent hydration mismatch by ensuring the component is mounted
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) return null; // Avoid rendering until mounted
   return (
     <div
       className="relative h-[35rem] w-full rounded-md flex items-center justify-center overflow-hidden bg-black"
       style={{
-        background:
-          'radial-gradient(130% 130% at 50% 100%, transparent 40%, rgb(102, 51, 238) 100%, rgb(255, 255, 255) 0px)',
+        background: `radial-gradient(circle at center, #313985, ${theme === 'dark' ? '#000' : '#fff'})`,
+        maskImage: `linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.1))`,
+        WebkitMaskImage: `linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.1))`
       }}
     >
       <Spotlight

@@ -40,6 +40,7 @@ import {
   PlayCircleIcon,
 } from '@heroicons/react/20/solid';
 import { useEffect } from "react";
+import Lenis from 'lenis';
 
 const products = [
   {
@@ -69,7 +70,7 @@ const products = [
   },
   {
     name: 'WEB / CLOUD HOSTING',
-    href: '/services/ui-ux-design',
+    href: '/services/WEB-CLOUD-HOSTING',
     icon: PencilSquareIcon,
   }
 ];
@@ -135,6 +136,27 @@ export default function HEADERIT() {
     router.push(href);         // Navigate to the page
     setOpen(false);             // Close the dropdown
   };
+
+  // 
+  useEffect(() => {
+    const lenis = new Lenis({
+      duration: 2, // Slightly higher for extra smoothness
+      easing: t => 1 - Math.pow(1 - t, 4), // More natural easing
+      smoothWheel: true,
+    });
+
+    const raf = (time: number) => {
+      lenis.raf(time);
+      window.requestAnimationFrame(raf);
+    };
+
+    window.requestAnimationFrame(raf);
+
+    return () => {
+      lenis.destroy();
+    };
+  }, []);
+
   return (
     <header className="sticky top-0 z-50 bg-white text-gray-900 dark:bg-gray-900 dark:text-white border-t border-b border-gray-300 dark:border-gray-700 transition-colors duration-300 text-transform: uppercase">
       <nav

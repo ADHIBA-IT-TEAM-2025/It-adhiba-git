@@ -90,11 +90,13 @@ export  function Landing() {
                         </div>
                     </div>
                     <div className="flex justify-center">
-                        <p className="text-center text-xl mt-8 max-w-md">Celebrate the joy of accomplishment with an app designed to track progress, motivate your efforts, and celebrate your success.</p>
+                        <p className="text-center text-xl mt-8 max-w-md">Celebrate the joy of accomplishment    </p>
                     </div>
-                    <div className="flex justify-center mt-8">
-                        <button className="bg-white text-black py-3 px-5 rounded-lg font-medium">Get for free</button>
+                    <div className="text-center mt-12
+                    ">
+                        <a className="Button_button__JJiqJ Button_light__KdYEB" aria-disabled="false" href="/settings/organizations/new?open=true">Get started today</a><a href="#learn-more" className="TeamsHeader_learnMore__Tce6T">Learn more <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16" className="icon TeamsHeader_arrowDown__rKHtB"><path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M9.75 4.75 13.25 8m0 0-3.5 3.25M13.25 8H2.75"></path></svg></a>
                     </div>
+                 
                 </div>
             </section>
         </>

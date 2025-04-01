@@ -14,12 +14,12 @@ import whyus4 from '../../../assets/cardfooter.png';
 import whyus5 from '../../../assets/GALLERY (8).png';
 import FeatureCarousel from '@/components/ui/feature-carousel';
 import { HeroHighlight, Highlight } from "../../../components/ui/feature-carousel1";
-
+import parallaloppimg from "../../../assets/parallal-opp-card.png"
 
 export default function Appdevelopment() {
   return (
     <>
-      <HeroHighlightDemo/>
+      <Parallaloppimg/>
       <FeatureCarouselDemo />
     </>
   );
@@ -29,34 +29,52 @@ export default function Appdevelopment() {
 
 // landing
 
-
-export function HeroHighlightDemo() {
+export function Parallaloppimg() {
   return (
-    <HeroHighlight>
-      <motion.h1
-        initial={{
-          opacity: 0,
-          y: 20,
-        }}
-        animate={{
-          opacity: 1,
-          y: [20, -5, 0],
-        }}
-        transition={{
-          duration: 0.5,
-          ease: [0.4, 0.0, 0.2, 1],
-        }}
-        className="text-2xl px-4 md:text-4xl lg:text-5xl font-bold text-neutral-700 dark:text-white max-w-4xl leading-relaxed lg:leading-snug text-center mx-auto "
-      >
-        With insomnia, nothing&apos;s real. Everything is far away. Everything
-        is a{" "}
-        <Highlight className="text-black dark:text-white">
-          copy, of a copy, of a copy.
-        </Highlight>
-      </motion.h1>
-    </HeroHighlight>
-  );
+    <>
+      <section>
+        <div className="mt-12 relative z-20 flex flex-col items-center justify-center space-y-6 px-6 md:py-14">
+          <motion.h1
+            className="text-3xl md:text-6xl font-semibold text-center bg-gradient-to-r from-purple-50 via-neutral-400 to-transparent bg-clip-text text-transparent max-w-2xl"
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            Build product of the future with Data
+          </motion.h1>
+          <motion.p
+            className="text-sm md:text-base text-center text-purple-50 max-w-md"
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+          >
+            We are on a mission to build data products that collectively help businesses create products of the future.
+          </motion.p>
+
+          <button className="relative inline-block p-px font-semibold leading-6 text-white no-underline bg-[#ffffff44] shadow-2xl cursor-pointer group rounded-xl shadow-zinc-900">
+
+            <div className="relative z-10 flex items-center px-6 py-1 space-x-2 rounded-xl bg-gray-950/50 ring-1 ring-white/10">
+              <span>START FREE TRIAL</span>
+            </div>
+
+          </button>
+
+        </div>
+        <div className="absolute inset-0 flex items-center justify-center z-10">
+          <div className="bg-[radial-gradient(circle,_#9146FF_100%,_#97939E_100%)] w-[500px] h-[500px] md:w-[900px] md:h-[1100px] rounded-full opacity-30 blur-3xl">
+          </div>
+        </div>
+        <div className="flex flex-wrap">
+          <div className="w-full lg:w-1/2">
+            <Image src={parallaloppimg} alt="" style={{ padding: "30px" }} /></div>
+          <div className="w-full lg:w-1/2">
+            <Image src={parallaloppimg} alt="" style={{ padding: "30px" }} /></div>
+        </div>
+      </section>
+    </>
+  )
 }
+
 
 // llanding
 
