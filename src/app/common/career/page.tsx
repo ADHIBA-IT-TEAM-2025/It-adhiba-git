@@ -19,6 +19,7 @@ import appScreen from "../../../assets/images/app-screen.png";
 import { cn } from "@/lib/utils";
 import { AnimatedGradientText } from "@/components/magicui/animated-gradient-text";
 import { ChevronRightIcon } from "lucide-react";
+import { EvervaultCard, Icon } from "@/components/ui/evervault-card";
 
 export default function career() {
     const sectionRef = useRef<HTMLElement>(null);
@@ -27,9 +28,13 @@ export default function career() {
             <Landing />
             <Logoscroll />
             <Features />
+
+           
         </>
     );
 }
+
+
 
 // componunt
 export  function Landing() {
@@ -163,6 +168,7 @@ export function Features() {
     return (
         <>
             <section className="bg-black text-white py-[72px] md:py-24">
+                
                 <div className="container w-[1300px] mx-auto">
                     <h2 className="text-center font-bold text-5xl md:text-6xl tracking-tighter">Everything you need</h2>
                     <div className="max-w-xl mx-auto">
@@ -172,6 +178,7 @@ export function Features() {
                         {features.map(({ title, description }) => (
                             <Feature key={title} title={title} description={description} />
                         ))}
+                        
                     </div>
                 </div>
             </section>

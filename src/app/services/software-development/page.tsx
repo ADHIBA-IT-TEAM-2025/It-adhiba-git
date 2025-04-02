@@ -7,6 +7,8 @@ import centerimg from "../../../assets/center-img.png"
 const Softwaredevelopment = () => {
   return (
     <>
+
+    
       <div className="relative flex flex-col items-center md:justify-between overflow-hidden  md:py-10">
         {/* Decorative Lines */}
         <Image
@@ -65,3 +67,4 @@ const Softwaredevelopment = () => {
   );
 }
 export default Softwaredevelopment;
+

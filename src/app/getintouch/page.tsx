@@ -32,7 +32,6 @@ export default function GetInTouch() {
   );
 }
 
-
 export function GlobeDemo() {
   const globeConfig = {
     pointSize: 4,
@@ -557,7 +556,6 @@ function Supportleft() {
     </>
   );
 }
-
 
 export function SignupFormDemo() {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {

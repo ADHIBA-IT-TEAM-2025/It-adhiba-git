@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import '../styles/globals.css';
+import './globals.css';
 import { ThemeProvider } from '../components/shadcn/ui/theme-provider';
 import SmoothScrollWrapper from '@/components/B-components/LANDING/useSmoothScroll';
 import HEADERIT from '@/components/A-header/header';

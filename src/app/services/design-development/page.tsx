@@ -94,7 +94,7 @@ export function OrbitingCirclesDemo() {
             <div
                 className="relative bg- flex min-h-[90vh] w-full items-center justify-center overflow-hidden"
                 style={{
-                    background: `radial-gradient(circle at center, #313985, ${theme === 'dark' ? '#000' : '# 000'})`,
+                    background: `radial-gradient(circle at center, #313985, ${(theme ?? 'light') === 'dark' ? '#000' : '#000'})`,
                     maskImage: `linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.1))`,
                     WebkitMaskImage: `linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.1))`
                 }}

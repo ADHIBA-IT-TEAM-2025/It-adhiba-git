@@ -13,7 +13,7 @@ import { PricingCard } from './PricingHeadings/PricingCard';
 import { PricingHeader } from './PricingHeadings/PricingHeadings';
 import { PAYMENT_FREQUENCIES, TIERS } from './PricingHeadings/pricingcontents';
 import { ThemeProvider } from 'next-themes';
-
+import './Pricing.css'
 export default function PricingPlans() {
     const [selectedPaymentFreq, setSelectedPaymentFreq] = useState(
         PAYMENT_FREQUENCIES[0],
@@ -57,6 +57,136 @@ export default function PricingPlans() {
                     </div>
                 </ThemeProvider>
             </div>
+
+            {/* Pricing Table */}
+            <section className="section-2">
+                <div className="container">
+                    <h2>Individual Service<br />Pricing</h2>
+                    <div className="full-table table">
+                        <div className="tr">
+                            <div className="td price"></div>
+                            <div className="td price">
+                                <p>Free</p>
+                            </div>
+                            <div className="td price">
+                                <p>Pro</p>
+                            </div>
+                            <div className="td price">
+                                <p>Team</p>
+                            </div>
+                            <div className="td price">
+                                <p>Team Pro</p>
+                            </div>
+                        </div>
+                        <div className="tr">
+                            <div className="td feature">Full Acess Library
+                            </div>
+                            <div className="td cross"></div>
+                            <div className="td cross"></div>
+                            <div className="td correct"></div>
+                            <div className="td correct"></div>
+                        </div>
+                        <div className="tr">
+                            <div className="td feature">Multiple User</div>
+                            <div className="td cross"></div>
+                            <div className="td correct"></div>
+                            <div className="td correct"></div>
+                            <div className="td correct"></div>
+                        </div>
+                        <div className="tr">
+                            <div className="td feature">Multiple Order</div>
+                            <div className="td cross"></div>
+                            <div className="td correct"></div>
+                            <div className="td correct"></div>
+                            <div className="td correct"></div>
+                        </div>
+                        <div className="tr">
+                            <div className="td feature">24/7 Support</div>
+                            <div className="td correct"></div>
+                            <div className="td correct"></div>
+                            <div className="td correct"></div>
+                            <div className="td correct"></div>
+                        </div>
+                        <div className="tr">
+                            <div className="td feature">Full Acess Library
+                            </div>
+                            <div className="td cross"></div>
+                            <div className="td cross"></div>
+                            <div className="td correct"></div>
+                            <div className="td correct"></div>
+                        </div>
+                        <div className="tr">
+                            <div className="td feature">Multiple User</div>
+                            <div className="td cross"></div>
+                            <div className="td correct"></div>
+                            <div className="td correct"></div>
+                            <div className="td correct"></div>
+                        </div>
+                        <div className="tr">
+                            <div className="td feature">Multiple Order</div>
+                            <div className="td cross"></div>
+                            <div className="td correct"></div>
+                            <div className="td correct"></div>
+                            <div className="td correct"></div>
+                        </div>
+                        <div className="tr">
+                            <div className="td feature">24/7 Support</div>
+                            <div className="td correct"></div>
+                            <div className="td correct"></div>
+                            <div className="td correct"></div>
+                            <div className="td correct"></div>
+                        </div>
+                        <div className="tr">
+                            <div className="td feature">Full Acess Library
+                            </div>
+                            <div className="td cross"></div>
+                            <div className="td cross"></div>
+                            <div className="td correct"></div>
+                            <div className="td correct"></div>
+                        </div>
+                        <div className="tr">
+                            <div className="td feature">Multiple User</div>
+                            <div className="td cross"></div>
+                            <div className="td correct"></div>
+                            <div className="td correct"></div>
+                            <div className="td correct"></div>
+                        </div>
+                        <div className="tr">
+                            <div className="td feature">Multiple Order</div>
+                            <div className="td cross"></div>
+                            <div className="td correct"></div>
+                            <div className="td correct"></div>
+                            <div className="td correct"></div>
+                        </div>
+                        <div className="tr">
+                            <div className="td feature">24/7 Support</div>
+                            <div className="td correct"></div>
+                            <div className="td correct"></div>
+                            <div className="td correct"></div>
+                            <div className="td correct"></div>
+                        </div>
+                        <div className="tr">
+                            <div className="td"></div>
+                            <div className="td action" style={{ cursor: "pointer" }}>
+                                <button className="w-full">Choose Plan</button>
+                                <p>Get your 30 day free trial</p>
+                            </div>
+                            <div className="td action" style={{ cursor: "pointer" }}>
+                                <button className="w-full">Choose Plan</button>
+                                <p>Get your 30 day free trial</p>
+                            </div>
+                            <div className="td action" style={{ cursor: "pointer" }}>
+                                <button className="w-full">Choose Plan</button>
+                                <p>Get your 30 day free trial</p>
+                            </div>
+                            <div className="td action" style={{ cursor: "pointer" }}>
+                                <button className="w-full">Choose Plan</button>
+                                <p>Get your 30 day free trial</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
         </>
     )

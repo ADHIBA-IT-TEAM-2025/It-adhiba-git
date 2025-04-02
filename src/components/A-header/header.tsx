@@ -200,9 +200,14 @@ export default function HEADERIT() {
         </div>
 
         <PopoverGroup className="hidden lg:flex lg:gap-x-12 dark:bg-gray-900 ">
+          <a onClick={() => handleNavigation('/knowus')}
+            className="text-sm/6 font-semibold text-gray-900 dark:text-white"
+          >
+            Know us
+          </a>
           <Popover className="relative">
             <PopoverButton className="flex items-center gap-x-1 text-sm/6 font-semibold text-gray-900 dark:text-white text-transform: uppercase">
-              OUR SERVICES
+              What We Do
               <ChevronDownIcon
                 aria-hidden="true"
                 className="size-5 flex-none text-gray-400 dark:text-gray-300"
@@ -251,24 +256,20 @@ export default function HEADERIT() {
               </div>
             </PopoverPanel>
           </Popover>
-          <a onClick={() => handleNavigation('/knowus')}
-            className="text-sm/6 font-semibold text-gray-900 dark:text-white"
-          >
-            Know us
-          </a>
+        
           <a onClick={() => handleNavigation('/common/Pricing')}
             className="text-sm/6 font-semibold text-gray-900 dark:text-white"
           >
             Pricing
           </a>
           <a onClick={() => handleNavigation('/gallery')} className="text-sm/6 font-semibold text-gray-900 dark:text-white">
-            Gallery
+            Our Work
           </a>
 
           <a onClick={() => handleNavigation('/common/career')}
             className="text-sm/6 font-semibold text-gray-900 dark:text-white"
           >
-            Career
+            Join Us
           </a>
           <a onClick={() => handleNavigation('/getintouch')}
             className="text-sm/6 font-semibold text-gray-900 dark:text-white"
