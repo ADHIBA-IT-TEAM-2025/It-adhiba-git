@@ -3,12 +3,10 @@ import landingban from "../../../assets/Landingthree-banner.png"
 import { motion } from "framer-motion";
 import Image from "next/image";
 import centerimg from "../../../assets/center-img.png"
-
+import './software.css'
 const Softwaredevelopment = () => {
   return (
     <>
-
-    
       <div className="relative flex flex-col items-center md:justify-between overflow-hidden  md:py-10">
         {/* Decorative Lines */}
         <Image
@@ -63,6 +61,58 @@ const Softwaredevelopment = () => {
           />
         </div>
       </div>
+      <section className="software-development-body">
+        <section className="jh dg ug mm er at">
+          <div className="w">
+            <div className="jp hq fr sp sq mq vq">
+              <div className="kh jb nm jr fp ip qr">
+                <p className="ki ri wi yi">Level up with</p>
+                <h2 className="ob mi ri xi gl dn ds ht"><span className="zi dh ah bh ch">Connect apps</span>with CRM</h2>
+
+                <ul className="rb vf hm dl">
+                  <li className="ic ef">
+                    <div className="jc gf hf md pc yg hg ce">
+                      <svg className="id vc xi" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M17 14v6m-3-3h6M6 10h2a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v2a2 2 0 002 2zm10 0h2a2 2 0 002-2V6a2 2 0 00-2-2h-2a2 2 0 00-2 2v2a2 2 0 002 2zM6 20h2a2 2 0 002-2v-2a2 2 0 00-2-2H6a2 2 0 00-2 2v2a2 2 0 002 2z"></path>
+                      </svg>
+                    </div>
+                    <div className="dc">
+                      <h3 className="ji ri xi">1200+ Premium Apps</h3>
+                      <p className="vb li ri yi">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
+                    </div>
+                  </li>
+
+                  <li className="ic ef">
+                    <div className="jc gf hf md pc yg hg ce">
+                      <svg className="id vc xi" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"></path>
+                      </svg>
+                    </div>
+                    <div className="dc">
+                      <h3 className="ji ri xi">Control Directly from Dashboard</h3>
+                      <p className="vb li ri yi">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
+                    </div>
+                  </li>
+                </ul>
+
+                <hr className="rb pg dl"/>
+
+                  <div className="w jc gf hf rb dl kk">
+                    <div className="v sj tj hg x ah bh ch rk sk"></div>
+                    <a href="#" title="" className="w jc gf hf nh oh li ri xi ug kg og hg" role="button"> Explore More </a>
+                  </div>
+              </div>
+
+              <div className="ec op gp">
+                <div className="w gi fc bn pn qr hp wp">
+                  <div className="v gc il ah bh ch qp z wf ms gg"></div>
+                  <img className="w fd mj gg yo bp wp aq bq"  src="https://landingfoliocom.imgix.net/store/collection/dusk/images/features/3/dashboard-mockup.png" alt="Inbox user interface"/>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
     </>
   );
 }

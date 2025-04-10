@@ -1,6 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
-import Image from "next/image";
+import React, {  useState } from "react";
 import { Check, ChevronRightIcon, LinkIcon } from "lucide-react";
 import { OrbitingCircles } from "@/components/ui/OrbitingCircles";
 import { cn } from "@/lib/utils";
@@ -14,13 +13,13 @@ import { PricingHeader } from './PricingHeadings/PricingHeadings';
 import { PAYMENT_FREQUENCIES, TIERS } from './PricingHeadings/pricingcontents';
 import { ThemeProvider } from 'next-themes';
 import './Pricing.css'
+
 export default function PricingPlans() {
     const [selectedPaymentFreq, setSelectedPaymentFreq] = useState(
         PAYMENT_FREQUENCIES[0],
     );
     return (
         <>
-
             <div className="relative mt-15">
                 <ThemeProvider
                     attribute="class"

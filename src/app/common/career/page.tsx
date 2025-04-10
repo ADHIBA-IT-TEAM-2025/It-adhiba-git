@@ -1,8 +1,6 @@
 "use client";
-
-import { useRef } from "react";  // ✅ Import useRef
+import { useRef } from "react"; 
 import React from 'react';
-import careerImage from '../../../assets/career.png';
 import Image from 'next/image';
 import { motion } from "framer-motion";
 import cursorImage from '../../../assets/images/cursor.png';
@@ -14,14 +12,11 @@ import celestialLogo from "../../../assets/images/celestial.png";
 import pulseLogo from "../../../assets/images/pulse.png";
 import apexLogo from "../../../assets/images/apex.png";
 import { Feature } from "../../../components/ui/features";
-import { useScroll, useTransform } from "framer-motion";
-import appScreen from "../../../assets/images/app-screen.png";
 import { cn } from "@/lib/utils";
 import { AnimatedGradientText } from "@/components/magicui/animated-gradient-text";
 import { ChevronRightIcon } from "lucide-react";
-import { EvervaultCard, Icon } from "@/components/ui/evervault-card";
 
-export default function career() {
+export default function CareerPage() {
     const sectionRef = useRef<HTMLElement>(null);
     return (
         <>
@@ -34,14 +29,12 @@ export default function career() {
     );
 }
 
-
-
 // componunt
 export  function Landing() {
     const sectionRef = useRef<HTMLElement>(null);
     return (
         <>
-            <section ref={sectionRef} className="relative py-[72px] md:py-24 text-white bg-[linear-gradient(to_bottom,#000,#200d42_34%,#4f21a1_65%,#a46edb_82%)] overflow-clip" style={{ display: "flex", justifyContent: "center" }}>
+            <section  className="relative py-[72px] md:py-24 text-white bg-[linear-gradient(to_bottom,#000,#200d42_34%,#4f21a1_65%,#a46edb_82%)] overflow-clip" style={{ display: "flex", justifyContent: "center" }}>
                 <div className="absolute h-[375px] w-[750px] md:w-[1536px] md:h-[768px] lg:w-[2400px] lg:h-[1200px] rounded-[100%] bg-black left-1/2 -translate-x-1/2 border border-[#b48cde] bg-[radial-gradient(closest-side,#000_82%,#9560eb)] top-[calc(100%-96px)] md:top-[calc(100%-120px)]"></div>
                 <div className="container relative">
                     <div className="w-fit mx-auto">
@@ -185,6 +178,5 @@ export function Features() {
         </>
     );
 }
-
 
 

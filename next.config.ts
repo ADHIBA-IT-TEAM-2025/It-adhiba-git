@@ -1,9 +1,7 @@
-import type { NextConfig } from "next";
 
-const nextConfig: NextConfig = {
+module.exports = {
+  output: 'export',
   images: {
-    domains: ['images.unsplash.com'],
+    unoptimized: true, // ✅ Disable image optimization for static export
   },
 };
-
-export default nextConfig;

@@ -8,24 +8,24 @@ import Features from '@/app/services/website-development/features1';
 
 export default function Home() {
 
-  useEffect(() => {
-    const lenis = new Lenis({
-      duration: 2, // Slightly higher for extra smoothness
-      easing: t => 1 - Math.pow(1 - t, 4), // More natural easing
-      smoothWheel: true,
-    });
+  // useEffect(() => {
+  //   const lenis = new Lenis({
+  //     duration: 2, // Slightly higher for extra smoothness
+  //     easing: t => 1 - Math.pow(1 - t, 4), // More natural easing
+  //     smoothWheel: true,
+  //   });
 
-    const raf = (time: number) => {
-      lenis.raf(time);
-      window.requestAnimationFrame(raf);
-    };
+  //   const raf = (time: number) => {
+  //     lenis.raf(time);
+  //     window.requestAnimationFrame(raf);
+  //   };
 
-    window.requestAnimationFrame(raf);
+  //   window.requestAnimationFrame(raf);
 
-    return () => {
-      lenis.destroy();
-    };
-  }, []);
+  //   return () => {
+  //     lenis.destroy();
+  //   };
+  // }, []);
 
   return (
     <div>

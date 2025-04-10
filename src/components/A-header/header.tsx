@@ -158,6 +158,7 @@ export default function HEADERIT() {
   }, []);
 
   return (
+    <>
     <header className="sticky top-0 z-50 bg-white text-gray-900 dark:bg-gray-900 dark:text-white border-t border-b border-gray-300 dark:border-gray-700 transition-colors duration-300 text-transform: uppercase">
       <nav
         aria-label="Global"
@@ -365,5 +366,7 @@ export default function HEADERIT() {
         </DialogPanel>
       </Dialog>
     </header>
+    </>
+    
   );
 }
