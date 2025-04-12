@@ -15,20 +15,18 @@ import whyus5 from '../../../assets/GALLERY (8).png';
 import FeatureCarousel from '@/components/ui/feature-carousel';
 import { HeroHighlight, Highlight } from "../../../components/ui/feature-carousel1";
 import parallaloppimg from "../../../assets/parallal-opp-card.png"
+import '../software-development/software.css'
 
 export default function Appdevelopment() {
   return (
     <>
-      <Parallaloppimg/>
-      <FeatureCarouselDemo />
+      <Parallaloppimg />
     </>
   );
 }
 
 
-
 // landing
-
 export function Parallaloppimg() {
   return (
     <>
@@ -71,64 +69,82 @@ export function Parallaloppimg() {
             <Image src={parallaloppimg} alt="" style={{ padding: "30px" }} /></div>
         </div>
       </section>
+
+      <section className="app-development-section mt-12">
+        <section className="w qf eg">
+          <div className="v ab db le ke in jn tp eq">
+            <svg className="ri oi" style={{ filter: 'blur(64px)' }} width="644" height="411" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M180.781 217.613C85.977 122.809-63.572 134.004 31.232 39.2c94.804-94.804 495.712 1.312 590.516 96.116 94.804 94.804-152.396 152.395-247.2 247.199s-98.963-70.098-193.767-164.902Z" fill="url(#b)" />
+              <defs>
+                <linearGradient id="b" x1="663.883" y1="177.451" x2="295.437" y2="472.757" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" style={{ stopColor: 'var(--color-cyan-500)' }} />
+                  <stop offset="100%" style={{ stopColor: 'var(--color-purple-500)' }} />
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+
+          <div className="v y">
+            <img
+              className="pg xc lc ki ni"
+              src="https://landingfoliocom.imgix.net/store/collection/dusk/images/noise.png"
+              alt=""
+            />
+          </div>
+
+          <div className="w ug hb id kl oo">
+            <div className="fc re co ho">
+              <div className="gh rl xo">
+                <h2 className="oh th zh tl ep cq">Become an early adopter of our app.</h2>
+                <p className="qb ph th zh ck yl">Keep control on your projects. Don't make the mistakes again & again.</p>
+                <p className="pb ph th zh yl dk">Join Landingfolio to:</p>
+                <ul className="ob mf">
+                  <li className="cc ve ph th di">
+                    <span className="ac ph">💸</span> Get 10 Web & Mobile UI Inspirations Every Week
+                  </li>
+                  <li className="cc ve ph th di">
+                    <span className="ac ph">🎁</span> Exclusive Discount on Design Resources
+                  </li>
+                  <li className="cc ve ph th di">
+                    <span className="ac ph">⌛️</span> 3 Random Subscribers will Get Featured on Emails
+                  </li>
+                </ul>
+
+                <div className="cc te xe ye pb if dm sk cl dl vk">
+                  <a href="#" title="App Store" className="w cc ti ui le yi" role="button">
+                    <div className="v tf kg lg mg x"></div>
+                    <img
+                      className="w vc tf nc hm un"
+                      src="https://landingfoliocom.imgix.net/store/collection/dusk/images/application/2/app-store-button.svg"
+                      alt="App Store"
+                    />
+                  </a>
+                  <a href="#" title="Play Store" className="w cc ti ui le yi" role="button">
+                    <div className="v tf kg lg mg x"></div>
+                    <img
+                      className="w vc tf nc hm un"
+                      src="https://landingfoliocom.imgix.net/store/collection/dusk/images/application/2/play-store-button.svg"
+                      alt="Play Store"
+                    />
+                  </a>
+                </div>
+              </div>
+
+              <div className="pf jb sn">
+                <img
+                  className="xc md hb le up xn"
+                  src="https://landingfoliocom.imgix.net/store/collection/dusk/images/cta/4/phone-in-hand-mockup.png"
+                  alt="Phone in Hand Mockup"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+
     </>
   )
 }
 
-
 // llanding
 
-export function FeatureCarouselDemo() {
-  return (
-    <div className="w-full max-w-5xl mx-auto mt-25">
-      <div className="rounded-[34px] bg-neutral-700 p-2">
-        <div className="relative z-10 grid w-full gap-8 rounded-[28px] bg-neutral-950 p-2">
-          <FeatureCarousel
-            title="Interactive Feature Demo"
-            description="Showcase your features with smooth animations and transitions"
-            step1img1Class={cn(
-              "pointer-events-none w-[50%] border border-stone-100/10 transition-all duration-500 dark:border-stone-700/50",
-              "max-md:scale-[160%] max-md:rounded-[24px] rounded-[24px] left-[25%] top-[57%] md:left-[35px] md:top-[29%]",
-              "md:group-hover:translate-y-2"
-            )}
-            step1img2Class={cn(
-              "pointer-events-none w-[60%] border border-stone-100/10 dark:border-stone-700/50 transition-all duration-500 overflow-hidden",
-              "max-md:scale-[160%] rounded-2xl max-md:rounded-[24px] left-[69%] top-[53%] md:top-[21%] md:left-[calc(50%+35px+1rem)]",
-              "md:group-hover:-translate-y-6"
-            )}
-            step2img1Class={cn(
-              "pointer-events-none w-[50%] rounded-t-[24px] overflow-hidden border border-stone-100/10 transition-all duration-500 dark:border-stone-700",
-              "max-md:scale-[160%] left-[25%] top-[69%] md:left-[35px] md:top-[30%]",
-              "md:group-hover:translate-y-2"
-            )}
-            step2img2Class={cn(
-              "pointer-events-none w-[40%] rounded-t-[24px] border border-stone-100/10 dark:border-stone-700 transition-all duration-500 rounded-2xl overflow-hidden",
-              "max-md:scale-[140%] left-[70%] top-[53%] md:top-[25%] md:left-[calc(50%+27px+1rem)]",
-              "md:group-hover:-translate-y-6"
-            )}
-            step3imgClass={cn(
-              "pointer-events-none w-[90%] border border-stone-100/10 dark:border-stone-700 rounded-t-[24px] transition-all duration-500 overflow-hidden",
-              "left-[5%] top-[50%] md:top-[30%] md:left-[68px]"
-            )}
-            step4imgClass={cn(
-              "pointer-events-none w-[90%] border border-stone-100/10 dark:border-stone-700 rounded-t-[24px] transition-all duration-500 overflow-hidden",
-              "left-[5%] top-[50%] md:top-[30%] md:left-[68px]"
-            )}
-            // Example images
-            image={{
-              step1light1: whyus5,
-              step1light2: whyus5,
-              step2light1: whyus5,
-              step2light2: whyus5,
-              step3light: whyus5,
-              step4light: whyus5,
-              alt: "Feature demonstration",
-            }}
-            // Card styling
-            bgClass="bg-gradient-to-tr from-neutral-900/90 to-neutral-800/90"
-          />
-        </div>
-      </div>
-    </div>
-  )
-}

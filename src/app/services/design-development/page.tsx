@@ -38,12 +38,13 @@ import { cn } from '@/lib/utils'
 import { AnimatedGradientText } from '@/components/magicui/animated-gradient-text'
 import { ChevronRightIcon } from 'lucide-react'
 import { MarqueeDemo } from './Webdesign'
-
+import '../software-development/software.css'
 
 export default function Webdesign() {
     return (
         <>
             <OrbitingCirclesDemo />
+            <Featurespoint/>
         </>
     )
 }
@@ -75,6 +76,89 @@ export function AnimatedGradientTextDemo() {
                     />
                 </div>
                 <h1>Your team, reimagined.</h1><p>Take your team up a level with easy-to-use tools, effortless templates and efficient workflows.</p><a className="Button_button__JJiqJ Button_light__KdYEB" aria-disabled="false" href="/settings/organizations/new?open=true">Get started today</a><a href="#learn-more" className="TeamsHeader_learnMore__Tce6T">Learn more <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16" className="icon TeamsHeader_arrowDown__rKHtB"><path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M9.75 4.75 13.25 8m0 0-3.5 3.25M13.25 8H2.75"></path></svg></a></div>
+        </>
+    );
+}
+
+export function Featurespoint() {
+    return (
+        <>
+            <section className='desgin-development-sectioin'>
+                <section className="nh yg qm kr it">
+                    <div className="oh jb rm lr qd">
+                        <div className="rd jb mi">
+                            <p className="oi vi aj yi">
+                                <span className="dj hh eh fh gh"> What's inside </span>
+                            </p>
+                            <h2 className="ob qi vi bj in js pt">Track all customers in a single dashboard</h2>
+                            <p className="ob ri vi cj">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat.</p>
+                        </div>
+
+                        <div className="lc sd cf jb lb mi qf pf vl uq fl qp dm">
+                            <div className="ic df hf">
+                                <div className="w ed qc kg ok">
+                                    <div className="v y wj xj kg pk eh fh gh"></div>
+                                    <div className="w jc hf if ed qc kg zg">
+                                        <svg className="cd oc cj wj xj uk" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1">
+                                            <path strokeLinecap="round" strokeLinejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <h3 className="ob ri vi bj">Daily Analytics</h3>
+                            </div>
+
+                            <div className="ic df hf">
+                                <div className="w ed qc kg ok">
+                                    <div className="v y wj xj kg pk eh fh gh"></div>
+                                    <div className="w jc hf if ed qc kg zg">
+                                        <svg className="cd oc cj wj xj uk" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1">
+                                            <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <h3 className="ob ri vi bj">Unlimited User</h3>
+                            </div>
+
+                            <div className="ic df hf">
+                                <div className="w ed qc kg ok">
+                                    <div className="v y wj xj kg pk eh fh gh"></div>
+                                    <div className="w jc hf if ed qc kg zg">
+                                        <svg className="cd oc cj wj xj uk" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1">
+                                            <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <h3 className="ob ri vi bj">Email Alerts</h3>
+                            </div>
+
+                            <div className="ic df hf">
+                                <div className="w ed qc kg ok">
+                                    <div className="v y wj xj kg pk eh fh gh"></div>
+                                    <div className="w jc hf if ed qc kg zg">
+                                        <svg className="cd oc cj wj xj uk" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1">
+                                            <path strokeLinecap="round" strokeLinejoin="round" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <h3 className="ob ri vi bj">Custom Themes</h3>
+                            </div>
+
+                            <div className="ic df hf">
+                                <div className="w ed qc kg ok">
+                                    <div className="v y wj xj kg pk eh fh gh"></div>
+                                    <div className="w jc hf if ed qc kg zg">
+                                        <svg className="cd oc cj wj xj uk" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1">
+                                            <path strokeLinecap="round" strokeLinejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <h3 className="ob ri vi bj">Chat Service</h3>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </section>
+           
         </>
     );
 }
@@ -272,3 +356,4 @@ const Icons = {
         </svg>
     ),
 };
+
