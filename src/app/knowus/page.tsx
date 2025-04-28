@@ -1,6 +1,10 @@
+'use client';
 import { Timeline } from "@/components/ui/timeline";
 import Image from "next/image";
-import React from "react";
+import React, { useRef } from "react";
+import { Canvas, useFrame } from "@react-three/fiber";
+import { OrbitControls, Sphere } from "@react-three/drei";
+import { pointsInner, pointsOuter } from "./utils";
 import galler10 from '../../assets/GALLERY (10).png';
 import galler11 from '../../assets/GALLERY (11).png';
 import galler12 from '../../assets/GALLERY (12).png';
@@ -10,42 +14,69 @@ import galler14 from '../../assets/GALLERY (14).png';
 export default function Knowus() {
     return (
         <>
-            <ComponentName/>
+            <ParticleRing/>
             <TimelineDemo />
         </>
     )
 }
 
-const ComponentName = () => {
+const ParticleRing = () => {
     return (
-        <div className="overflow-x-hidden ">
+        <div className="relative">
+            <Canvas
+                camera={{
+                    position: [10, -7.5, -5],
+                }}
+                style={{ height: "100vh" }}
+                className="bg-slate-900"
+            >
+                <OrbitControls maxDistance={20} minDistance={10} />
+                <directionalLight />
+                <pointLight position={[-30, 0, -30]} power={10.0} />
+                <PointCircle />
+            </Canvas>
 
-
-            <section className="relative py-12 sm:py-16 lg:pt-12 xl:pb-0">
-                <div className="relative px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
-                    <div className="max-w-3xl mx-auto text-center">
-                        <p className="inline-flex px-4 py-2 text-base text-gray-900 border border-gray-200 rounded-full font-pj">Made by Developers, for Developers</p>
-                        <h1 className="mt-5 text-4xl font-bold leading-tight text-gray-900 sm:text-5xl sm:leading-tight lg:text-6xl lg:leading-tight font-pj">Quality resources shared by the community</h1>
-                        <p className="max-w-md mx-auto mt-6 text-base leading-7 text-gray-600 font-inter">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vehicula massa in enim luctus. Rutrum arcu.</p>
-
-                        <div className="relative inline-flex mt-10 group">
-                            <div className="absolute transitiona-all duration-1000 opacity-70 -inset-px bg-gradient-to-r from-[#44BCFF] via-[#FF44EC] to-[#FF675E] rounded-xl blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt"></div>
-
-                            <a href="#" title="" className="relative inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white transition-all duration-200 bg-gray-900 font-pj rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900" role="button">
-                                Get access to 4,958 resources
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div className=" md:mt-12">
-                    <img className="object-cover object-top w-full h-auto mx-auto scale-150 2xl:max-w-screen-2xl xl:scale-100" src="https://d33wubrfki0l68.cloudfront.net/54780decfb9574945bc873b582cdc6156144a2ba/d9fa1/images/hero/4/illustration.png" alt="" />
-                </div>
-            </section>
+            <h1 className="absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] text-slate-200 font-medium text-2xl md:text-5xl pointer-events-none">
+               ADHIBA
+            </h1>
         </div>
+    );
+};
 
-    )
-}
+const PointCircle = () => {
+    const ref = useRef(null);
+
+    useFrame(({ clock }) => {
+        if (ref.current?.rotation) {
+            ref.current.rotation.z = clock.getElapsedTime() * 0.05;
+        }
+    });
+
+    return (
+        <group ref={ref}>
+            {pointsInner.map((point) => (
+                <Point key={point.idx} position={point.position} color={point.color} />
+            ))}
+            {pointsOuter.map((point) => (
+                <Point key={point.idx} position={point.position} color={point.color} />
+            ))}
+        </group>
+    );
+};
+
+const Point = ({ position, color }) => {
+    return (
+        <Sphere position={position} args={[0.1, 10, 10]}>
+            <meshStandardMaterial
+                emissive={color}
+                emissiveIntensity={0.5}
+                roughness={0.5}
+                color={color}
+            />
+        </Sphere>
+    );
+};
+
 
 export function TimelineDemo() {
     const data = [

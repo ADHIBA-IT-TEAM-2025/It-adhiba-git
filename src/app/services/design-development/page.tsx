@@ -1,5 +1,4 @@
 'use client'
-
 import {
     Box,
     ButtonGroup,
@@ -30,7 +29,8 @@ import {
     FiTrendingUp,
     FiToggleLeft,
     FiTerminal,
-    FiCode
+    FiCode,
+    FiMousePointer
 } from 'react-icons/fi';
 import { useEffect, useState } from 'react'
 import { OrbitingCircles } from '@/components/ui/OrbitingCircles'
@@ -39,15 +39,23 @@ import { AnimatedGradientText } from '@/components/magicui/animated-gradient-tex
 import { ChevronRightIcon } from 'lucide-react'
 import { MarqueeDemo } from './Webdesign'
 import '../software-development/software.css'
+import React, { useRef } from "react";
+import galleryImg from "../../../assets/GALLERY (13).png";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { FiArrowUpRight } from "react-icons/fi";
+import { useAnimate } from "framer-motion";
 
 export default function Webdesign() {
     return (
         <>
             <OrbitingCirclesDemo />
-            <Featurespoint/>
+            <Featurespoint />
+            <TextParallaxContentExample />
+            <Example />
         </>
     )
 }
+
 export function AnimatedGradientTextDemo() {
     return (
         <>
@@ -158,7 +166,7 @@ export function Featurespoint() {
                     </div>
                 </section>
             </section>
-           
+
         </>
     );
 }
@@ -357,3 +365,269 @@ const Icons = {
     ),
 };
 
+export const TextParallaxContentExample = () => {
+    return (
+        <div className="bg-white">
+            <TextParallaxContent
+                imgUrl="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2671&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                subheading="Collaborate"
+                heading="Built for all of us."
+            >
+                <ExampleContent />
+            </TextParallaxContent>
+            <TextParallaxContent
+                imgUrl="https://images.unsplash.com/photo-1530893609608-32a9af3aa95c?q=80&w=2564&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                subheading="Quality"
+                heading="Never compromise."
+            >
+                <ExampleContent />
+            </TextParallaxContent>
+            <TextParallaxContent
+                imgUrl="https://images.unsplash.com/photo-1504610926078-a1611febcad3?q=80&w=2416&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                subheading="Modern"
+                heading="Dress for the best."
+            >
+                <ExampleContent />
+            </TextParallaxContent>
+        </div>
+    );
+};
+
+const IMG_PADDING = 12;
+
+const TextParallaxContent = ({ imgUrl, subheading, heading, children }) => {
+    return (
+        <div
+            style={{
+                paddingLeft: IMG_PADDING,
+                paddingRight: IMG_PADDING,
+            }}
+        >
+            <div className="relative h-[150vh]">
+                <StickyImage imgUrl={imgUrl} />
+                <OverlayCopy heading={heading} subheading={subheading} />
+            </div>
+            {children}
+        </div>
+    );
+};
+
+const StickyImage = ({ imgUrl }) => {
+    const targetRef = useRef(null);
+    const { scrollYProgress } = useScroll({
+        target: targetRef,
+        offset: ["end end", "end start"],
+    });
+
+    const scale = useTransform(scrollYProgress, [0, 1], [1, 0.85]);
+    const opacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
+
+    return (
+        <motion.div
+            style={{
+                backgroundImage: `url(${imgUrl})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                height: `calc(100vh - ${IMG_PADDING * 2}px)`,
+                top: IMG_PADDING,
+                scale,
+            }}
+            ref={targetRef}
+            className="sticky z-0 overflow-hidden rounded-3xl"
+        >
+            <motion.div
+                className="absolute inset-0 bg-neutral-950/70"
+                style={{
+                    opacity,
+                }}
+            />
+        </motion.div>
+    );
+};
+
+const OverlayCopy = ({ subheading, heading }) => {
+    const targetRef = useRef(null);
+    const { scrollYProgress } = useScroll({
+        target: targetRef,
+        offset: ["start end", "end start"],
+    });
+
+    const y = useTransform(scrollYProgress, [0, 1], [250, -250]);
+    const opacity = useTransform(scrollYProgress, [0.25, 0.5, 0.75], [0, 1, 0]);
+
+    return (
+        <motion.div
+            style={{
+                y,
+                opacity,
+            }}
+            ref={targetRef}
+            className="absolute left-0 top-0 flex h-screen w-full flex-col items-center justify-center text-white"
+        >
+            <p className="mb-2 text-center text-xl md:mb-4 md:text-3xl">
+                {subheading}
+            </p>
+            <p className="text-center text-4xl font-bold md:text-7xl">{heading}</p>
+        </motion.div>
+    );
+};
+
+const ExampleContent = () => (
+    <div className="mx-auto grid max-w-5xl grid-cols-1 gap-8 px-4 pb-24 pt-12 md:grid-cols-12">
+        <h2 className="col-span-1 text-3xl font-bold md:col-span-4">
+            Additional content explaining the above card here
+        </h2>
+        <div className="col-span-1 md:col-span-8">
+            <p className="mb-4 text-xl text-neutral-600 md:text-2xl">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi,
+                blanditiis soluta eius quam modi aliquam quaerat odit deleniti minima
+                maiores voluptate est ut saepe accusantium maxime doloremque nulla
+                consectetur possimus.
+            </p>
+            <p className="mb-8 text-xl text-neutral-600 md:text-2xl">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+                reiciendis blanditiis aliquam aut fugit sint.
+            </p>
+            <button className="w-full rounded bg-neutral-900 px-9 py-4 text-xl text-white transition-colors hover:bg-neutral-700 md:w-fit">
+                Learn more <FiArrowUpRight className="inline" />
+            </button>
+        </div>
+    </div>
+);
+// HOVER TO SHOW  IMAGE
+export const Example = () => {
+    return (
+        <MouseImageTrail
+            renderImageBuffer={50}
+            rotationRange={25}
+            images={[
+                galleryImg,
+                galleryImg,
+                galleryImg,
+                galleryImg,
+                galleryImg,
+                galleryImg,
+                galleryImg,
+                galleryImg,
+                galleryImg,
+                galleryImg,
+                galleryImg,
+                galleryImg,
+                galleryImg,
+                galleryImg,
+                galleryImg,
+                galleryImg,
+            ]}
+
+        >
+            <section className="grid h-screen w-full place-content-center bg-white">
+                <p className="flex items-center gap-2 text-3xl font-bold uppercase text-black">
+                    <FiMousePointer />
+                    <span>Hover me</span>
+                </p>
+            </section>
+        </MouseImageTrail>
+    );
+};
+
+const MouseImageTrail = ({
+    children,
+    renderImageBuffer,
+    rotationRange,
+}) => {
+    const [scope, animate] = useAnimate();
+
+    const lastRenderPosition = useRef({ x: 0, y: 0 });
+    const imageRenderCount = useRef(0);
+
+    const handleMouseMove = (e) => {
+        const { clientX, clientY } = e;
+
+        const distance = calculateDistance(
+            clientX,
+            clientY,
+            lastRenderPosition.current.x,
+            lastRenderPosition.current.y
+        );
+
+        if (distance >= renderImageBuffer) {
+            lastRenderPosition.current.x = clientX;
+            lastRenderPosition.current.y = clientY;
+
+            renderNextImage();
+        }
+    };
+
+    const calculateDistance = (x1, y1, x2, y2) => {
+        const deltaX = x2 - x1;
+        const deltaY = y2 - y1;
+
+        // Using the Pythagorean theorem to calculate the distance
+        const distance = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
+
+        return distance;
+    };
+
+    const renderNextImage = () => {
+        const imageIndex = imageRenderCount.current % images.length;
+        const selector = `[data-mouse-move-index="${imageIndex}"]`;
+
+        const el = document.querySelector(selector);
+
+        el.style.top = `${lastRenderPosition.current.y}px`;
+        el.style.left = `${lastRenderPosition.current.x}px`;
+        el.style.zIndex = imageRenderCount.current.toString();
+
+        const rotation = Math.random() * rotationRange;
+
+        animate(
+            selector,
+            {
+                opacity: [0, 1],
+                transform: [
+                    `translate(-50%, -25%) scale(0.5) ${imageIndex % 2
+                        ? `rotate(${rotation}deg)`
+                        : `rotate(-${rotation}deg)`
+                    }`,
+                    `translate(-50%, -50%) scale(1) ${imageIndex % 2
+                        ? `rotate(-${rotation}deg)`
+                        : `rotate(${rotation}deg)`
+                    }`,
+                ],
+            },
+            { type: "spring", damping: 15, stiffness: 200 }
+        );
+
+        animate(
+            selector,
+            {
+                opacity: [1, 0],
+            },
+            { ease: "linear", duration: 0.5, delay: 5 }
+        );
+
+        imageRenderCount.current = imageRenderCount.current + 1;
+    };
+    const images = Array(16).fill(galleryImg);
+
+
+    return (
+        <div
+            ref={scope}
+            className="relative overflow-hidden"
+            onMouseMove={handleMouseMove}
+        >
+            {children}
+
+            {images.map((img, index) => (
+                <img
+                    className="pointer-events-none absolute left-0 top-0 h-48 w-auto rounded-xl border-2 border-black bg-neutral-900 object-cover opacity-0"
+                    src={img}
+                    alt={`Mouse move image ${index}`}
+                    key={index}
+                    data-mouse-move-index={index}
+                />
+            ))}
+        </div>
+    );
+};
