@@ -5,6 +5,7 @@ import Image from "next/image";
 import centerimg from "../../../assets/center-img.png"
 import { cn } from "@/lib/utils";
 import { HoverEffect, projects } from "../design-development/Webdesign";
+import { ComponentPropsWithoutRef } from "react";
 
 const WEBCLOUDHOSTING = () => {
   return (
@@ -30,7 +31,7 @@ const ReviewCard = ({ img }: { img: string }) => {
   );
 };
 
-export function MarqueeDemo() {
+ function MarqueeDemo() {
   return (
     <>
       <div className="relative mt-12 flex w-full flex-col items-center justify-center overflow-hidden">
@@ -104,7 +105,7 @@ interface MarqueeProps extends ComponentPropsWithoutRef<"div"> {
   repeat?: number;
 }
 
-export function Marquee({
+ function Marquee({
   className,
   reverse = false,
   pauseOnHover = false,
@@ -144,7 +145,7 @@ export function Marquee({
   );
 }
 
-export function CardHoverEffectDemo() {
+ function CardHoverEffectDemo() {
   return (
     <div className="w-[1300px] mx-auto px-8 mt-15 mb-15">
       <HoverEffect items={projects} />

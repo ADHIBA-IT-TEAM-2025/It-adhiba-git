@@ -9,6 +9,7 @@ import whyus3 from '../../../assets/Contact us Banner.png';
 import whyus4 from '../../../assets/cardfooter.png';
 import whyus5 from '../../../assets/GALLERY (8).png';
 import FeatureCarousel from '@/components/ui/feature-carousel';
+import { cn } from "@/lib/utils";
 
 const Softwaredevelopment = () => {
   return (
@@ -128,7 +129,7 @@ const Softwaredevelopment = () => {
 }
 export default Softwaredevelopment;
 
-export function FeatureCarouselDemo() {
+ function FeatureCarouselDemo() {
   return (
     <div className="w-full max-w-5xl mx-auto mt-25">
       <div className="rounded-[34px] bg-neutral-700 p-2">
@@ -174,11 +175,11 @@ export function FeatureCarouselDemo() {
               step4light: whyus5,
               alt: "Feature demonstration",
             }}
-            // Card styling
-            bgClassnaclassName="bg-gradient-to-tr from-neutral-900/90 to-neutral-800/90"
           />
         </div>
       </div>
     </div>
   )
 }
+
+

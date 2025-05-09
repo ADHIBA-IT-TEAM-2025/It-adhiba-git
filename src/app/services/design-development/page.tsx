@@ -19,7 +19,6 @@ import {
 import { Br, Link } from '@saas-ui/react'
 import type { Metadata, NextPage } from 'next'
 import Image from 'next/image'
-import Features1 from './Features1'
 import {
     FiBox,
     FiLock,
@@ -37,7 +36,6 @@ import { OrbitingCircles } from '@/components/ui/OrbitingCircles'
 import { cn } from '@/lib/utils'
 import { AnimatedGradientText } from '@/components/magicui/animated-gradient-text'
 import { ChevronRightIcon } from 'lucide-react'
-import { MarqueeDemo } from './Webdesign'
 import '../software-development/software.css'
 import React, { useRef } from "react";
 import galleryImg from "../../../assets/GALLERY (13).png";
@@ -51,12 +49,11 @@ export default function Webdesign() {
             <OrbitingCirclesDemo />
             <Featurespoint />
             <TextParallaxContentExample />
-            <Example />
         </>
     )
 }
 
-export function AnimatedGradientTextDemo() {
+ function AnimatedGradientTextDemo() {
     return (
         <>
 
@@ -88,7 +85,7 @@ export function AnimatedGradientTextDemo() {
     );
 }
 
-export function Featurespoint() {
+ function Featurespoint() {
     return (
         <>
             <section className='desgin-development-sectioin'>
@@ -171,7 +168,7 @@ export function Featurespoint() {
     );
 }
 
-export function OrbitingCirclesDemo() {
+ function OrbitingCirclesDemo() {
     const { theme, resolvedTheme } = useTheme();
     const [mounted, setMounted] = useState(false);
 
@@ -365,7 +362,7 @@ const Icons = {
     ),
 };
 
-export const TextParallaxContentExample = () => {
+ const TextParallaxContentExample = () => {
     return (
         <div className="bg-white">
             <TextParallaxContent
@@ -395,7 +392,15 @@ export const TextParallaxContentExample = () => {
 
 const IMG_PADDING = 12;
 
-const TextParallaxContent = ({ imgUrl, subheading, heading, children }) => {
+type TextParallaxContentProps = {
+    imgUrl: string;
+    subheading: string;
+    heading: string;
+    children?: React.ReactNode;
+};
+
+
+const TextParallaxContent = ({ imgUrl, subheading, heading, children }: TextParallaxContentProps) => {
     return (
         <div
             style={{
@@ -412,7 +417,12 @@ const TextParallaxContent = ({ imgUrl, subheading, heading, children }) => {
     );
 };
 
-const StickyImage = ({ imgUrl }) => {
+
+interface StickyImageProps {
+    imgUrl: string;
+}
+
+const StickyImage = ({ imgUrl }: StickyImageProps) => {
     const targetRef = useRef(null);
     const { scrollYProgress } = useScroll({
         target: targetRef,
@@ -445,7 +455,14 @@ const StickyImage = ({ imgUrl }) => {
     );
 };
 
-const OverlayCopy = ({ subheading, heading }) => {
+
+
+interface OverlayCopyProps {
+    subheading: string;
+    heading: string;
+}
+
+const OverlayCopy = ({ subheading, heading }: OverlayCopyProps) => {
     const targetRef = useRef(null);
     const { scrollYProgress } = useScroll({
         target: targetRef,
@@ -495,139 +512,3 @@ const ExampleContent = () => (
     </div>
 );
 // HOVER TO SHOW  IMAGE
-export const Example = () => {
-    return (
-        <MouseImageTrail
-            renderImageBuffer={50}
-            rotationRange={25}
-            images={[
-                galleryImg,
-                galleryImg,
-                galleryImg,
-                galleryImg,
-                galleryImg,
-                galleryImg,
-                galleryImg,
-                galleryImg,
-                galleryImg,
-                galleryImg,
-                galleryImg,
-                galleryImg,
-                galleryImg,
-                galleryImg,
-                galleryImg,
-                galleryImg,
-            ]}
-
-        >
-            <section className="grid h-screen w-full place-content-center bg-white">
-                <p className="flex items-center gap-2 text-3xl font-bold uppercase text-black">
-                    <FiMousePointer />
-                    <span>Hover me</span>
-                </p>
-            </section>
-        </MouseImageTrail>
-    );
-};
-
-const MouseImageTrail = ({
-    children,
-    renderImageBuffer,
-    rotationRange,
-}) => {
-    const [scope, animate] = useAnimate();
-
-    const lastRenderPosition = useRef({ x: 0, y: 0 });
-    const imageRenderCount = useRef(0);
-
-    const handleMouseMove = (e) => {
-        const { clientX, clientY } = e;
-
-        const distance = calculateDistance(
-            clientX,
-            clientY,
-            lastRenderPosition.current.x,
-            lastRenderPosition.current.y
-        );
-
-        if (distance >= renderImageBuffer) {
-            lastRenderPosition.current.x = clientX;
-            lastRenderPosition.current.y = clientY;
-
-            renderNextImage();
-        }
-    };
-
-    const calculateDistance = (x1, y1, x2, y2) => {
-        const deltaX = x2 - x1;
-        const deltaY = y2 - y1;
-
-        // Using the Pythagorean theorem to calculate the distance
-        const distance = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
-
-        return distance;
-    };
-
-    const renderNextImage = () => {
-        const imageIndex = imageRenderCount.current % images.length;
-        const selector = `[data-mouse-move-index="${imageIndex}"]`;
-
-        const el = document.querySelector(selector);
-
-        el.style.top = `${lastRenderPosition.current.y}px`;
-        el.style.left = `${lastRenderPosition.current.x}px`;
-        el.style.zIndex = imageRenderCount.current.toString();
-
-        const rotation = Math.random() * rotationRange;
-
-        animate(
-            selector,
-            {
-                opacity: [0, 1],
-                transform: [
-                    `translate(-50%, -25%) scale(0.5) ${imageIndex % 2
-                        ? `rotate(${rotation}deg)`
-                        : `rotate(-${rotation}deg)`
-                    }`,
-                    `translate(-50%, -50%) scale(1) ${imageIndex % 2
-                        ? `rotate(-${rotation}deg)`
-                        : `rotate(${rotation}deg)`
-                    }`,
-                ],
-            },
-            { type: "spring", damping: 15, stiffness: 200 }
-        );
-
-        animate(
-            selector,
-            {
-                opacity: [1, 0],
-            },
-            { ease: "linear", duration: 0.5, delay: 5 }
-        );
-
-        imageRenderCount.current = imageRenderCount.current + 1;
-    };
-    const images = Array(16).fill(galleryImg);
-
-
-    return (
-        <div
-            ref={scope}
-            className="relative overflow-hidden"
-            onMouseMove={handleMouseMove}
-        >
-            {children}
-
-            {images.map((img, index) => (
-                <img
-                    className="pointer-events-none absolute left-0 top-0 h-48 w-auto rounded-xl border-2 border-black bg-neutral-900 object-cover opacity-0"
-                    src={img}
-                    alt={`Mouse move image ${index}`}
-                    key={index}
-                    data-mouse-move-index={index}
-                />
-            ))}
-        </div>
-    );
-};

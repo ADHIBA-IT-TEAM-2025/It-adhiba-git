@@ -1,6 +1,5 @@
 import { cn } from "@/lib/utils";
 import React from "react";
-import { IconStar } from "lucide-react"; // Correct (based on actual icon name)
 
 export interface OrbitingCirclesProps
     extends React.HTMLAttributes<HTMLDivElement> {

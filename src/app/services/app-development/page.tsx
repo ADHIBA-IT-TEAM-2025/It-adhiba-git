@@ -21,7 +21,9 @@ import { FiBatteryCharging, FiWifi } from "react-icons/fi";
 export default function Appdevelopment() {
   return (
     <>
+      {/* <Mobileview /> */}
       <Parallaloppimg />
+     
       <Example/>
     </>
   );
@@ -29,7 +31,7 @@ export default function Appdevelopment() {
 
 
 // landing
-export function Parallaloppimg() {
+ function Parallaloppimg() {
   return (
     <>
       <section>
@@ -149,6 +151,13 @@ export function Parallaloppimg() {
 }
 
 // llanding
+// const Mobileview = () => {
+//   return (
+   
+//   );
+// };
+
+
 
 
 const Example = () => {

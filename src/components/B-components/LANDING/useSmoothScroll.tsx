@@ -1,33 +1,26 @@
 'use client';
 
 import { useEffect } from 'react';
-import { useRouter } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 
 export default function SmoothScrollWrapper({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const router = useRouter();
+  const pathname = usePathname();
 
   useEffect(() => {
-    const handleRouteChange = (url: string) => {
-      const hash = url.split('#')[1];
-      if (hash) {
-        setTimeout(() => {
-          document.getElementById(hash)?.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start',
-          });
-        }, 100);
-      }
-    };
-
-    router.events?.on('routeChangeComplete', handleRouteChange);
-    return () => {
-      router.events?.off('routeChangeComplete', handleRouteChange);
-    };
-  }, [router]);
+    const hash = window.location.hash.substring(1);
+    if (hash) {
+      setTimeout(() => {
+        document.getElementById(hash)?.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start',
+        });
+      }, 100);
+    }
+  }, [pathname]); // Runs on every path change
 
   return <>{children}</>;
 }

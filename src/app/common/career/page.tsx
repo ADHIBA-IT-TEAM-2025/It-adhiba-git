@@ -20,15 +20,15 @@ export default function CareerPage() {
     const sectionRef = useRef<HTMLElement>(null);
     return (
         <>
-            <Landing />
-            <Logoscroll />
-            <Features />
+            <Landingexport />
+            <Logoscrollexport />
+            <Featuresexport />
         </>
     );
 }
                                                                                                                                                                                          
 // componunt
-export const Landingexport = () => {
+ const Landingexport = () => {
     const sectionRef = useRef<HTMLElement>(null);
     return (
         <>
@@ -99,7 +99,7 @@ export const Landingexport = () => {
     );
 }
 
-export const Logoscrollexport = () => {
+ const Logoscrollexport = () => {
     const images = [
         { src: acmeLogo, alt: "Acme Logo" },
         { src: quantumLogo, alt: "Quantum Logo" },
@@ -138,7 +138,7 @@ export const Logoscrollexport = () => {
     )
 }
 
-export const Featuresexport = () => {
+ const Featuresexport = () => {
     const features = [
         {
             title: "Integration Ecosystem",

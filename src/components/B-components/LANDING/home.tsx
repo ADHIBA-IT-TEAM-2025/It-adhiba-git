@@ -80,7 +80,7 @@ const ReviewCard = ({
   );
 };
 
-export function Landing() {
+function Landing() {
 
   const reviews = [
     {
@@ -212,7 +212,7 @@ interface Testimonial {
   role: string;
 }
 
-export function Whyus() {
+function Whyus() {
   const testimonials: Testimonial[] = [
     {
       quote: '6 Evervault balances flexibility and security extremely well.',
@@ -385,7 +385,7 @@ export function Whyus() {
 }
 
 // Four card
-export function Whatweoffer() {
+function Whatweoffer() {
   const Offerimages = [
     {
       src: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=3560&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
@@ -801,7 +801,7 @@ const Notification = ({ name, description, icon, color, time }: Item) => {
   );
 };
 
-export function AnimatedListDemo({
+function AnimatedListDemo({
   className,
 }: {
   className?: string;

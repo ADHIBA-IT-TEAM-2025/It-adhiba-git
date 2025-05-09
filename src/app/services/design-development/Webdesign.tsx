@@ -2,8 +2,8 @@ import { useState } from "react";
 import { cn } from "@/lib/utils";
 import { ComponentPropsWithoutRef } from "react";
 import Image from "next/image";
-
-
+import { AnimatePresence, motion } from "motion/react";
+import Link from "next/link";
 
 export const projects = [
   {
@@ -49,10 +49,6 @@ export const projects = [
     img: require("../../../assets/Web-Designing/ICON-6.png"),
   },
 ];
-
-import { AnimatePresence, motion } from "motion/react";
-import Link from "next/link";
-
 
 export const HoverEffect = ({
   items,
@@ -117,7 +113,7 @@ export const HoverEffect = ({
   );
 };
 
-export const Card = ({
+const Card = ({
   className,
   children,
 }: {
@@ -140,7 +136,7 @@ export const Card = ({
     </>
   );
 };
-export const CardTitle = ({
+const CardTitle = ({
   className,
   children,
 }: {
@@ -155,7 +151,7 @@ export const CardTitle = ({
     </>
   );
 };
-export const CardDescription = ({
+const CardDescription = ({
   className,
   children,
 }: {

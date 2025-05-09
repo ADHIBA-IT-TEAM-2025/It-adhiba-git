@@ -10,7 +10,6 @@ import { AnimatePresence, motion } from "motion/react";
 import Link from "next/link";
 import { WordRotate } from "../../../components/magicui/word-rotate";
 
-
 export function CardHoverEffectDemo() {
     return (
         <div className="w-[1300px] mx-auto px-8 mt-15 mb-15">
@@ -18,6 +17,7 @@ export function CardHoverEffectDemo() {
         </div>
     );
 }
+
 export const projects = [
     {
         title: "Stripe",

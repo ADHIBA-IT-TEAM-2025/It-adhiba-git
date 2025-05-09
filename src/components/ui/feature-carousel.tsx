@@ -164,9 +164,10 @@ function useNumberCycler(
     totalSteps: number = TOTAL_STEPS,
     interval: number = 3000
 ) {
-    const [currentNumber, setCurrentNumber] = useState(0)
-    const [isManualInteraction, setIsManualInteraction] = useState(false)
-    const timerRef = useRef<NodeJS.Timeout>()
+    const [currentNumber, setCurrentNumber] = useState(0);
+    const [isManualInteraction, setIsManualInteraction] = useState(false);
+    const timerRef = useRef<NodeJS.Timeout | null>(null);
+
 
     // Setup timer function
     const setupTimer = useCallback(() => {
