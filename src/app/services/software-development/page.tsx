@@ -10,6 +10,7 @@ import whyus4 from '../../../assets/cardfooter.png';
 import whyus5 from '../../../assets/GALLERY (8).png';
 import FeatureCarousel from '@/components/ui/feature-carousel';
 import { cn } from "@/lib/utils";
+import { CardHoverEffectDemo } from "../website-development/Webdev";
 
 const Softwaredevelopment = () => {
   return (
@@ -102,18 +103,18 @@ const Softwaredevelopment = () => {
                   </li>
                 </ul>
 
-                <hr className="rb pg dl"/>
+                <hr className="rb pg dl" />
 
-                  <div className="w jc gf hf rb dl kk">
-                    <div className="v sj tj hg x ah bh ch rk sk"></div>
-                    <a href="#" title="" className="w jc gf hf nh oh li ri xi ug kg og hg" role="button"> Explore More </a>
-                  </div>
+                <div className="w jc gf hf rb dl kk">
+                  <div className="v sj tj hg x ah bh ch rk sk"></div>
+                  <a href="#" title="" className="w jc gf hf nh oh li ri xi ug kg og hg" role="button"> Explore More </a>
+                </div>
               </div>
 
               <div className="ec op gp">
                 <div className="w gi fc bn pn qr hp wp">
                   <div className="v gc il ah bh ch qp z wf ms gg"></div>
-                  <img className="w fd mj gg yo bp wp aq bq"  src="https://landingfoliocom.imgix.net/store/collection/dusk/images/features/3/dashboard-mockup.png" alt="Inbox user interface"/>
+                  <img className="w fd mj gg yo bp wp aq bq" src="https://landingfoliocom.imgix.net/store/collection/dusk/images/features/3/dashboard-mockup.png" alt="Inbox user interface" />
                 </div>
               </div>
             </div>
@@ -129,56 +130,67 @@ const Softwaredevelopment = () => {
 }
 export default Softwaredevelopment;
 
- function FeatureCarouselDemo() {
+function FeatureCarouselDemo() {
   return (
-    <div className="w-full max-w-5xl mx-auto mt-25">
-      <div className="rounded-[34px] bg-neutral-700 p-2">
-        <div className="relative z-10 grid w-full gap-8 rounded-[28px] bg-neutral-950 p-2">
-          <FeatureCarousel
-            title="Interactive Feature Demo"
-            description="Showcase your features with smooth animations and transitions"
-            step1img1Class={cn(
-              "pointer-events-none w-[50%] border border-stone-100/10 transition-all duration-500 dark:border-stone-700/50",
-              "max-md:scale-[160%] max-md:rounded-[24px] rounded-[24px] left-[25%] top-[57%] md:left-[35px] md:top-[29%]",
-              "md:group-hover:translate-y-2"
-            )}
-            step1img2Class={cn(
-              "pointer-events-none w-[60%] border border-stone-100/10 dark:border-stone-700/50 transition-all duration-500 overflow-hidden",
-              "max-md:scale-[160%] rounded-2xl max-md:rounded-[24px] left-[69%] top-[53%] md:top-[21%] md:left-[calc(50%+35px+1rem)]",
-              "md:group-hover:-translate-y-6"
-            )}
-            step2img1Class={cn(
-              "pointer-events-none w-[50%] rounded-t-[24px] overflow-hidden border border-stone-100/10 transition-all duration-500 dark:border-stone-700",
-              "max-md:scale-[160%] left-[25%] top-[69%] md:left-[35px] md:top-[30%]",
-              "md:group-hover:translate-y-2"
-            )}
-            step2img2Class={cn(
-              "pointer-events-none w-[40%] rounded-t-[24px] border border-stone-100/10 dark:border-stone-700 transition-all duration-500 rounded-2xl overflow-hidden",
-              "max-md:scale-[140%] left-[70%] top-[53%] md:top-[25%] md:left-[calc(50%+27px+1rem)]",
-              "md:group-hover:-translate-y-6"
-            )}
-            step3imgClass={cn(
-              "pointer-events-none w-[90%] border border-stone-100/10 dark:border-stone-700 rounded-t-[24px] transition-all duration-500 overflow-hidden",
-              "left-[5%] top-[50%] md:top-[30%] md:left-[68px]"
-            )}
-            step4imgClass={cn(
-              "pointer-events-none w-[90%] border border-stone-100/10 dark:border-stone-700 rounded-t-[24px] transition-all duration-500 overflow-hidden",
-              "left-[5%] top-[50%] md:top-[30%] md:left-[68px]"
-            )}
-            // Example images
-            image={{
-              step1light1: whyus5,
-              step1light2: whyus5,
-              step2light1: whyus5,
-              step2light2: whyus5,
-              step3light: whyus5,
-              step4light: whyus5,
-              alt: "Feature demonstration",
-            }}
-          />
+    <>
+      <div className="w-full max-w-5xl mx-auto mt-25">
+        <div className="rounded-[34px] bg-neutral-700 p-2">
+          <div className="relative z-10 grid w-full gap-8 rounded-[28px] bg-neutral-950 p-2">
+            <FeatureCarousel
+              title="Interactive Feature Demo"
+              description="Showcase your features with smooth animations and transitions"
+              step1img1Class={cn(
+                "pointer-events-none w-[50%] border border-stone-100/10 transition-all duration-500 dark:border-stone-700/50",
+                "max-md:scale-[160%] max-md:rounded-[24px] rounded-[24px] left-[25%] top-[57%] md:left-[35px] md:top-[29%]",
+                "md:group-hover:translate-y-2"
+              )}
+              step1img2Class={cn(
+                "pointer-events-none w-[60%] border border-stone-100/10 dark:border-stone-700/50 transition-all duration-500 overflow-hidden",
+                "max-md:scale-[160%] rounded-2xl max-md:rounded-[24px] left-[69%] top-[53%] md:top-[21%] md:left-[calc(50%+35px+1rem)]",
+                "md:group-hover:-translate-y-6"
+              )}
+              step2img1Class={cn(
+                "pointer-events-none w-[50%] rounded-t-[24px] overflow-hidden border border-stone-100/10 transition-all duration-500 dark:border-stone-700",
+                "max-md:scale-[160%] left-[25%] top-[69%] md:left-[35px] md:top-[30%]",
+                "md:group-hover:translate-y-2"
+              )}
+              step2img2Class={cn(
+                "pointer-events-none w-[40%] rounded-t-[24px] border border-stone-100/10 dark:border-stone-700 transition-all duration-500 rounded-2xl overflow-hidden",
+                "max-md:scale-[140%] left-[70%] top-[53%] md:top-[25%] md:left-[calc(50%+27px+1rem)]",
+                "md:group-hover:-translate-y-6"
+              )}
+              step3imgClass={cn(
+                "pointer-events-none w-[90%] border border-stone-100/10 dark:border-stone-700 rounded-t-[24px] transition-all duration-500 overflow-hidden",
+                "left-[5%] top-[50%] md:top-[30%] md:left-[68px]"
+              )}
+              step4imgClass={cn(
+                "pointer-events-none w-[90%] border border-stone-100/10 dark:border-stone-700 rounded-t-[24px] transition-all duration-500 overflow-hidden",
+                "left-[5%] top-[50%] md:top-[30%] md:left-[68px]"
+              )}
+              // Example images
+              image={{
+                step1light1: whyus5,
+                step1light2: whyus5,
+                step2light1: whyus5,
+                step2light2: whyus5,
+                step3light: whyus5,
+                step4light: whyus5,
+                alt: "Feature demonstration",
+              }}
+            />
+          </div>
         </div>
       </div>
-    </div>
+
+      <div className="relative flex flex-col items-center justify-center mt-20">
+        <div className="flex flex-col items-center text-center space-y-4">
+          <h2 className="text-white" style={{ fontSize: "40px" }}>We are a team of passionate people</h2>
+          <p className="text-lg text-gray-400">We are on a mission to build data products that collectively help businesses</p>
+        </div>
+        <CardHoverEffectDemo />
+      </div>
+    </>
+
   )
 }
 

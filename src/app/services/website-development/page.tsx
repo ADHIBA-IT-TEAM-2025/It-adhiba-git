@@ -31,12 +31,12 @@ export default function Webdevelopment() {
   return (
     <>
       <Landingtwo/>
-      <SpotlightSection/>
+      {/* <SpotlightSection/>
       <InfiniteImageScrollerDemo />
       <Textdivide />
       <Component/>
       <FeaturesSection/>
-      <Whyus/>
+      <Whyus/> */}
     </>
   );
 }

@@ -53,7 +53,7 @@ export default function Webdesign() {
     )
 }
 
- function AnimatedGradientTextDemo() {
+function AnimatedGradientTextDemo() {
     return (
         <>
 
@@ -85,7 +85,7 @@ export default function Webdesign() {
     );
 }
 
- function Featurespoint() {
+function Featurespoint() {
     return (
         <>
             <section className='desgin-development-sectioin'>
@@ -168,7 +168,7 @@ export default function Webdesign() {
     );
 }
 
- function OrbitingCirclesDemo() {
+function OrbitingCirclesDemo() {
     const { theme, resolvedTheme } = useTheme();
     const [mounted, setMounted] = useState(false);
 
@@ -362,7 +362,7 @@ const Icons = {
     ),
 };
 
- const TextParallaxContentExample = () => {
+const TextParallaxContentExample = () => {
     return (
         <div className="bg-white">
             <TextParallaxContent

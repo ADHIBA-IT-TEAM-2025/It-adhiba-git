@@ -1,0 +1,47 @@
+.video-sec-itab{
+    /* Main Heading */
+        .main-heading {
+            margin-top: 64px;
+            margin-bottom: 16px;
+            padding: 0 32px;
+            font-size: 35px;
+            font-weight: 800;
+            text-align: center;
+            color: white;
+        }
+    
+        @media (min-width: 1280px) {
+            .main-heading {
+                font-size: 50px;
+            }
+        }
+    
+        .highlight {
+            color: #545b96;
+        }
+    
+        /* Description */
+        .description {
+            max-width: 672px;
+            margin: 0 auto 32px;
+            font-size: 17px;
+            text-align: center;
+            color: #a0aec0;
+        }
+    
+        /* Button Group */
+        .button-group {
+            display: flex;
+            flex-direction: column;
+            max-width: 320px;
+            margin: 0 auto 48px;
+            gap: 16px;
+        }
+    
+        @media (min-width: 640px) {
+            .button-group {
+                flex-direction: row;
+                justify-content: center;
+            }
+        }
+}

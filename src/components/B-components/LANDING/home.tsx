@@ -554,7 +554,7 @@ function Whatweoffer() {
 function Index() {
   return (
     <>
-      <div className="h-fit  overflow-hidden bg-black">
+      <div className="h-fit overflow-hidden bg-black">
         <div className="mx-auto mt-32 w-fit max-w-2xl">
           <div className="text-center text-3xl text-white">
             <span className="text-indigo-200">Trusted by experts.</span>

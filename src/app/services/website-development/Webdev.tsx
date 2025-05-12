@@ -9,6 +9,8 @@ import cardRightimg from "../../../assets/Web-dev/card-right-img.png"
 import { AnimatePresence, motion } from "motion/react";
 import Link from "next/link";
 import { WordRotate } from "../../../components/magicui/word-rotate";
+import centervideoimg from "../../../assets/video-placeholder.c1bbe879.jpg";
+import './videosec.css';
 
 export function CardHoverEffectDemo() {
     return (
@@ -297,8 +299,28 @@ export function Landingtwo() {
                     </motion.div>
                 </motion.div>
             </motion.div>
+
             <CardHoverEffectDemo />
-            <section className=" w-[1300px] mx-auto">
+
+            <section className="video-sec-itab">
+                <h1 className="main-heading">
+                    Landing template for <span className="highlight">startups</span>
+                </h1>
+                <p className="description">
+                    Our landing page template works on all devices, so you only have to set
+                    it up once, and get beautiful results forever.
+                </p>
+
+                <div className="mb-16 pt-10">
+                    <Image
+                        className="block w-full max-w-5xl mx-auto rounded"
+                        src={centervideoimg}
+                        alt="Video placeholder"
+                    />
+                </div>
+            </section>
+
+            <section className=" w-[1300px] mx-auto pt-16">
                 <div className="flex flex-wrap">
                     <div className="w-full lg:w-1/2">
                         <div className="">
@@ -313,6 +335,45 @@ export function Landingtwo() {
 
                         </div>
                         <Image src={cardRightimg} alt="" className="mt-5" /></div>
+                </div>
+            </section>
+
+            <section className="overflow-hidden">
+                <div className="max-w-screen-xl mb-15 2xl:max-w-screen-3xl px-8 md:px-12 mx-auto py-12 lg:py-24 space-y-24 flex flex-col justify-center">
+                    {/* Section header */}
+                    <div className="mx-auto max-w-3xl pb-4 text-center md:pb-12">
+                        <div className="inline-flex items-center gap-3 pb-3 before:h-px before:w-8 before:bg-linear-to-r before:from-transparent before:to-indigo-200/50 after:h-px after:w-8 after:bg-linear-to-l after:from-transparent after:to-indigo-200/50">
+                            <span className="inline-flex bg-linear-to-r from-indigo-500 to-indigo-200 bg-clip-text text-transparent">
+                                Advanced Controls
+                            </span>
+                        </div>
+                        <h2 className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,var(--color-gray-200),var(--color-indigo-200),var(--color-gray-50),var(--color-indigo-300),var(--color-gray-200))] bg-[length:200%_auto] bg-clip-text pb-4 font-nacelle text-3xl font-semibold text-transparent md:text-4xl">
+                            Built for modern product teams
+                        </h2>
+                        <p className="text-lg text-indigo-200/65">
+                            Open AI reads and understands your files, and with nothing more
+                            than a single line of feedback, so you can go further than the
+                            speed of thought.
+                        </p>
+                    </div>
+                    <div className="flex flex-col sm:flex-row mx-auto text-center">
+                        <a href="#_">
+                            <Image src={cardRightimg} className="rounded-xl  rotate-6 hover:rotate-0 duration-500 hover:-translate-y-12 h-[25vh] w-full object-cover hover:scale-150 transform origin-bottom" alt="#_" />
+                            <hr style={{width:"50%"}}/>
+                            <h1 className="mt-15">Nystai.com</h1></a>
+                        <a href="#_">
+                            <Image src={cardRightimg} className="rounded-xl  -rotate-12 hover:rotate-0 duration-500 hover:-translate-y-12 h-[25vh] w-full object-cover hover:scale-150 transform origin-bottom" alt="#_" /> 
+                            <hr style={{width:"50%"}}/>
+                            <h1 className="mt-15">Istretail.com</h1> </a>
+                        <a href="#_">
+                            <Image src={cardRightimg} className="rounded-xl  rotate-6 hover:rotate-0 duration-500 hover:-translate-y-12 h-[25vh] w-full object-cover hover:scale-150 transform origin-bottom" alt="#_" />
+                            <hr style={{width:"50%"}}/>
+                            <h1 className="mt-15">Adhiba.com</h1> </a>
+                        <a href="#_">
+                            <Image src={cardRightimg} className="rounded-xl  -rotate-12 hover:rotate-0 duration-500 hover:-translate-y-12 h-[25vh] w-full object-cover hover:scale-150 transform origin-bottom" alt="#_" />
+                            <hr style={{width:"50%"}}/>
+                            <h1 className="mt-15">Glocre.com</h1> </a>
+                    </div>
                 </div>
             </section>
 

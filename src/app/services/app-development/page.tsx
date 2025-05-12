@@ -17,21 +17,26 @@ import { HeroHighlight, Highlight } from "../../../components/ui/feature-carouse
 import parallaloppimg from "../../../assets/parallal-opp-card.png"
 import '../software-development/software.css'
 import { FiBatteryCharging, FiWifi } from "react-icons/fi";
+import videoimg1 from '../../../assets/GALLERY (12).png';
+import mobileimg1 from '../../../assets/App_Development-image-1.webp';
+import Rightimg from "../../../assets/Web-dev/rightt-img.png"
+import cardRightimg from "../../../assets/Web-dev/card-right-img.png"
 
 export default function Appdevelopment() {
   return (
     <>
       {/* <Mobileview /> */}
       <Parallaloppimg />
-     
-      <Example/>
+      <Appdevbodydesign />
+      <Example />
+
     </>
   );
 }
 
 
 // landing
- function Parallaloppimg() {
+function Parallaloppimg() {
   return (
     <>
       <section>
@@ -153,12 +158,9 @@ export default function Appdevelopment() {
 // llanding
 // const Mobileview = () => {
 //   return (
-   
+
 //   );
 // };
-
-
-
 
 const Example = () => {
   return (
@@ -242,3 +244,127 @@ const Screen = () => {
     </div>
   );
 };
+
+export function Appdevbodydesign() {
+  return (
+    <>
+      <section className="overflow-hidden">
+        <div className="max-w-screen-xl 2xl:max-w-screen-3xl px-8 md:px-12 mx-auto py-12 lg:py-24 space-y-24 flex flex-col justify-center">
+          {/* Section header */}
+          <div className="mx-auto max-w-3xl pb-4 text-center md:pb-12">
+            <div className="inline-flex items-center gap-3 pb-3 before:h-px before:w-8 before:bg-linear-to-r before:from-transparent before:to-indigo-200/50 after:h-px after:w-8 after:bg-linear-to-l after:from-transparent after:to-indigo-200/50">
+              <span className="inline-flex bg-linear-to-r from-indigo-500 to-indigo-200 bg-clip-text text-transparent">
+                Advanced Controls
+              </span>
+            </div>
+            <h2 className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,var(--color-gray-200),var(--color-indigo-200),var(--color-gray-50),var(--color-indigo-300),var(--color-gray-200))] bg-[length:200%_auto] bg-clip-text pb-4 font-nacelle text-3xl font-semibold text-transparent md:text-4xl">
+              Built for modern product teams
+            </h2>
+            <p className="text-lg text-indigo-200/65">
+              Open AI reads and understands your files, and with nothing more
+              than a single line of feedback, so you can go further than the
+              speed of thought.
+            </p>
+          </div>
+          <div className="flex flex-col sm:flex-row mx-auto text-center">
+            <a href="#_">
+              <Image src={cardRightimg} className="rounded-xl  rotate-6 hover:rotate-0 duration-500 hover:-translate-y-12 h-[25vh] w-full object-cover hover:scale-150 transform origin-bottom" alt="#_" />
+              <hr style={{ width: "50%" }} />
+              <h1 className="mt-15">Nystai.com</h1></a>
+            <a href="#_">
+              <Image src={cardRightimg} className="rounded-xl  -rotate-12 hover:rotate-0 duration-500 hover:-translate-y-12 h-[25vh] w-full object-cover hover:scale-150 transform origin-bottom" alt="#_" />
+              <hr style={{ width: "50%" }} />
+              <h1 className="mt-15">Istretail.com</h1> </a>
+            <a href="#_">
+              <Image src={cardRightimg} className="rounded-xl  rotate-6 hover:rotate-0 duration-500 hover:-translate-y-12 h-[25vh] w-full object-cover hover:scale-150 transform origin-bottom" alt="#_" />
+              <hr style={{ width: "50%" }} />
+              <h1 className="mt-15">Adhiba.com</h1> </a>
+            <a href="#_">
+              <Image src={cardRightimg} className="rounded-xl  -rotate-12 hover:rotate-0 duration-500 hover:-translate-y-12 h-[25vh] w-full object-cover hover:scale-150 transform origin-bottom" alt="#_" />
+              <hr style={{ width: "50%" }} />
+              <h1 className="mt-15">Glocre.com</h1> </a>
+          </div>
+        </div>
+      </section>
+      <div className="relative overflow-hidden xl:pt-40 mb-20">
+        <div className="relative">
+          <div className="px-6 mx-auto sm:px-8 lg:px-12 max-w-7xl">
+            <div className="text-left md:max-w-xl md:mx-auto md:text-center">
+              <h1 className="tracking-tighter text-white">
+                <span className="font-serif italic font-normal text-8xl">App Development</span>
+              </h1>
+              <p className="mt-5 font-sans text-base font-normal leading-7 text-white text-opacity-70">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu penatibus pellentesque dolor consequat ligula egestas massa gravida. Porttitor venenatis enim praesent.</p>
+              <div className="mt-8">
+                <a
+                  href="#"
+                  title=""
+                  className="
+                            inline-flex
+                            items-center
+                            justify-center
+                            px-8
+                            py-2
+                            font-sans
+                            text-base
+                            font-semibold
+                            transition-all
+                            duration-200
+                            border-2 border-transparent
+                            rounded-full
+                            sm:leading-8
+                            bg-white
+                            sm:text-lg
+                            text-black
+                            hover:bg-opacity-90
+                            focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary focus:ring-offset-secondary
+                        "
+                  role="button"
+                >
+                  Get started
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="relative max-w-5xl px-6 mx-auto mt-12 -mb-8 group sm:px-8 lg:px-12 sm:-mb-24 lg:-mb-36 xl:-mb-40">
+          <div className="overflow-hidden rounded-md aspect-w-4 aspect-h-3 lg:aspect-w-16 lg:aspect-h-9">
+            <Image className="object-cover w-full h-full transition-all duration-300 group-hover:opacity-80" src={videoimg1} alt="" style={{ borderRadius: "10px" }} />
+          </div>
+          <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
+            <button type="button" className="flex flex-col items-center">
+              <span className="inline-flex items-center justify-center w-16 h-16 transition-all duration-200 border-2 rounded-full text-white border-primary hover:bg-white hover:bg-opacity-20">
+
+              </span>
+              <span className="mt-5 text-base font-normal text-white"> Play trailer </span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <section className="py-12 sm:pb-16 lg:pb-20 xl:pb-24">
+        <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+          <div className="grid items-center max-w-5xl grid-cols-1 mx-auto gap-y-8 lg:grid-cols-5 gap-x-16">
+            <div className="max-w-md mx-auto text-center lg:max-w-none lg:col-span-3">
+              <h1 className="text-4xl font-normal text-white uppercase sm:text-5xl lg:text-7xl xl:text-7xl">Get goods <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-purple-500">delivered</span></h1>
+              <p className="mt-6 font-[17px] text-white sm:text-xl" >Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam.</p>
+              <div className="mt-8 sm:mt-10">
+                <a href="#" title="" className="inline-flex items-center justify-center px-8 py-4 text-base font-normal text-white transition-all duration-200 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 hover:contrast-150" role="button"> Download Now </a>
+              </div>
+
+              <p className="max-w-xs mx-auto mt-4 text-base font-normal text-gray-400 sm:mt-8">
+                30 days free trial.<br />
+                then plans start at $9.99
+              </p>
+            </div>
+
+            <div className="lg:col-span-2 lg:order-first">
+              <Image className="w-full max-w-sm mx-auto" src={mobileimg1} alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </>
+  )
+}
+
