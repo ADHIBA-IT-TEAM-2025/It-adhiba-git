@@ -201,11 +201,12 @@ export default function HEADERIT() {
           </div>
 
           <PopoverGroup className="hidden lg:flex lg:gap-x-12 dark:bg-gray-900 ">
-            <a onClick={() => handleNavigation('/knowus')}
+            <Link
+              href="/knowus"
               className="text-sm/6 font-semibold text-gray-900 dark:text-white"
             >
               Know us
-            </a>
+            </Link>
             <Popover className="relative">
               <PopoverButton className="flex items-center gap-x-1 text-sm/6 font-semibold text-gray-900 dark:text-white text-transform: uppercase">
                 What We Do
@@ -221,10 +222,10 @@ export default function HEADERIT() {
               >
                 <div className="p-4">
                   {products.map(item => (
-                    <div
+                    <Link
                       key={item.name}
-                      className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6 hover:bg-gray-50 dark:hover:bg-gray-800 cursor-pointer"
-                      onClick={() => handleNavigation(item.href)}  // Faster navigation
+                      href={item.href}
+                      className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6 hover:bg-gray-50 dark:hover:bg-gray-800"
                     >
                       <div className="flex size-11 flex-none items-center justify-center rounded-lg bg-gray-50 dark:bg-gray-800 group-hover:bg-white dark:group-hover:bg-gray-700">
                         <item.icon
@@ -237,12 +238,12 @@ export default function HEADERIT() {
                           {item.name}
                         </span>
                       </div>
-                    </div>
+                    </Link>
                   ))}
                 </div>
                 <div className="grid grid-cols-2 divide-x divide-gray-900/5 dark:divide-gray-700 bg-gray-50 dark:bg-gray-800">
                   {callsToAction.map(item => (
-                    <a
+                    <Link
                       key={item.name}
                       href={item.href}
                       className="flex items-center justify-center gap-x-2.5 p-3 text-sm/6 font-semibold text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
@@ -252,31 +253,39 @@ export default function HEADERIT() {
                         className="size-5 flex-none text-gray-400 dark:text-gray-300"
                       />
                       {item.name}
-                    </a>
+                    </Link>
+
                   ))}
                 </div>
               </PopoverPanel>
             </Popover>
 
-            <a onClick={() => handleNavigation('/common/Pricing')}
+            <Link
+              href="/common/Pricing"
               className="text-sm/6 font-semibold text-gray-900 dark:text-white"
             >
               Pricing
-            </a>
-            <a onClick={() => handleNavigation('/gallery')} className="text-sm/6 font-semibold text-gray-900 dark:text-white">
-              Our Work
-            </a>
+            </Link>
 
-            <a onClick={() => handleNavigation('/common/career')}
+            <Link
+              href="/gallery"
+              className="text-sm/6 font-semibold text-gray-900 dark:text-white"
+            >
+              Our Work
+            </Link>
+
+            <Link
+              href="/common/career"
               className="text-sm/6 font-semibold text-gray-900 dark:text-white"
             >
               Join Us
-            </a>
-            <a onClick={() => handleNavigation('/getintouch')}
+            </Link>
+            <Link
+              href="/getintouch"
               className="text-sm/6 font-semibold text-gray-900 dark:text-white"
             >
               Get in Touch
-            </a>
+            </Link>
           </PopoverGroup>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end items-center">
             <ModeToggle />
@@ -370,3 +379,4 @@ export default function HEADERIT() {
 
   );
 }
+

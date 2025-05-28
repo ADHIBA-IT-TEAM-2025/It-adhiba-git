@@ -33,7 +33,6 @@ export default function Landingit() {
   return (
     <>
       <Landing />
-      <Workflows />
       <Features />
       <Index />
       <FeaturesSection />
@@ -162,8 +161,8 @@ function Landing() {
               show: { opacity: 1, y: 0, transition: { duration: 0.7 } },
             }}
           >
-            Agentic Cloud <br className="hidden md:block" />
-            Database Sandboxes
+            Building the Future  <br className="hidden md:block" />
+            of Digital Innovation
           </motion.h3>
 
           <motion.p
@@ -173,8 +172,8 @@ function Landing() {
               show: { opacity: 1, y: 0, transition: { duration: 1.2 } },
             }}
           >
-            Adhiba instant, AI-powered database sandboxes with seamless <br />
-            querying, visualizations, and external data integration.
+            We design, develop, and deliver high-quality digital solutions <br /> that empower businesses to grow, scale, and lead.
+
           </motion.p>
 
           <div className="relative justify-center mx-auto mt-12 mb-12">
@@ -554,7 +553,7 @@ function Whatweoffer() {
 function Index() {
   return (
     <>
-      <div className="h-fit overflow-hidden bg-black">
+      <div className="h-fit overflow-hidden bg-white dark:bg-black">
         <div className="mx-auto mt-32 w-fit max-w-2xl">
           <div className="text-center text-3xl text-white">
             <span className="text-indigo-200">Trusted by experts.</span>

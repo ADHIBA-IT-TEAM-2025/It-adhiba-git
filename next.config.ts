@@ -1,14 +1,14 @@
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
+  reactStrictMode: true,
+  output: 'export', // ✅ this replaces `next export`
   images: {
-    unoptimized: true, // ✅ Disable image optimization for static export
+    unoptimized: true,
   },
   eslint: {
-    ignoreDuringBuilds: true, // ✅ This disables ESLint during `next build`
-  }
+    ignoreDuringBuilds: true,
+  },
+  trailingSlash: true,
 };
 
-module.exports = nextConfig;
-
+export default nextConfig;

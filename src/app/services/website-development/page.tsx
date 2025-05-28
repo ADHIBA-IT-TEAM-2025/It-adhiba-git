@@ -31,12 +31,6 @@ export default function Webdevelopment() {
   return (
     <>
       <Landingtwo/>
-      {/* <SpotlightSection/>
-      <InfiniteImageScrollerDemo />
-      <Textdivide />
-      <Component/>
-      <FeaturesSection/>
-      <Whyus/> */}
     </>
   );
 }

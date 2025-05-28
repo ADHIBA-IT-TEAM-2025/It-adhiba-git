@@ -1,6 +1,5 @@
 'use client';
 import landingban from "../../../assets/Landingthree-banner.png"
-import { motion } from "framer-motion";
 import Image from "next/image";
 import centerimg from "../../../assets/center-img.png"
 import './software.css'
@@ -11,64 +10,14 @@ import whyus5 from '../../../assets/GALLERY (8).png';
 import FeatureCarousel from '@/components/ui/feature-carousel';
 import { cn } from "@/lib/utils";
 import { CardHoverEffectDemo } from "../website-development/Webdev";
+import { motion } from "motion/react";
 
 const Softwaredevelopment = () => {
   return (
     <>
-      <div className="relative flex flex-col items-center md:justify-between overflow-hidden  md:py-10">
-        {/* Decorative Lines */}
-        <Image
-          src={centerimg}
-          alt="Decorative Lines"
-          width={1000}
-          height={1000}
-          className="absolute top-0 left-1/2 transform -translate-x-1/2 w-full max-w-3xl md:max-w-5xl"
-        />
+      
+      <HeroSectionOne />
 
-        <div className=" relative z-20 flex flex-col items-center justify-center space-y-6 px-6 md:py-14">
-          <motion.h1
-            className="text-3xl md:text-6xl font-semibold text-center bg-gradient-to-r from-purple-50 via-neutral-400 to-transparent bg-clip-text text-transparent max-w-2xl"
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            Build product of the future with Data
-          </motion.h1>
-          <motion.p
-            className="text-sm md:text-base text-center text-purple-50 max-w-md"
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-          >
-            We are on a mission to build data products that collectively help businesses create products of the future.
-          </motion.p>
-
-          <button className="relative inline-block p-px font-semibold leading-6 text-white no-underline bg-[#ffffff44] shadow-2xl cursor-pointer group rounded-xl shadow-zinc-900">
-
-            <div className="relative z-10 flex items-center px-6 py-1 space-x-2 rounded-xl bg-gray-950/50 ring-1 ring-white/10">
-              <span>START FREE TRIAL</span>
-            </div>
-
-          </button>
-
-        </div>
-
-        {/* Background Blur Effect */}
-        <div className="absolute inset-0 flex items-center justify-center z-10">
-          <div className="bg-[radial-gradient(circle,_#9146FF_100%,_#97939E_100%)] w-[500px] h-[500px] md:w-[900px] md:h-[1100px] rounded-full opacity-30 blur-3xl z-10"></div>
-        </div>
-
-        {/* Hero Image */}
-        <div className="relative mt-8 md:mt-10 w-full flex justify-center z-0">
-          <Image
-            src={landingban}
-            alt="Hero Image"
-            width={1000}
-            height={1000}
-            className="w-[90%] md:w-[80%] max-w-xs md:max-w-full"
-          />
-        </div>
-      </div>
       <section className="software-development-body">
         <section className="jh dg ug mm er at">
           <div className="w">
@@ -121,7 +70,6 @@ const Softwaredevelopment = () => {
           </div>
         </section>
       </section>
-
 
       <FeatureCarouselDemo />
 
@@ -195,3 +143,101 @@ function FeatureCarouselDemo() {
 }
 
 
+ function HeroSectionOne() {
+  return (
+    <div className="relative mx-auto my-10 flex max-w-7xl flex-col items-center justify-center">
+      <div className="absolute inset-y-0 left-0 h-full w-px bg-neutral-200/80 dark:bg-neutral-800/80">
+        <div className="absolute top-0 h-40 w-px bg-gradient-to-b from-transparent via-blue-500 to-transparent" />
+      </div>
+      <div className="absolute inset-y-0 right-0 h-full w-px bg-neutral-200/80 dark:bg-neutral-800/80">
+        <div className="absolute h-40 w-px bg-gradient-to-b from-transparent via-blue-500 to-transparent" />
+      </div>
+      <div className="absolute inset-x-0 bottom-0 h-px w-full bg-neutral-200/80 dark:bg-neutral-800/80">
+        <div className="absolute mx-auto h-px w-40 bg-gradient-to-r from-transparent via-blue-500 to-transparent" />
+      </div>
+      <div className="px-4 py-10 md:py-20">
+        <h1 className="relative z-10 mx-auto max-w-4xl text-center text-2xl font-bold text-slate-700 md:text-4xl lg:text-7xl dark:text-slate-300">
+          {"Launch your website in hours, not days"
+            .split(" ")
+            .map((word, index) => (
+              <motion.span
+                key={index}
+                initial={{ opacity: 0, filter: "blur(4px)", y: 10 }}
+                animate={{ opacity: 1, filter: "blur(0px)", y: 0 }}
+                transition={{
+                  duration: 0.3,
+                  delay: index * 0.1,
+                  ease: "easeInOut",
+                }}
+                className="mr-2 inline-block"
+              >
+                {word}
+              </motion.span>
+            ))}
+        </h1>
+        <motion.p
+          initial={{
+            opacity: 0,
+          }}
+          animate={{
+            opacity: 1,
+          }}
+          transition={{
+            duration: 0.3,
+            delay: 0.8,
+          }}
+          className="relative z-10 mx-auto max-w-xl py-4 text-center text-lg font-normal text-neutral-600 dark:text-neutral-400"
+        >
+          With AI, you can launch your website in hours, not days. Try our best
+          in class, state of the art, cutting edge AI tools to get your website
+          up.
+        </motion.p>
+        <motion.div
+          initial={{
+            opacity: 0,
+          }}
+          animate={{
+            opacity: 1,
+          }}
+          transition={{
+            duration: 0.3,
+            delay: 1,
+          }}
+          className="relative z-10 mt-8 flex flex-wrap items-center justify-center gap-4"
+        >
+          <button className="w-60 transform rounded-lg bg-black px-6 py-2 font-medium text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200">
+            Explore Now
+          </button>
+          <button className="w-60 transform rounded-lg border border-gray-300 bg-white px-6 py-2 font-medium text-black transition-all duration-300 hover:-translate-y-0.5 hover:bg-gray-100 dark:border-gray-700 dark:bg-black dark:text-white dark:hover:bg-gray-900">
+            Contact Support
+          </button>
+        </motion.div>
+        <motion.div
+          initial={{
+            opacity: 0,
+            y: 10,
+          }}
+          animate={{
+            opacity: 1,
+            y: 0,
+          }}
+          transition={{
+            duration: 0.3,
+            delay: 1.2,
+          }}
+          className="relative z-10 mt-20 rounded-3xl border border-neutral-200 bg-neutral-100 p-4 shadow-md dark:border-neutral-800 dark:bg-neutral-900"
+        >
+          <div className="w-full overflow-hidden rounded-xl border border-gray-300 dark:border-gray-700">
+            <img
+              src="https://assets.aceternity.com/pro/aceternity-landing.webp"
+              alt="Landing page preview"
+              className="aspect-[16/9] h-auto w-full object-cover"
+              height={1000}
+              width={1000}
+            />
+          </div>
+        </motion.div>
+      </div>
+    </div>
+  );
+}

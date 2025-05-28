@@ -7,12 +7,12 @@ interface InteractiveHoverButtonProps {
 }
 
 export function InteractiveHoverButton({
-  text = 'Get Start',
+  text = 'Get a Quote',
   className,
 }: InteractiveHoverButtonProps = {}) {
   return (
     <div
-      className={`group relative w-32 cursor-pointer overflow-hidden rounded-full border bg-white p-2 text-center font-semibold text-black ${className}`}
+      className={`group relative w-42 cursor-pointer overflow-hidden rounded-full border bg-white p-2 text-center font-semibold text-black ${className}`}
     >
       <span className="inline-block translate-x-1 transition-all duration-300 group-hover:translate-x-12 group-hover:opacity-0">
         {text}

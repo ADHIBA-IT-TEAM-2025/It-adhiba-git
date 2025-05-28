@@ -11,19 +11,17 @@ export function Footerit() {
         <div className="flex overflow-hidden w-full p-[30px] relative rounded-[24px] bg-[#171825] shadow-[inset_0_0_0_0.5px_rgba(255,255,255,0.15),0_1px_4px_rgba(255,237,237,0.1),0_2px_24px_rgba(0,0,0,0.1)]">
           <div className="p-6 flex flex-col justify-center space-y-4 w-[55%]">
             <h5 className="font-semibold text-[12px] text-[#9fa2b9] tracking-[.1em] uppercase mb-[12px]">
-              Webinar
+              Free Guide
             </h5>
             <h2 className="text-[28px] text-white font-medium mb-[16px]">
-              A Practical Guide to Network Tokens
+              Ready to Build Your Website?
             </h2>
             <p className="text-[#dfe1f4] leading-[1.75] font-normal text-[0.9rem] mb-[30px]">
-              Curious about Network Tokens but unsure how they work or how to
-              get started? Watch this 1-hour webinar with our CEO Shane to get
-              practical advice on Network Tokens.
+              Let's create something powerful together. Get in touch to start your project.
             </p>
 
             <a
-              href="/webinars/network-tokens-24"
+              href="/resources/website-launch-guide"
               className="bg-white text-black min-h-[2.5rem] px-4 py-2 text-[1rem] flex items-center rounded-[25px] w-fit"
             >
               <svg
@@ -36,16 +34,18 @@ export function Footerit() {
               >
                 <polygon points="6 3 20 12 6 21 6 3"></polygon>
               </svg>
-              &nbsp;&nbsp;Watch Now
+              &nbsp;Contact Us Today
             </a>
           </div>
+
           <Image
-            src={network}
-            alt=""
+            src={network} // replace with your image variable
+            alt="Website Launch Guide"
             className="absolute top-0 right-0 w-[600px] h-[350px] [mask-image:linear-gradient(90deg,transparent_10%,#000)]"
           />
         </div>
       </div>
+
 
       <section
         className="relative w-full overflow-hidden bg-gradient-to-b from-[#222] to-[#000000] dark:from-[#1a1a1a] dark:to-[#000000] group"
