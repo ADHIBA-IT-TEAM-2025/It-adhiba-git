@@ -25,7 +25,6 @@ import {
   PhoneOutgoing,
 } from 'lucide-react';
 import { AnimatedList } from '@/components/magicui/animated-list';
-import Features from '@/app/services/website-development/features1';
 import Workflows from '../../shadcn/ui/workflows';
 
 // MAIN
@@ -33,7 +32,6 @@ export default function Landingit() {
   return (
     <>
       <Landing />
-      <Features />
       <Index />
       <FeaturesSection />
       <Whatweoffer />
@@ -56,7 +54,7 @@ const ReviewCard = ({
   return (
     <figure
       className={cn(
-        'relative h-full w-64 cursor-pointer overflow-hidden rounded-xl border p-4',
+        'relative h-full w-64 cursor-pointer overflow-hidden rounded-2xl border p-4',
         // Light mode styles
         'border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05]',
         // Dark mode styles
@@ -148,22 +146,24 @@ function Landing() {
                 'group rounded-full border border-black/5 bg-[#ffffff25] transition-all ease-in hover:cursor-pointer hover:bg-neutral-200 dark:border-white/5 dark:bg-neutral-900 dark:hover:bg-neutral-800'
               )}
             >
-              <AnimatedShinyText className="inline-flex items-center justify-center px-4 py-1 transition ease-out hover:text-neutral-600 hover:duration-300 hover:dark:text-neutral-400 text-[#ffffff70]">
+              <AnimatedShinyText className="inline-flex items-center justify-center px-4 py-1 transition ease-out hover:text-neutral-600 hover:duration-300 hover:dark:text-neutral-400 text-[#00000070] dark:text-[#ffffff70]">
                 <span>✨ Adhiba IT Solutions</span>
               </AnimatedShinyText>
+
             </div>
           </div>
 
           <motion.h3
-            className="text-[#ffffffcc] py-5 text-4xl font-medium leading-none tracking-tighter text-balance sm:text-5xl md:text-6xl lg:text-7xl translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:200ms]"
+            className="py-5 text-4xl font-medium leading-none tracking-tighter text-balance sm:text-5xl md:text-6xl lg:text-7xl translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:200ms] text-[#000000cc] dark:text-[#ffffffcc]"
             variants={{
               hidden: { opacity: 0, y: 10 },
               show: { opacity: 1, y: 0, transition: { duration: 0.7 } },
             }}
           >
-            Building the Future  <br className="hidden md:block" />
+            Building the Future <br className="hidden md:block" />
             of Digital Innovation
           </motion.h3>
+
 
           <motion.p
             className="tracking-tight text-gray-400 md:text-lg text-balance translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:400ms]"
@@ -182,7 +182,7 @@ function Landing() {
         </motion.div>
 
         {/* Marquee Section */}
-        <div className="relative flex w-full flex-col items-center justify-center overflow-hidden">
+        <div className="relative flex w-full flex-col items-center justify-center overflow-hidden ">
           <Marquee pauseOnHover className="[--duration:20s]">
             {firstRow.map(review => (
               <ReviewCard key={review.username} {...review} />
@@ -214,40 +214,40 @@ interface Testimonial {
 function Whyus() {
   const testimonials: Testimonial[] = [
     {
-      quote: '6 Evervault balances flexibility and security extremely well.',
+      quote: 'Delivered exactly what we needed, on time and perfectly!',
       img: whyus,
       name: 'John Doe',
-      role: 'CEO, CompanyX',
+      role: 'CEO, Company',
     },
     {
-      quote: '5 Evervault balances flexibility and security extremely well.',
+      quote: 'Exceptional design and development—professional, reliable, and fast.',
       img: whyus,
       name: 'Jane Smith',
-      role: 'Marketing Manager, CompanyY',
+      role: 'Marketing Manager, Company',
     },
     {
-      quote: '1 Evervault balances flexibility and security extremely well.',
+      quote: 'Our website looks amazing and functions beautifully now.',
       img: whyus,
       name: 'John Doe',
-      role: 'CEO, CompanyX',
+      role: 'CEO, Company',
     },
     {
-      quote: '2 Evervault balances flexibility and security extremely well.',
+      quote: 'They understood our vision and brought it to life.',
       img: whyus,
       name: 'Jane Smith',
-      role: 'Marketing Manager, CompanyY',
+      role: 'Marketing Manager, Company',
     },
     {
-      quote: '3 Evervault balances flexibility and security extremely well.',
+      quote: 'Great experience, responsive team, and flawless project execution.',
       img: whyus,
       name: 'John Doe',
-      role: 'CEO, CompanyX',
+      role: 'CEO, Company',
     },
     {
-      quote: '4 Evervault balances flexibility and security extremely well.',
+      quote: 'Highly recommend them for any digital development needs!',
       img: whyus,
       name: 'Jane Smith',
-      role: 'Marketing Manager, CompanyY',
+      role: 'Marketing Manager, Company',
     },
   ];
 
@@ -275,27 +275,26 @@ function Whyus() {
   }, []);
   return (
     <>
-      <section className="relative px-6  styles_background__rbhqc  styles_section__h_NXB ">
+      <section className="relative four-card-it  styles_background__rbhqc styles_section__h_NXB">
         <div className="flex flex-col items-center justify-center max-w-[680px] text-center text-base leading-7 mx-auto mb-6">
           <h2
-            className=" mx-auto text-center text-[3.25rem] leading-none tracking-[-0.02em] mb-6 last:mb-0 bg-clip-text text-transparent bg-gradient-to-b from-black via-black/70 to-black/40 dark:from-white dark:via-white/50 dark:to-white/30"
+            className="mx-auto text-center text-[3.25rem] leading-none tracking-[-0.02em] mb-6 last:mb-0 bg-clip-text text-transparent bg-gradient-to-b from-black via-black/70 to-black/40 dark:from-[#f0f0f0] dark:via-[#f0f0f080] dark:to-[#f0f0f04d]"
             style={{ paddingTop: '5rem' }}
           >
-
             Why Trust Us?
           </h2>
 
-          <div className="text-gray-700 dark:text-gray-300">
-            Evervault is secure by default. We build, manage, and implement
-            security best practices into the platform so you have to.
+          <div className="text-[#333] dark:text-[#d1d5db]">
+            We deliver reliable, high-quality digital solutions with transparent communication, on-time delivery, and a strong focus on client satisfaction.
           </div>
         </div>
 
-        <div className="mx-auto my-12 w-fit max-w-full rounded-[24px] px-4 py-16 sm:px-4 sm:py-16 md:px-4 md:py-16 lg:px-4 lg:py-16 xl:px-4 xl:py-16 2xl:px-4 2xl:py-16 backdrop-blur-md bg-gradient-to-b from-[#31398590] to-[#000000] dark:from-[#1c1c2b] dark:to-[#0a0622] shadow-[0_8px_16px_-4px_rgba(0,0,0,0.25),0_4px_8px_-2px_rgba(0,0,0,0.25),0_1px_2px_rgba(0,0,0,0.2),inset_0_0_0_1px_rgba(190,167,255,0.24)]">
+
+        <div className="mx-auto my-12 w-fit max-w-full rounded-[24px] px-4 py-16 backdrop-blur-md bg-gradient-to-b from-[#f8f9ff] to-[#e8ebf5] dark:from-[#1c1c2b] dark:to-[#0a0622] shadow-[0_8px_16px_-4px_rgba(0,0,0,0.25),0_4px_8px_-2px_rgba(0,0,0,0.25),0_1px_2px_rgba(0,0,0,0.2),inset_0_0_0_1px_rgba(190,167,255,0.24)]">
           <div className="mx-auto relative max-w-full md:max-w-[850px] lg:max-w-[850px]">
             {/* Testimonial Image */}
             <div className="relative h-32">
-              <div className="pointer-events-none absolute left-1/2 top-0 h-[480px] w-[480px] -translate-x-1/2 before:absolute before:inset-0 before:-z-10 before:rounded-full before:bg-gradient-to-b before:from-[#313985]/25 before:via-[#313985]/5 before:via-25% before:to-[#313985]/0 before:to-75%">
+              <div className="pointer-events-none absolute left-1/2 top-0 h-[480px] w-[480px] -translate-x-1/2 before:absolute before:inset-0 before:-z-10 before:rounded-full before:bg-gradient-to-b before:from-[#8b95ff]/25 before:via-[#8b95ff]/5 before:via-25% before:to-[#8b95ff]/0 before:to-75%">
                 <div className="h-32 [mask-image:_linear-gradient(0deg,transparent,theme(colors.white)_20%,theme(colors.white))]">
                   {testimonials.map((testimonial, index) => (
                     <Transition
@@ -317,7 +316,7 @@ function Whyus() {
                           typeof testimonial.img === 'string'
                             ? testimonial.img
                             : testimonial.img.src
-                        } // Ensure correct format
+                        }
                         width={56}
                         height={56}
                         alt={testimonial.name}
@@ -327,12 +326,10 @@ function Whyus() {
                 </div>
               </div>
             </div>
+
             {/* Testimonial Text */}
             <div className="mb-9 transition-all delay-300 duration-150 ease-in-out">
-              <div
-                className="relative flex flex-col relative h-[100px] overflow-hidden"
-                ref={testimonialsRef}
-              >
+              <div className="relative flex flex-col h-[100px] overflow-hidden" ref={testimonialsRef}>
                 {testimonials.map((testimonial, index) => (
                   <Transition
                     key={index}
@@ -344,13 +341,14 @@ function Whyus() {
                     leaveFrom="opacity-100 translate-y-0 absolute"
                     leaveTo="opacity-0 translate-y-2 absolute"
                   >
-                    <div className="absolute inset-0 flex items-center justify-center text-2xl font-bold text-[#313985] dark:text-[#aab0ff] before:content-['\201C'] after:content-['\201D']">
+                    <div className="absolute inset-0 flex items-center justify-center text-2xl font-bold text-[#333374] dark:text-[#cdd1ff] before:content-['\201C'] after:content-['\201D']">
                       {testimonial.quote}
                     </div>
                   </Transition>
                 ))}
               </div>
             </div>
+
             {/* Buttons */}
             <div className="-m-1.5 flex flex-wrap justify-center">
               {testimonials.map((testimonial, index) => (
@@ -370,7 +368,7 @@ function Whyus() {
                     className={`${active === index ? 'text-[#e0e3ff]' : 'text-[#aab0ff]'
                       }`}
                   >
-                    -
+                    &nbsp;-&nbsp;
                   </span>
                   <span>{testimonial.role}</span>
                 </button>
@@ -378,6 +376,7 @@ function Whyus() {
             </div>
           </div>
         </div>
+
       </section>
     </>
   );
@@ -405,26 +404,24 @@ function Whatweoffer() {
   return (
     <>
       {/* What we offer */}
-      <div className="four-card-it mx-auto flex justify-center items-center">
-        <div className=" styles_container__IFQFq mx-auto flex flex-col lg:flex-row items-center ">
+      <div className="four-card-it mx-auto max-w-[1300px] flex justify-center items-center">
+        <div className="styles_container__IFQFq mx-auto flex flex-col lg:flex-row items-center p-5 pt-0">
           {/* Left Content */}
           <div className="lg:w-1/2 w-full">
             <div className="styles_content__4BIdk">
               <div className="styles_eyebrow__Zrgyh">
-                <div className="styles_eyebrow__ExZzW">
-                  Agile payments infrastructure
+                <div className="styles_eyebrow__ExZzW text-indigo-700 dark:text-indigo-300">
+                  Smart Development
                 </div>
               </div>
-              <h2 className="styles_text__Fvsk7 styles_title__Pzt7O">
-                We secure it, <br /> You own it
+              <h2 className="text-4xl sm:text-4xl font-extrabold text-indigo-700 dark:text-indigo-300">
+                Smart Solutions for
+                <br /> Web Success
               </h2>
+
+
               <div className="styles_text__G73wT">
-                Our flexible solutions are designed to adapt to your specific
-                needs without sacrificing control of your user experience.
-                Evervault can be seamlessly integrated into your existing
-                infrastructure, allowing you to maintain full control of your
-                payment experience while ensuring it remains secure and
-                compliant.
+                From initial research to final delivery, we craft custom web solutions that are fast, responsive, and user-focused. Our process combines strategic thinking, clean design, and robust development to create websites that not only look great but drive real business results.
               </div>
               <div className="styles_grid__byXtd grid grid-cols-1 sm:grid-cols-2 gap-6 mt-6">
                 {/* Card Items */}
@@ -445,11 +442,10 @@ function Whatweoffer() {
                       <path d="m9.06 11.9 8.07-8.06a2.85 2.85 0 1 1 4.03 4.03l-8.06 8.08"></path>
                       <path d="M7.07 14.94c-1.66 0-3 1.35-3 3.02 0 1.33-2.5 1.52-2 2.02 1.08 1.1 2.49 2.02 4 2.02 2.2 0 4-1.8 4-4.04a3.01 3.01 0 0 0-3-3.02z"></path>
                     </svg>
-                    Infinitely Customizable
+                    Research
                   </h3>
                   <p className="styles_gridCopy__cfHwU">
-                    UI Components has full CSS-in-JS support, as well as three
-                    base themes to get you started.
+                    We analyze your goals, audience, and competitors to uncover insights that guide smarter development and strategic digital solutions.
                   </p>
                 </div>
                 <div>
@@ -471,11 +467,10 @@ function Whatweoffer() {
                       <path d="M7 19h5"></path>
                       <rect width="6" height="10" x="16" y="12" rx="2"></rect>
                     </svg>
-                    Cross-platform
+                    Sketching
                   </h3>
                   <p className="styles_gridCopy__cfHwU">
-                    Evervault lets you implement payment flows across mobile,
-                    web, and APIs.
+                    We transform ideas into wireframes and interactive layouts to visualize structure, content flow, and user interactions early on.
                   </p>
                 </div>
                 <div>
@@ -497,11 +492,10 @@ function Whatweoffer() {
                       <path d="M15 8V2"></path>
                       <path d="M18 8v5a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4V8Z"></path>
                     </svg>
-                    Plug and Play
+                    Development
                   </h3>
                   <p className="styles_gridCopy__cfHwU">
-                    Use Evervault with any number of third-party payment
-                    gateways, card issuers, or APIs.
+                    Our skilled developers build secure, responsive, and scalable websites using the latest technologies and best industry practices.
                   </p>
                 </div>
                 <div>
@@ -527,12 +521,10 @@ function Whatweoffer() {
                       <path d="M3 7.8V3h4.8"></path>
                       <path d="M9 9 3 3"></path>
                     </svg>
-                    Effortlessly Scalable
+                    Final Product
                   </h3>
                   <p className="styles_gridCopy__cfHwU">
-                    Every product auto-scales to process millions of
-                    transactions per day without affecting throughput or
-                    latency.
+                    The result is a fast, functional, and visually stunning website that’s optimized for performance, usability, and future growth.
                   </p>
                 </div>
               </div>
@@ -553,15 +545,56 @@ function Whatweoffer() {
 function Index() {
   return (
     <>
-      <div className="h-fit overflow-hidden bg-white dark:bg-black">
-        <div className="mx-auto mt-32 w-fit max-w-2xl">
-          <div className="text-center text-3xl text-white">
-            <span className="text-indigo-200">Trusted by experts.</span>
 
-            <br />
-
-            <span>Used by the leaders.</span>
+      <section id="process" className="py-20 px-6 ">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl font-light tracking-tight pb-12">Our Process</h2>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div className="border-t border-zinc-700 pt-6">
+              <span className="text-zinc-500 text-sm">01</span>
+              <h3 className="text-xl mt-2 mb-4"> Speed</h3>
+              <p className="text-zinc-400">
+                Experience ultra-fast performance with optimized servers that ensure quick load times and smooth user experiences worldwide.
+              </p>
+            </div>
+            <div className="border-t border-zinc-700 pt-6">
+              <span className="text-zinc-500 text-sm">02</span>
+              <h3 className="text-xl mt-2 mb-4">Security</h3>
+              <p className="text-zinc-400">
+                Your data is protected with industry-grade encryption, firewalls, and regular monitoring to prevent breaches and threats.
+              </p>
+            </div>
+            <div className="border-t border-zinc-700 pt-6">
+              <span className="text-zinc-500 text-sm">03</span>
+              <h3 className="text-xl mt-2 mb-4">Uptime</h3>
+              <p className="text-zinc-400">
+                We guarantee 99.9% uptime with redundant systems, so your website stays online without interruptions or downtime issues.
+              </p>
+            </div>
+            <div className="border-t border-zinc-700 pt-6">
+              <span className="text-zinc-500 text-sm">04</span>
+              <h3 className="text-xl mt-2 mb-4">Support</h3>
+              <p className="text-zinc-400">
+                Our expert support team is available 24/7 to assist with technical issues, updates, and hosting-related concerns.
+              </p>
+            </div>
           </div>
+        </div>
+      </section>
+
+      <div className="h-fit overflow-hidden bg-black">
+        <div className="mx-auto mt-35 w-fit max-w-2xl">
+          <div className="text-center text-3xl">
+            <span className="text-indigo-200">
+              Clients Believe in
+            </span>
+            <br />
+            <span className="text-white">
+              Our Expertise
+            </span>
+          </div>
+
+
           <div className="mt-14 grid grid-cols-4">
             <svg viewBox="0 0 180 56" fill="currentColor" className="w-full">
               <path
@@ -596,8 +629,9 @@ function Index() {
             </svg>
           </div>
         </div>
+
         <div className="relative -mt-32 h-96 w-screen overflow-hidden [mask-image:radial-gradient(50%_50%,white,transparent)] before:absolute before:inset-0 before:bg-[radial-gradient(circle_at_bottom_center,#369eff,transparent_80%)] before:opacity-100 after:absolute after:-left-1/2 after:top-1/2 after:aspect-[1/0.7] after:w-[200%] after:rounded-[100%] after:border-t after:border-[#7876c566] after:bg-zinc-900">
-          <div className="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#ffffff2c_1px,transparent_1px),linear-gradient(to_bottom,#3a3a3a01_1px,transparent_1px)] bg-[size:70px_80px] "></div>
+          <div className="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#ffffff2c_1px,transparent_1px),linear-gradient(to_bottom,#3a3a3a01_1px,transparent_1px)] bg-[size:70px_80px]" />
 
           <Sparkles
             density={800}
@@ -616,105 +650,113 @@ function Index() {
 // Completed
 const FeaturesSection = () => {
   return (
-    <div className="relative mb-25 rounded-[50px] bg-[radial-gradient(130%_130%_at_50%_20%,transparent_40%,#6633EE_100%,#FFFFFF_0px)] py-32">
-      <div className="container mx-auto max-w-[1100px]">
+    <>
+      <div className="bg-black " style={{ borderRadius: "0px 0px 50px 50px " }}>
 
-        <div className="flex flex-col items-center justify-center text-center mb-[44.8px]">
-          <h2 className="text-white text-[3.25rem] leading-[1.1] mb-8">
-            Secure, Compliant and Fully<br /> Customizable
-          </h2>
-          <p className="text-[#dfe1f4d7] text-[0.9rem] max-w-[470px] leading-[1.8] font-normal">
-            UI Components was designed to simplify the process of building compliant payments workflows.
-            They're flexible, secure and fully compliant under PCI DSS.
-          </p>
+        <div className=" relative rounded-[50px] bg-[radial-gradient(130%_130%_at_50%_20%,transparent_40%,#6633EE_100%,#FFFFFF_0px)] p-5 pt-0 pb-32 mb-25">
+          <div className="container mx-auto max-w-7xl">
+
+            <div className="flex flex-col items-center justify-center text-center mb-[44.8px]">
+              <h2 className=" text-[#e4e7f5] text-3xl sm:text-4xl md:text-5xl lg:text-[3rem] leading-[1.1] mb-8">
+                Building Web Solutions That <br />Drive Growth
+              </h2>
+
+
+              <p className="text-gray-300 text-[0.9rem] max-w-[470px] leading-[1.8] font-normal">
+                We create fast, responsive, and scalable websites tailored to your business needs, focusing on performance, usability, and modern design standards.
+              </p>
+            </div>
+
+            <div className="w-full h-[1px] bg-[#2a2b3a] my-12"></div>
+
+            <div className="grid md:grid-cols-3 gap-8">
+              {/* Web Development */}
+              <div className="mb-4 text-white">
+                <div className="flex items-center gap-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" className="w-5 h-5 fill-current">
+                    <path d="M372.2 52c0 20.9-12.4 39-30.2 47.2L448 192l104.4-20.9c-5.3-7.7-8.4-17.1-8.4-27.1c0-26.5 21.5-48 48-48s48 21.5 48 48c0 26-20.6 47.1-46.4 48L481 442.3c-10.3 23-33.2 37.7-58.4 37.7l-205.2 0c-25.2 0-48-14.8-58.4-37.7L46.4 192C20.6 191.1 0 170 0 144c0-26.5 21.5-48 48-48s48 21.5 48 48c0 10.1-3.1 19.4-8.4 27.1L192 192 298.1 99.1c-17.7-8.3-30-26.3-30-47.1c0-28.7 23.3-52 52-52s52 23.3 52 52z" />
+                  </svg>
+                  <h5 className="text-[1.05rem] leading-[1.142857143]">WEB DEVELOPMENT</h5>
+                </div>
+                <p className="mt-4  text-gray-300 text-[14.4px]">
+                  Expert web development: Fast, responsive, modern, scalable, secure, and SEO-friendly.
+                </p>
+              </div>
+
+              {/* App Development */}
+              <div className="mb-4 k text-white">
+                <div className="flex items-center gap-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" className="w-5 h-5 fill-current">
+                    <path d="M313.4 32.9c26 5.2 42.9 30.5 37.7 56.5l-2.3 11.4c-5.3 26.7-15.1 52.1-28.8 75.2l144 0c26.5 0 48 21.5 48 48c0 18.5-10.5 34.6-25.9 42.6C497 275.4 504 288.9 504 304c0 23.4-16.8 42.9-38.9 47.1c4.4 7.3 6.9 15.8 6.9 24.9c0 21.3-13.9 39.4-33.1 45.6c.7 3.3 1.1 6.8 1.1 10.4c0 26.5-21.5 48-48 48l-97.5 0c-19 0-37.5-5.6-53.3-16.1l-38.5-25.7C176 420.4 160 390.4 160 358.3l0-38.3 0-48 0-24.9c0-29.2 13.3-56.7 36-75l7.4-5.9c26.5-21.2 44.6-51 51.2-84.2l2.3-11.4c5.2-26 30.5-42.9 56.5-37.7zM32 192l64 0c17.7 0 32 14.3 32 32l0 224c0 17.7-14.3 32-32 32l-64 0c-17.7 0-32-14.3-32-32L0 224c0-17.7 14.3-32 32-32z" />
+                  </svg>
+                  <h5 className="text-[1.05rem] leading-[1.142857143]">APP DEVELOPMENT</h5>
+                </div>
+                <p className="mt-4  text-gray-300 text-[14.4px]">
+                  Custom app development: Fast, scalable, secure, user-friendly, and feature-rich.
+                </p>
+              </div>
+
+              {/* Software Development */}
+              <div className="mb-4  text-white">
+                <div className="flex items-center gap-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" className="w-5 h-5 fill-current">
+                    <path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3L562.7 256l-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z" />
+                  </svg>
+                  <h5 className="text-[1.05rem] leading-[1.142857143]">SOFTWARE DEVELOPMENT</h5>
+                </div>
+                <p className="mt-4  text-gray-300 text-[14.4px]">
+                  Powerful software development: Scalable, secure, efficient, innovative, and user-centric solutions.
+                </p>
+              </div>
+            </div>
+
+            <div className="w-full h-[1px] bg-[#2a2b3a] my-12"></div>
+
+            <div className="grid md:grid-cols-3 gap-8">
+              {/* Digital Marketing */}
+              <div className="mb-4 text-white">
+                <div className="flex items-center gap-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" className="w-5 h-5 fill-current">
+                    <path d="M87 481.8h73.7v-73.6H87zM25.4 346.6v61.6H87v-61.6zm466.2-169.7c-23-74.2-82.4-133.3-156.6-156.6C164.9-32.8 8 93.7 8 255.9h95.8c0-101.8 101-180.5 208.1-141.7 39.7 14.3 71.5 46.1 85.8 85.7 39.1 107-39.7 207.8-141.4 208v.3h-.3V504c162.6 0 288.8-156.8 235.6-327.1zm-235.3 231v-95.3h-95.6v95.6H256v-.3z" />
+                  </svg>
+                  <h5 className="text-[1.05rem] leading-[1.142857143]">DIGITAL MARKETING</h5>
+                </div>
+                <p className="mt-4 text-gray-300 text-[14.4px]">
+                  Results-driven digital marketing: SEO, social media, PPC, branding, and growth.
+                </p>
+              </div>
+
+              {/* Cloud Hosting */}
+              <div className="mb-4 text-white">
+                <div className="flex items-center gap-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" className="w-5 h-5 fill-current">
+                    <path d="M0 336c0 79.5 64.5 144 144 144l368 0c70.7 0 128-57.3 128-128c0-61.9-44-113.6-102.4-125.4c4.1-10.7 6.4-22.4 6.4-34.6c0-53-43-96-96-96c-19.7 0-38.1 6-53.3 16.2C367 64.2 315.3 32 256 32C167.6 32 96 103.6 96 192c0 2.7 .1 5.4 .2 8.1C40.2 219.8 0 273.2 0 336z" />
+                  </svg>
+                  <h5 className="text-[1.05rem] leading-[1.142857143]">CLOUD HOSTING</h5>
+                </div>
+                <p className="mt-4 text-gray-300 text-[14.4px]">
+                  Reliable cloud hosting: Secure, scalable, fast, cost-effective, and high-performance.
+                </p>
+              </div>
+
+              {/* Web Hosting */}
+              <div className="mb-4 text-white">
+                <div className="flex items-center gap-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" className="w-5 h-5 fill-current">
+                    <path d="M352 256c0 22.2-1.2 43.6-3.3 64l-185.3 0c-2.2-20.4-3.3-41.8-3.3-64s1.2-43.6 3.3-64l185.3 0c2.2 20.4 3.3 41.8 3.3 64zm28.8-64l123.1 0c5.3 20.5 8.1 41.9 8.1 64s-2.8 43.5-8.1 64l-123.1 0c2.1-20.6 3.2-42 3.2-64s-1.1-43.4-3.2-64zm112.6-32l-116.7 0c-10-63.9-29.8-117.4-55.3-151.6c78.3 20.7 142 77.5 171.9 151.6zm-149.1 0l-176.6 0c6.1-36.4 15.5-68.6 27-94.7c10.5-23.6 22.2-40.7 33.5-51.5C239.4 3.2 248.7 0 256 0s16.6 3.2 27.8 13.8c11.3 10.8 23 27.9 33.5 51.5c11.6 26 20.9 58.2 27 94.7zm-209 0L18.6 160C48.6 85.9 112.2 29.1 190.6 8.4C165.1 42.6 145.3 96.1 135.3 160zM8.1 192l123.1 0c-2.1 20.6-3.2 42-3.2 64s1.1 43.4 3.2 64L8.1 320C2.8 299.5 0 278.1 0 256s2.8-43.5 8.1-64zM194.7 446.6c-11.6-26-20.9-58.2-27-94.6l176.6 0c-6.1 36.4-15.5 68.6-27 94.6c-10.5 23.6-22.2 40.7-33.5 51.5C272.6 508.8 263.3 512 256 512s-16.6-3.2-27.8-13.8c-11.3-10.8-23-27.9-33.5-51.5zM135.3 352c10 63.9 29.8 117.4 55.3 151.6C112.2 482.9 48.6 426.1 18.6 352l116.7 0zm358.1 0c-30 74.1-93.6 130.9-171.9 151.6c25.5-34.2 45.2-87.7 55.3-151.6l116.7 0z" />
+                  </svg>
+                  <h5 className="text-[1.05rem] leading-[1.142857143]">WEB HOSTING</h5>
+                </div>
+                <p className="mt-4 text-gray-300 text-[14.4px]">
+                  Fast and secure web hosting: Reliable, scalable, affordable, and high-performance.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-
-        <div className="w-full h-[1px] bg-[#2a2b3a] my-12"></div>
-
-        <div className="grid md:grid-cols-3 gap-8 ">
-
-          <div className="mb-4 text-white">
-            <div className="flex items-center gap-3">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" className="w-5 h-5 fill-current">
-                <path d="M372.2 52c0 20.9-12.4 39-30.2 47.2L448 192l104.4-20.9c-5.3-7.7-8.4-17.1-8.4-27.1c0-26.5 21.5-48 48-48s48 21.5 48 48c0 26-20.6 47.1-46.4 48L481 442.3c-10.3 23-33.2 37.7-58.4 37.7l-205.2 0c-25.2 0-48-14.8-58.4-37.7L46.4 192C20.6 191.1 0 170 0 144c0-26.5 21.5-48 48-48s48 21.5 48 48c0 10.1-3.1 19.4-8.4 27.1L192 192 298.1 99.1c-17.7-8.3-30-26.3-30-47.1c0-28.7 23.3-52 52-52s52 23.3 52 52z" />
-              </svg>
-              <h5 className="text-[1.05rem] leading-[1.142857143]">WEB DEVELOPMENT</h5>
-            </div>
-            <p className="mt-4 text-[#dfe1f4d7] text-[14.4px]">
-              Expert web development: Fast, responsive, modern, scalable, secure, and SEO-friendly.
-            </p>
-          </div>
-
-          <div className="mb-4 text-white">
-            <div className="flex items-center gap-3">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" className="w-5 h-5 fill-current">
-                <path d="M313.4 32.9c26 5.2 42.9 30.5 37.7 56.5l-2.3 11.4c-5.3 26.7-15.1 52.1-28.8 75.2l144 0c26.5 0 48 21.5 48 48c0 18.5-10.5 34.6-25.9 42.6C497 275.4 504 288.9 504 304c0 23.4-16.8 42.9-38.9 47.1c4.4 7.3 6.9 15.8 6.9 24.9c0 21.3-13.9 39.4-33.1 45.6c.7 3.3 1.1 6.8 1.1 10.4c0 26.5-21.5 48-48 48l-97.5 0c-19 0-37.5-5.6-53.3-16.1l-38.5-25.7C176 420.4 160 390.4 160 358.3l0-38.3 0-48 0-24.9c0-29.2 13.3-56.7 36-75l7.4-5.9c26.5-21.2 44.6-51 51.2-84.2l2.3-11.4c5.2-26 30.5-42.9 56.5-37.7zM32 192l64 0c17.7 0 32 14.3 32 32l0 224c0 17.7-14.3 32-32 32l-64 0c-17.7 0-32-14.3-32-32L0 224c0-17.7 14.3-32 32-32z" />
-              </svg>
-              <h5 className="text-[1.05rem] leading-[1.142857143]">APP DEVELOPMENT</h5>
-            </div>
-            <p className="mt-4 text-[#dfe1f4d7] text-[14.4px]">
-              Custom app development: Fast, scalable, secure, user-friendly, and feature-rich.
-            </p>
-          </div>
-
-          <div className="mb-4 text-white">
-            <div className="flex items-center gap-3">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" className="w-5 h-5 fill-current">
-                <path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3L562.7 256l-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z" />
-              </svg>
-              <h5 className="text-[1.05rem] leading-[1.142857143]">SOFTWARE DEVELOPMENT</h5>
-            </div>
-            <p className="mt-4 text-[#dfe1f4d7] text-[14.4px]">
-              Powerful software development: Scalable, secure, efficient, innovative, and user-centric solutions.
-            </p>
-          </div>
-
-        </div>
-
-        <div className="w-full h-[1px] bg-[#2a2b3a] my-12"></div>
-
-        <div className="grid md:grid-cols-3 gap-8">
-
-          <div className="mb-4 text-white">
-            <div className="flex items-center gap-3">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" className="w-5 h-5 fill-current">
-                <path d="M87 481.8h73.7v-73.6H87zM25.4 346.6v61.6H87v-61.6zm466.2-169.7c-23-74.2-82.4-133.3-156.6-156.6C164.9-32.8 8 93.7 8 255.9h95.8c0-101.8 101-180.5 208.1-141.7 39.7 14.3 71.5 46.1 85.8 85.7 39.1 107-39.7 207.8-141.4 208v.3h-.3V504c162.6 0 288.8-156.8 235.6-327.1zm-235.3 231v-95.3h-95.6v95.6H256v-.3z" />
-              </svg>
-              <h5 className="text-[1.05rem] leading-[1.142857143]">DIGITAL MARKETING</h5>
-            </div>
-            <p className="mt-4 text-[#dfe1f4d7] text-[14.4px]">
-              Results-driven digital marketing: SEO, social media, PPC, branding, and growth.
-            </p>
-          </div>
-
-          <div className="mb-4 text-white">
-            <div className="flex items-center gap-3">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" className="w-5 h-5 fill-current">
-                <path d="M0 336c0 79.5 64.5 144 144 144l368 0c70.7 0 128-57.3 128-128c0-61.9-44-113.6-102.4-125.4c4.1-10.7 6.4-22.4 6.4-34.6c0-53-43-96-96-96c-19.7 0-38.1 6-53.3 16.2C367 64.2 315.3 32 256 32C167.6 32 96 103.6 96 192c0 2.7 .1 5.4 .2 8.1C40.2 219.8 0 273.2 0 336z" />
-              </svg>
-              <h5 className="text-[1.05rem] leading-[1.142857143]">CLOUD HOSTING</h5>
-            </div>
-            <p className="mt-4 text-[#dfe1f4d7] text-[14.4px]">
-              Reliable cloud hosting: Secure, scalable, fast, cost-effective, and high-performance.
-            </p>
-          </div>
-
-          <div className="mb-4 text-white">
-            <div className="flex items-center gap-3">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" className="w-5 h-5 fill-current">
-                <path d="M352 256c0 22.2-1.2 43.6-3.3 64l-185.3 0c-2.2-20.4-3.3-41.8-3.3-64s1.2-43.6 3.3-64l185.3 0c2.2 20.4 3.3 41.8 3.3 64zm28.8-64l123.1 0c5.3 20.5 8.1 41.9 8.1 64s-2.8 43.5-8.1 64l-123.1 0c2.1-20.6 3.2-42 3.2-64s-1.1-43.4-3.2-64zm112.6-32l-116.7 0c-10-63.9-29.8-117.4-55.3-151.6c78.3 20.7 142 77.5 171.9 151.6zm-149.1 0l-176.6 0c6.1-36.4 15.5-68.6 27-94.7c10.5-23.6 22.2-40.7 33.5-51.5C239.4 3.2 248.7 0 256 0s16.6 3.2 27.8 13.8c11.3 10.8 23 27.9 33.5 51.5c11.6 26 20.9 58.2 27 94.7zm-209 0L18.6 160C48.6 85.9 112.2 29.1 190.6 8.4C165.1 42.6 145.3 96.1 135.3 160zM8.1 192l123.1 0c-2.1 20.6-3.2 42-3.2 64s1.1 43.4 3.2 64L8.1 320C2.8 299.5 0 278.1 0 256s2.8-43.5 8.1-64zM194.7 446.6c-11.6-26-20.9-58.2-27-94.6l176.6 0c-6.1 36.4-15.5 68.6-27 94.6c-10.5 23.6-22.2 40.7-33.5 51.5C272.6 508.8 263.3 512 256 512s-16.6-3.2-27.8-13.8c-11.3-10.8-23-27.9-33.5-51.5zM135.3 352c10 63.9 29.8 117.4 55.3 151.6C112.2 482.9 48.6 426.1 18.6 352l116.7 0zm358.1 0c-30 74.1-93.6 130.9-171.9 151.6c25.5-34.2 45.2-87.7 55.3-151.6l116.7 0z" />
-              </svg>
-              <h5 className="text-[1.05rem] leading-[1.142857143]">WEB HOSTING</h5>
-            </div>
-            <p className="mt-4 text-[#dfe1f4d7] text-[14.4px]">
-              Fast and secure web hosting: Reliable, scalable, affordable, and high-performance.
-            </p>
-          </div>
-
-        </div>
-
       </div>
-    </div>
+
+    </>
   );
 };
 

@@ -458,9 +458,11 @@ export default function GetInTouch() {
 function Supportleft() {
   return (
     <>
-      <section className="flex container">
-        <div className="relative w-full lg:w-2/4 mx-4 sm:mx-8 md:mx-12 lg:mx-28 xl:mx-32 my-6 sm:my-8 md:my-10 lg:my-12 xl:my-14 before:content-[''] before:absolute before:w-full before:h-[100%] before:-z-10 before:rounded-[25px] before:bg-[radial-gradient(170%_130%_at_50%_100%,transparent_6%,#6633ee_100%,#000000_0px)] dark:before:bg-[radial-gradient(170%_130%_at_50%_100%,transparent_0%,#4422cc_100%,#222222_0px)]">
-          <div className="p-7 xs:p-[70px] sm:p-[70px] md:p-[70px] lg:p-[70px] xl:p-[70px]">
+      <section className="flex flex-col lg:flex-row container">
+        <div className="relative w-full lg:w-2/4 mx-4 sm:mx-8 md:mx-12 lg:mx-28 xl:mx-32 my-6 sm:my-8 md:my-10 lg:my-12 xl:my-14 before:content-[''] before:absolute before:w-full before:h-[100%] before:-z-10 before:rounded-[25px] before:bg-[radial-gradient(170%_130%_at_50%_100%,#00000000_0%,#6633ee_100%,#000000_100%)] dark:before:bg-[radial-gradient(170%_130%_at_50%_100%,#00000000_0%,#4422cc_100%,#222222_100%)]">
+
+
+          <div className="p-7 ">
             <h2 className="uppercase text-[55px] text-white text-gray-900 dark:text-white" >
               Contact info
             </h2>
@@ -551,10 +553,12 @@ function Supportleft() {
             </div>
           </div>
         </div>
-        <div className="w-full lg:w-2/4 flex  items-center justify-center">
+
+        <div className="w-full lg:w-2/4 flex items-center justify-center mt-8 lg:mt-0">
           <SignupFormDemo />
         </div>
       </section>
+
     </>
   );
 }
@@ -565,7 +569,7 @@ function Supportleft() {
     console.log('Form submitted');
   };
   return (
-    <div className="max-w-md w-full mx-auto rounded-none md:rounded-2xl   shadow-input bg-white dark:bg-black">
+    <div className="max-w-md w-fit mx-auto rounded-none md:rounded-2xl p-7  shadow-input bg-white dark:bg-black">
       <h2 className="uppercase text-[55px] text-gray-900 dark:text-white">
         Let's Connect
       </h2>

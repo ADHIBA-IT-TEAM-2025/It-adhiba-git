@@ -48,55 +48,55 @@ export const AnimatedTestimonials = ({
   const getRotateY = (index: number) => rotationValues[index] ?? 0;
 
   return (
-    <div className="max-w-sm md:max-w-4xl mx-auto antialiased font-sans px-4 md:px-8 lg:px-12 py-20">
+    <div className="max-w-sm md:max-w-4xl mx-auto antialiased font-sans px-4 md:px-8 lg:px-12 py-20" style={{ zIndex: "0" }}>
       <div className="relative grid grid-cols-2 md:grid-cols-2 gap-20">
-        <div>
-          <div className="relative h-100 w-125 ml-10">
-            <AnimatePresence>
-              {testimonials.map((testimonial, index) => (
-                <motion.div
-                  key={testimonial.src}
-                  initial={{
-                    opacity: 0,
-                    scale: 0.9,
-                    z: -100,
-                    rotate: getRotateY(index),
-                  }}
-                  animate={{
-                    opacity: isActive(index) ? 1 : 0.7,
-                    scale: isActive(index) ? 1 : 0.95,
-                    z: isActive(index) ? 0 : -100,
-                    rotate: isActive(index) ? 0 : getRotateY(index),
-                    zIndex: isActive(index)
-                      ? 999
-                      : testimonials.length + 2 - index,
-                    y: isActive(index) ? [0, -80, 0] : 0,
-                  }}
-                  exit={{
-                    opacity: 0,
-                    scale: 0.9,
-                    z: 100,
-                    rotate: getRotateY(index),
-                  }}
-                  transition={{
-                    duration: 0.4,
-                    ease: 'easeInOut',
-                  }}
-                  className="absolute inset-0 origin-bottom"
-                >
-                  <Image
-                    src={testimonial.src}
-                    alt="slider"
-                    width={500}
-                    height={500}
-                    draggable={false}
-                    className="h-full w-full rounded-3xl object-cover object-center"
-                  />
-                </motion.div>
-              ))}
-            </AnimatePresence>
-          </div>
+
+        <div className="relative h-60 sm:h-80 md:h-96 lg:h-[28rem] w-64 sm:w-80 md:w-96 lg:w-[32rem] ml-10">
+          <AnimatePresence>
+            {testimonials.map((testimonial, index) => (
+              <motion.div
+                key={testimonial.src}
+                initial={{
+                  opacity: 0,
+                  scale: 0.9,
+                  z: -100,
+                  rotate: getRotateY(index),
+                }}
+                animate={{
+                  opacity: isActive(index) ? 1 : 0.7,
+                  scale: isActive(index) ? 1 : 0.95,
+                  z: isActive(index) ? 0 : -100,
+                  rotate: isActive(index) ? 0 : getRotateY(index),
+                  zIndex: isActive(index)
+                    ? 999
+                    : testimonials.length + 2 - index,
+                  y: isActive(index) ? [0, -80, 0] : 0,
+                }}
+                exit={{
+                  opacity: 0,
+                  scale: 0.9,
+                  z: 100,
+                  rotate: getRotateY(index),
+                }}
+                transition={{
+                  duration: 0.4,
+                  ease: 'easeInOut',
+                }}
+                className="absolute inset-0 origin-bottom"
+              >
+                <Image
+                  src={testimonial.src}
+                  alt="slider"
+                  width={500}
+                  height={500}
+                  draggable={false}
+                  className="h-full w-full rounded-3xl object-cover object-center"
+                />
+              </motion.div>
+            ))}
+          </AnimatePresence>
         </div>
+
         <div className="flex justify-between flex-col py-4">
           <motion.div
             key={active}

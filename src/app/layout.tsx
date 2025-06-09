@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import { ThemeProvider } from '../components/shadcn/ui/theme-provider';
-import SmoothScrollWrapper from '@/components/B-components/LANDING/useSmoothScroll';
 import HEADERIT from '@/components/A-header/header';
 import { Footerit } from '@/components/A-header/footer';
 
@@ -22,11 +21,9 @@ export default function RootLayout({ children, }: { children: React.ReactNode; }
           enableSystem
           disableTransitionOnChange
         >
-          <SmoothScrollWrapper>
             <HEADERIT />
             <main>{children}</main>
             <Footerit />
-          </SmoothScrollWrapper>
         </ThemeProvider>
       </body>
     </html>

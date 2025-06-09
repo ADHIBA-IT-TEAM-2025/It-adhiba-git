@@ -1,19 +1,22 @@
-
-.styles_background__rbhqc:before {
+.styles_background__rbhqc::before {
   top: 50px;
   left: 0;
   content: '';
   width: 100%;
-  border-radius: 50px 50px 0 0 !important;
   height: 400px;
   z-index: -1;
   position: absolute;
-  border-radius: var(--token-48);
-  background: linear-gradient(
-    to bottom,
-    rgba(49, 57, 133, 0.56) 0%,
-    #000000 100%
-  );
+  border-radius: 50px 50px 0 0 !important;
+  background: linear-gradient(to bottom,
+      rgba(49, 57, 133, 0.56) 0%,
+      #ffffff 100%);
+}
+
+/* Dark Theme when using Tailwind's `class` strategy */
+.dark .styles_background__rbhqc::before {
+  background: linear-gradient(to bottom,
+      rgba(28, 28, 43, 0.7) 0%,
+      #0a0622 100%);
 }
 
 .styles_section__h_NXB {
@@ -33,7 +36,6 @@
     margin: auto;
   }
   .styles_container__IFQFq {
-      padding:0.2rem 10rem;
     display: flex;
   }
   @media (min-width: 1200px) and (max-width: 1499px) {

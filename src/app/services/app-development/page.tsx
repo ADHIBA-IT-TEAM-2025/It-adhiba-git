@@ -25,7 +25,6 @@ import cardRightimg from "../../../assets/Web-dev/card-right-img.png"
 export default function Appdevelopment() {
   return (
     <>
-      {/* <Mobileview /> */}
       <Parallaloppimg />
     </>
   );
@@ -38,12 +37,12 @@ function Parallaloppimg() {
       <section>
         <div className="mt-12 relative z-20 flex flex-col items-center justify-center space-y-6 px-6 md:py-14">
           <motion.h1
-            className="text-3xl md:text-6xl font-semibold text-center bg-gradient-to-r from-purple-50 via-neutral-400 to-transparent bg-clip-text text-transparent max-w-2xl"
+            className="text-3xl md:text-6xl font-semibold text-center bg-gradient-to-r from-purple-50 via-neutral-400 to-transparent bg-clip-text text-transparent max-w-3xl"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            Build product of the future with Data
+            Custom App Development for Businesses
           </motion.h1>
           <motion.p
             className="text-sm md:text-base text-center text-purple-50 max-w-md"
@@ -51,7 +50,9 @@ function Parallaloppimg() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
           >
-            We are on a mission to build data products that collectively help businesses create products of the future.
+           We design and develop apps that deliver seamless performance and intuitive user experiences.
+
+
           </motion.p>
 
           <button className="relative inline-block p-px font-semibold leading-6 text-white no-underline bg-[#ffffff44] shadow-2xl cursor-pointer group rounded-xl shadow-zinc-900">
@@ -80,10 +81,10 @@ function Parallaloppimg() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mb-14 text-center">
             <h2 className="text-4xl font-bold leading-[3.25rem] mb-6 text-gray-900 dark:text-white lg:max-w-3xl mx-auto">
-              Developed from scratch for seamless online functionality
+              Built from the ground up for Digital excellence
             </h2>
             <p className="text-base font-normal text-gray-500 dark:text-gray-300 lg:max-w-2xl mx-auto mb-8">
-              Using technology to make finance simpler, smarter and more rewarding.
+              Empowering businesses with custom web solutions that are fast, flexible, and future-ready.
             </p>
             <div className="flex flex-col justify-center md:flex-row gap-5 max-w-lg mx-auto md:max-w-2xl lg:max-w-full">
               <a
@@ -116,10 +117,10 @@ function Parallaloppimg() {
                     </svg>
                   </div>
                   <h3 className="text-lg font-bold xl:text-xl text-white py-5 w-full xl:w-64">
-                    Accomplish tasks swiftly with online tools.
+                  Custom Solutions for Every Business
                   </h3>
                   <p className="text-xs font-normal text-gray-300 w-full mb-8 xl:w-64">
-                    Get quoted and covered in under 10 minutes online. No paperwork or waiting anymore.
+                  We build scalable websites tailored to your unique goals and audience needs.
                   </p>
                   <button className="py-2 px-5 border border-gray-300 rounded-full gap-2 text-xs text-white font-semibold flex items-center justify-between transition-all duration-500 hover:bg-white/5">
                     View More
@@ -152,8 +153,9 @@ function Parallaloppimg() {
                     />
                   </svg>
                 </div>
-                <h3 className="py-5 text-white text-lg font-bold xl:text-xl">Improved technology yields greater value</h3>
-                <p className="text-xs font-normal text-white mb-8">We’ve eliminated old analog processes with state-of-the-art tech.</p>
+                <h3 className="py-5 text-white text-lg font-bold xl:text-xl">Fast Websites on All Devices
+                </h3>
+                <p className="text-xs font-normal text-white mb-8">Optimized for speed and responsiveness to provide smooth user experiences everywhere.</p>
                 <button className="py-2 px-5 border border-gray-300 rounded-full gap-2 text-xs text-white font-semibold flex items-center justify-between transition-all duration-500 hover:bg-white/5">
                   View More
                   <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -176,8 +178,8 @@ function Parallaloppimg() {
                     />
                   </svg>
                 </div>
-                <h3 className="py-5 text-white text-lg font-bold xl:text-xl">Build wealth with insurance planning</h3>
-                <p className="text-xs font-normal text-white mb-8">Every life plan policy has a built-in wealth bonus, and we contribute too.</p>
+                <h3 className="py-5 text-white text-lg font-bold xl:text-xl">Secure Code Protects Your Data</h3>
+                <p className="text-xs font-normal text-white mb-8">Following best practices to keep your site safe and users confident always.</p>
                 <button className="py-2 px-5 border border-gray-300 rounded-full gap-2 text-xs text-white font-semibold flex items-center justify-between transition-all duration-500 hover:bg-white/5">
                   View More
                   <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -219,18 +221,18 @@ function Parallaloppimg() {
           <div className="w ug hb id kl oo">
             <div className="fc re co ho">
               <div className="gh rl xo">
-                <h2 className="oh th zh tl ep cq">Become an early adopter of our app.</h2>
-                <p className="qb ph th zh ck yl">Keep control on your projects. Don't make the mistakes again & again.</p>
+                <h2 className="oh th zh tl ep cq">Innovative Solutions to Drive Success</h2>
+                <p className="qb ph th zh ck yl">Empowering your business with technology that’s fast, flexible, and reliable.</p>
                 <p className="pb ph th zh yl dk">Join Landingfolio to:</p>
                 <ul className="ob mf">
                   <li className="cc ve ph th di">
-                    <span className="ac ph">💸</span> Get 10 Web & Mobile UI Inspirations Every Week
+                    <span className="ac ph">💸</span>Seamless Integration Made Simple
                   </li>
                   <li className="cc ve ph th di">
-                    <span className="ac ph">🎁</span> Exclusive Discount on Design Resources
+                    <span className="ac ph">🎁</span>User Experience at Core
                   </li>
                   <li className="cc ve ph th di">
-                    <span className="ac ph">⌛️</span> 3 Random Subscribers will Get Featured on Emails
+                    <span className="ac ph">⌛️</span>Reliable Support and Maintenance
                   </li>
                 </ul>
 
@@ -298,7 +300,7 @@ function Parallaloppimg() {
                     <button
                       className="accordion-toggle group inline-flex items-center justify-between text-xl font-normal leading-8 text-gray-600 dark:text-gray-300 w-full transition duration-500 hover:text-indigo-600 dark:hover:text-indigo-400 accordion-active:text-indigo-600 accordion-active:font-medium"
                     >
-                      <h5>How to create an account?</h5>
+                      <h5>How do I start app development?</h5>
                       <svg
                         className="text-gray-900 dark:text-white transition duration-500 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 accordion-active:rotate-180"
                         width="22"
@@ -312,9 +314,7 @@ function Parallaloppimg() {
                     </button>
                     <div className="accordion-content w-full px-0 overflow-hidden pr-4 active" style={{maxHeight: "100px;"}}>
                       <p className="text-base font-normal text-gray-600 dark:text-gray-400">
-                        To create an account, find the 'Sign up' or 'Create account' button, fill out the registration
-                        form with your personal information, and click 'Create account' or 'Sign up.' Verify your email
-                        address if needed, and then log in to start using the platform.
+                        To begin, contact us via the inquiry form or call. We discuss your requirements, plan the project, and start designing your custom app solution.
                       </p>
                     </div>
                   </div>
@@ -322,7 +322,7 @@ function Parallaloppimg() {
                     <button
                       className="accordion-toggle group inline-flex items-center justify-between text-xl font-normal leading-8 text-gray-600 dark:text-gray-300 w-full transition duration-500 hover:text-indigo-600 dark:hover:text-indigo-400 accordion-active:font-medium"
                     >
-                      <h5>Have any trust issue?</h5>
+                      <h5>Can I trust your development process?</h5>
                       <svg
                         className="text-gray-900 dark:text-white transition duration-500 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 accordion-active:rotate-180"
                         width="22"
@@ -336,8 +336,7 @@ function Parallaloppimg() {
                     </button>
                     <div className="accordion-content w-full px-0 overflow-hidden pr-4">
                       <p className="text-base font-normal text-gray-600 dark:text-gray-400">
-                        Our focus on providing robust and user-friendly content management capabilities ensures that you
-                        can manage your content with confidence, and achieve your content marketing goals with ease.
+                       Absolutely! We follow industry best practices, maintain transparent communication, and ensure your app is delivered on time with full quality assurance.
                       </p>
                     </div>
                   </div>
@@ -346,7 +345,7 @@ function Parallaloppimg() {
                     <button
                       className="accordion-toggle group inline-flex items-center justify-between text-xl font-normal leading-8 text-gray-600 dark:text-gray-300 w-full transition duration-500 hover:text-indigo-600 dark:hover:text-indigo-400 accordion-active:font-medium"
                     >
-                      <h5>How can I reset my password?</h5>
+                      <h5>How do I request changes or updates?</h5>
                       <svg
                         className="text-gray-900 dark:text-white transition duration-500 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 accordion-active:rotate-180"
                         width="22"
@@ -360,8 +359,7 @@ function Parallaloppimg() {
                     </button>
                     <div className="accordion-content w-full px-0 overflow-hidden pr-4">
                       <p className="text-base font-normal text-gray-600 dark:text-gray-400">
-                        You can reset your password by clicking the 'Forgot password?' link on the login page. Follow the
-                        instructions in the email you receive to set a new password securely.
+                        You can request updates anytime through our support portal or email. We prioritize your feedback to continuously improve your app.
                       </p>
                     </div>
                   </div>
@@ -385,8 +383,7 @@ function Parallaloppimg() {
                     </button>
                     <div className="accordion-content w-full px-0 overflow-hidden pr-4">
                       <p className="text-base font-normal text-gray-600 dark:text-gray-400">
-                        We support multiple secure payment gateways. Choose your preferred method, follow the on-screen
-                        instructions, and complete your transaction. A receipt will be sent to your email.
+                       Payments are made via secure channels, typically in milestones. You receive invoices and receipts for every transaction for full transparency.
                       </p>
                     </div>
                   </div>

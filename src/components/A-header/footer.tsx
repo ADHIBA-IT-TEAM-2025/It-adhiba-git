@@ -56,7 +56,7 @@ export function Footerit() {
           <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-[#313985] to-transparent dark:from-black"></div>
         </div>
 
-        <section className="container mx-auto mt-20 mb-20 relative bg-cover bg-center" style={{ padding: '0 8%' }}>
+        <section className="container mx-auto mt-12 mb-12 relative bg-cover bg-center" style={{ padding: '0 8%' }}>
           <div className="flex flex-wrap">
 
             {/* Company */}

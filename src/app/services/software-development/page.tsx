@@ -24,7 +24,7 @@ const Softwaredevelopment = () => {
             <div className="jp hq fr sp sq mq vq">
               <div className="kh jb nm jr fp ip qr">
                 <p className="ki ri wi yi">Level up with</p>
-                <h2 className="ob mi ri xi gl dn ds ht"><span className="zi dh ah bh ch">Connect apps</span>with CRM</h2>
+                <h2 className="ob mi ri xi gl dn ds ht"><span className="zi dh ah bh ch">Powerful Software Built </span>Results</h2>
 
                 <ul className="rb vf hm dl">
                   <li className="ic ef">
@@ -34,8 +34,8 @@ const Softwaredevelopment = () => {
                       </svg>
                     </div>
                     <div className="dc">
-                      <h3 className="ji ri xi">1200+ Premium Apps</h3>
-                      <p className="vb li ri yi">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
+                      <h3 className="ji ri xi">Custom Software Solutions</h3>
+                      <p className="vb li ri yi">We design and develop software that perfectly aligns with your business needs, ensuring flexibility, scalability, and long-term value.</p>
                     </div>
                   </li>
 
@@ -46,8 +46,8 @@ const Softwaredevelopment = () => {
                       </svg>
                     </div>
                     <div className="dc">
-                      <h3 className="ji ri xi">Control Directly from Dashboard</h3>
-                      <p className="vb li ri yi">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
+                      <h3 className="ji ri xi">Agile Development Process</h3>
+                      <p className="vb li ri yi">Our agile approach ensures faster delivery, adaptive planning, continuous improvement, and collaboration throughout every phase of development.</p>
                     </div>
                   </li>
                 </ul>
@@ -132,8 +132,8 @@ function FeatureCarouselDemo() {
 
       <div className="relative flex flex-col items-center justify-center mt-20">
         <div className="flex flex-col items-center text-center space-y-4">
-          <h2 className="text-white" style={{ fontSize: "40px" }}>We are a team of passionate people</h2>
-          <p className="text-lg text-gray-400">We are on a mission to build data products that collectively help businesses</p>
+          <h2 className="text-white" style={{ fontSize: "40px" }}>Agile Development Process That Ensures Quality</h2>
+          <p className="text-lg text-gray-400">Fast, adaptive, and collaborative development for better product outcomes.</p>
         </div>
         <CardHoverEffectDemo />
       </div>
@@ -157,7 +157,7 @@ function FeatureCarouselDemo() {
       </div>
       <div className="px-4 py-10 md:py-20">
         <h1 className="relative z-10 mx-auto max-w-4xl text-center text-2xl font-bold text-slate-700 md:text-4xl lg:text-7xl dark:text-slate-300">
-          {"Launch your website in hours, not days"
+          {"Building Scalable, Efficient Software Solutions"
             .split(" ")
             .map((word, index) => (
               <motion.span
@@ -188,9 +188,7 @@ function FeatureCarouselDemo() {
           }}
           className="relative z-10 mx-auto max-w-xl py-4 text-center text-lg font-normal text-neutral-600 dark:text-neutral-400"
         >
-          With AI, you can launch your website in hours, not days. Try our best
-          in class, state of the art, cutting edge AI tools to get your website
-          up.
+          We deliver custom software solutions that enhance efficiency, scalability, and innovation for your business growth.
         </motion.p>
         <motion.div
           initial={{

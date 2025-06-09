@@ -14,7 +14,7 @@ import './videosec.css';
 
 export function CardHoverEffectDemo() {
     return (
-        <div className="w-[1300px] mx-auto px-8 mt-15 mb-15">
+        <div className="max-w-7xl mx-auto mt-5 mb-10">
             <HoverEffect items={projects} />
         </div>
     );
@@ -22,45 +22,45 @@ export function CardHoverEffectDemo() {
 
 export const projects = [
     {
-        title: "Stripe",
+        title: "Design",
         description:
-            "A technology company that builds economic infrastructure for the internet.",
-        link: "https://stripe.com",
+            "We create visually stunning, user-focused designs that deliver intuitive and memorable online experiences.",
+        link: "#",
         img: require("../../../assets/Web-dev/ICON-1.png"),
     },
     {
-        title: "Netflix",
+        title: "Development",
         description:
-            "A streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices.",
-        link: "https://netflix.com",
+            "Our expert developers build scalable, high-performing websites tailored to your business goals and needs.",
+        link: "#",
         img: require("../../../assets/Web-dev/ICON-2.png"),
     },
     {
-        title: "Google",
+        title: "Responsive",
         description:
-            "A multinational technology company that specializes in Internet-related services and products.",
-        link: "https://google.com",
+            "Every website we build adapts beautifully across all devices, ensuring a consistent user experience.",
+        link: "#",
         img: require("../../../assets/Web-dev/ICON-3.png"),
     },
     {
-        title: "Meta",
+        title: "Optimization",
         description:
-            "A technology company that focuses on building products that advance Facebook's mission of bringing the world closer together.",
-        link: "https://meta.com",
+            "We optimize your site for speed, SEO, and conversions to boost visibility and engagement.",
+        link: "#",
         img: require("../../../assets/Web-dev/ICON-4.png"),
     },
     {
-        title: "Amazon",
+        title: "Security",
         description:
-            "A multinational technology company focusing on e-commerce, cloud computing, digital streaming, and artificial intelligence.",
-        link: "https://amazon.com",
+            "Robust security measures protect your site and data, ensuring peace of mind for you.",
+        link: "#",
         img: require("../../../assets/Web-dev/ICON-5.png"),
     },
     {
-        title: "Microsoft",
+        title: "Support",
         description:
-            "A multinational technology company that develops, manufactures, licenses, supports, and sells computer software, consumer electronics, personal computers, and related services.",
-        link: "https://microsoft.com",
+            "We offer ongoing support and maintenance to keep your website running smoothly and efficiently.",
+        link: "#",
         img: require("../../../assets/Web-dev/ICON-6.png"),
     },
 ];
@@ -227,13 +227,13 @@ export function Landingtwo() {
 
                     {/* Heading */}
                     <h1 className="max-w-2xl mx-auto text-center font-manrope font-bold text-4xl text-gray-900 dark:text-white mb-5 md:text-5xl leading-[50px]">
-                        Control your Finances with our
-                        <span className="text-indigo-600 dark:text-indigo-400"> Smart Tool </span>
+                        Custom Web Development that
+                        <span className="text-indigo-600 dark:text-indigo-400"> Elevates Your Brand </span>
                     </h1>
 
                     {/* Paragraph */}
                     <p className="max-w-sm mx-auto text-center text-base font-normal leading-7 text-gray-500 dark:text-gray-300 mb-9">
-                        Invest intelligently and discover a better way to manage your entire wealth easily.
+                        We build tailored websites that engage users and grow your digital presence effortlessly.
                     </p>
 
                     {/* CTA Button */}
@@ -241,7 +241,7 @@ export function Landingtwo() {
                         href="#"
                         className="w-full md:w-auto mb-14 inline-flex items-center justify-center py-3 px-7 text-base font-semibold text-center text-white rounded-full bg-indigo-600 shadow-xs hover:bg-indigo-700 transition-all duration-500"
                     >
-                        Create an account
+                        Know More
                         <svg
                             className="ml-2"
                             width="20"
@@ -272,20 +272,45 @@ export function Landingtwo() {
             </section>
 
 
-            <CardHoverEffectDemo />
 
-
-            <section className="py-24 bg-white dark:bg-gray-900 transition-colors duration-500">
+            <section className="py-24 bg-white dark:bg-[#000] transition-colors duration-500">
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                     <div className="mb-10 lg:mb-16 flex justify-center items-center flex-col gap-x-0 gap-y-6 lg:gap-y-0 lg:flex-row lg:justify-between max-md:max-w-lg max-md:mx-auto">
                         <div className="relative w-full text-center lg:text-left lg:w-2/4">
                             <h2 className="text-4xl font-bold text-gray-900 dark:text-white leading-[3.25rem] lg:mb-6 mx-auto max-w-max lg:max-w-md lg:mx-0">
-                                Enjoy the finest features with our products
+                                Enjoy the finest features with our solutions
                             </h2>
                         </div>
                         <div className="relative w-full text-center lg:text-left lg:w-2/4">
                             <p className="text-lg font-normal text-gray-500 dark:text-gray-300 mb-5">
-                                We provide all the advantages that can simplify all your financial transactions without any further requirements
+                                We build modern, feature-rich websites and applications designed to enhance user experience, boost engagement, and simplify your business operations
+                            </p>
+                            <a href="#" className="flex flex-row items-center justify-center gap-2 text-base font-semibold text-indigo-600 dark:text-indigo-400 lg:justify-start hover:text-indigo-700 dark:hover:text-indigo-300">
+                                Button CTA
+                                <svg width="20" height="20" fill="none" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.5 15L11.0858 11.4142C11.7525 10.7475 12.0858 10.4142 12.0858 10C12.0858 9.58579 11.7525 9.25245 11.0858 8.58579L7.5 5"
+                                        stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <CardHoverEffectDemo />
+
+                </div>
+            </section>
+
+            <section className="py-24 bg-white dark:bg-black transition-colors duration-500">
+                <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                    <div className="mb-10 lg:mb-16 flex justify-center items-center flex-col gap-x-0 gap-y-6 lg:gap-y-0 lg:flex-row lg:justify-between max-md:max-w-lg max-md:mx-auto">
+                        <div className="relative w-full text-center lg:text-left lg:w-2/4">
+                            <h2 className="text-4xl font-bold text-gray-900 dark:text-white leading-[3.25rem] lg:mb-6 mx-auto max-w-max lg:max-w-md lg:mx-0">
+                                Seamless digital experiences, built for results
+                            </h2>
+                        </div>
+                        <div className="relative w-full text-center lg:text-left lg:w-2/4">
+                            <p className="text-lg font-normal text-gray-500 dark:text-gray-300 mb-5">
+                                Our web solutions are crafted for speed, scalability, and efficiency—making your online presence not just look great but perform flawlessly across all devices and browsers.
                             </p>
                             <a href="#" className="flex flex-row items-center justify-center gap-2 text-base font-semibold text-indigo-600 dark:text-indigo-400 lg:justify-start hover:text-indigo-700 dark:hover:text-indigo-300">
                                 Button CTA
@@ -307,9 +332,9 @@ export function Landingtwo() {
                                         stroke="#4F46E5" strokeWidth="2" />
                                 </svg>
                             </div>
-                            <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-3 capitalize transition-all duration-500 group-hover:text-white">Easy Payment</h4>
+                            <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-3 capitalize transition-all duration-500 group-hover:text-white">Speed</h4>
                             <p className="text-sm font-normal text-gray-500 dark:text-gray-300 transition-all duration-500 leading-5 group-hover:text-white">
-                                We provide various methods for you to carry out all transactions related to your finances.
+                                Experience lightning-fast transactions designed to save your time and increase efficiency.
                             </p>
                         </div>
                         <div className="group relative w-full bg-gray-100 dark:bg-gray-800 rounded-2xl p-4 transition-all duration-500 max-md:max-w-md max-md:mx-auto md:w-2/5 md:h-64 xl:p-7 xl:w-1/4 hover:bg-indigo-600">
@@ -320,9 +345,9 @@ export function Landingtwo() {
                                         stroke="#4F46E5" strokeWidth="2" />
                                 </svg>
                             </div>
-                            <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-3 capitalize transition-all duration-500 group-hover:text-white">Easy Payment</h4>
+                            <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-3 capitalize transition-all duration-500 group-hover:text-white">Access</h4>
                             <p className="text-sm font-normal text-gray-500 dark:text-gray-300 transition-all duration-500 leading-5 group-hover:text-white">
-                                We provide various methods for you to carry out all transactions related to your finances.
+                                Enjoy secure access to your data anytime, anywhere, with complete peace of mind.
                             </p>
                         </div>
                         <div className="group relative w-full bg-gray-100 dark:bg-gray-800 rounded-2xl p-4 transition-all duration-500 max-md:max-w-md max-md:mx-auto md:w-2/5 md:h-64 xl:p-7 xl:w-1/4 hover:bg-indigo-600">
@@ -333,9 +358,9 @@ export function Landingtwo() {
                                         stroke="#4F46E5" strokeWidth="2" />
                                 </svg>
                             </div>
-                            <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-3 capitalize transition-all duration-500 group-hover:text-white">Easy Payment</h4>
+                            <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-3 capitalize transition-all duration-500 group-hover:text-white">Simplicity</h4>
                             <p className="text-sm font-normal text-gray-500 dark:text-gray-300 transition-all duration-500 leading-5 group-hover:text-white">
-                                We provide various methods for you to carry out all transactions related to your finances.
+                                Our solutions are easy to use, making complex financial processes feel effortless.
                             </p>
                         </div>
                         <div className="group relative w-full bg-gray-100 dark:bg-gray-800 rounded-2xl p-4 transition-all duration-500 max-md:max-w-md max-md:mx-auto md:w-2/5 md:h-64 xl:p-7 xl:w-1/4 hover:bg-indigo-600">
@@ -346,9 +371,9 @@ export function Landingtwo() {
                                         stroke="#4F46E5" strokeWidth="2" />
                                 </svg>
                             </div>
-                            <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-3 capitalize transition-all duration-500 group-hover:text-white">Easy Payment</h4>
+                            <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-3 capitalize transition-all duration-500 group-hover:text-white">Support</h4>
                             <p className="text-sm font-normal text-gray-500 dark:text-gray-300 transition-all duration-500 leading-5 group-hover:text-white">
-                                We provide various methods for you to carry out all transactions related to your finances.
+                                Get expert help whenever you need it with our dedicated support team.
                             </p>
                         </div>
 
@@ -358,7 +383,7 @@ export function Landingtwo() {
             </section>
 
 
-            <section className="py-24 relative xl:mr-0 lg:mr-5 mr-0 bg-white dark:bg-gray-900 transition-colors duration-500">
+            <section className="py-24 relative xl:mr-0 lg:mr-5 mr-0 bg-white dark:bg-black transition-colors duration-500">
                 <div className="w-full max-w-7xl px-4 md:px-5 lg:px-5 mx-auto">
                     <div className="w-full justify-start items-center xl:gap-12 gap-10 grid lg:grid-cols-2 grid-cols-1">
 
@@ -371,7 +396,7 @@ export function Landingtwo() {
                                             The Tale of Our Achievement Story
                                         </h2>
                                         <p className="text-gray-500 dark:text-gray-300 text-base font-normal leading-relaxed lg:text-start text-center">
-                                            Our achievement story is a testament to teamwork and perseverance. Together, we've overcome challenges, celebrated victories, and created a narrative of progress and success.
+                                            Our journey in web development reflects true teamwork and dedication. From simple websites to complex platforms, we’ve overcome technical challenges, delivered successful projects, and built long-term trust with our clients.
                                         </p>
                                     </div>
                                 </div>
@@ -379,30 +404,30 @@ export function Landingtwo() {
                                 <div className="w-full flex-col justify-center items-start gap-6 flex">
                                     <div className="w-full justify-start items-center gap-8 grid md:grid-cols-2 grid-cols-1">
                                         <div className="w-full h-full p-3.5 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-700 ease-in-out flex-col justify-start items-start gap-2.5 inline-flex">
-                                            <h4 className="text-gray-900 dark:text-white text-2xl font-bold font-manrope leading-9">33+ Years</h4>
+                                            <h4 className="text-gray-900 dark:text-white text-2xl font-bold font-manrope leading-9">Frontend Magic</h4>
                                             <p className="text-gray-500 dark:text-gray-300 text-base font-normal leading-relaxed">
-                                                Influencing Digital Landscapes Together
+                                                Sleek interfaces built for seamless user experience.
                                             </p>
                                         </div>
                                         <div className="w-full h-full p-3.5 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-700 ease-in-out flex-col justify-start items-start gap-2.5 inline-flex">
-                                            <h4 className="text-gray-900 dark:text-white text-2xl font-bold font-manrope leading-9">125+ Projects</h4>
+                                            <h4 className="text-gray-900 dark:text-white text-2xl font-bold font-manrope leading-9">Strong Backend</h4>
                                             <p className="text-gray-500 dark:text-gray-300 text-base font-normal leading-relaxed">
-                                                Excellence Achieved Through Success
+                                                Strong code runs quietly behind every click.
                                             </p>
                                         </div>
                                     </div>
 
                                     <div className="w-full h-full justify-start items-center gap-8 grid md:grid-cols-2 grid-cols-1">
                                         <div className="w-full p-3.5 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-700 ease-in-out flex-col justify-start items-start gap-2.5 inline-flex">
-                                            <h4 className="text-gray-900 dark:text-white text-2xl font-bold font-manrope leading-9">26+ Awards</h4>
+                                            <h4 className="text-gray-900 dark:text-white text-2xl font-bold font-manrope leading-9">Responsive Design</h4>
                                             <p className="text-gray-500 dark:text-gray-300 text-base font-normal leading-relaxed">
-                                                Our Dedication to Innovation Wins Understanding
+                                                Perfect on mobile, tablet, and desktop too.
                                             </p>
                                         </div>
                                         <div className="w-full h-full p-3.5 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-700 ease-in-out flex-col justify-start items-start gap-2.5 inline-flex">
-                                            <h4 className="text-gray-900 dark:text-white text-2xl font-bold font-manrope leading-9">99% Happy Clients</h4>
+                                            <h4 className="text-gray-900 dark:text-white text-2xl font-bold font-manrope leading-9">Scalable Solutions</h4>
                                             <p className="text-gray-500 dark:text-gray-300 text-base font-normal leading-relaxed">
-                                                Mirrors our Focus on Client Satisfaction.
+                                               We build to grow with your future needs.
                                             </p>
                                         </div>
                                     </div>
@@ -429,7 +454,7 @@ export function Landingtwo() {
             </section>
 
 
-            
+
         </>
     )
 }

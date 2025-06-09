@@ -60,11 +60,14 @@ function MarqueeDemo() {
       <div className="mt-20 text-center">
         <span className="animate-fadeIn">
           <h1 className="text-[55px] font-semibold leading-[115%] text-transparent bg-clip-text bg-gradient-to-r from-white/80 via-white to-white/80 shadow-md">
-            AI that works<br />with your OS
+            Secure Cloud & <br />
+            Web Hosting Solutions
           </h1>
         </span>
         <p className="mt-8 mb-3 text-[16px] font-medium leading-6 text-white/60 shadow-md tracking-wide">
-          Raycast AI combines leading models with powerful <br /> extensions - right on your OS
+          Reliable, fast, and scalable hosting for websites and applications.
+
+
         </p>
         <div className="mt-10 flex justify-center">
           {/* <Button>Contact Us</Button> */}
@@ -156,7 +159,7 @@ function CardHoverEffectDemo() {
 }
 
 
- function Cloudbodydesign() {
+function Cloudbodydesign() {
 
   const [isLoaded, setIsLoaded] = useState(false);
   const [activeTab, setActiveTab] = useState('all');
@@ -169,45 +172,45 @@ function CardHoverEffectDemo() {
   const projects = [
     {
       id: 1,
-      title: 'Brand Identity',
+      title: 'Fast Deployment',
       category: 'branding',
       image: 'https://images.unsplash.com/photo-1634986666676-ec8fd927c23d?q=80&w=2940&auto=format&fit=crop',
-      description: 'Corporate identity design for tech startup',
+      description: 'Launch projects in less time',
     },
     {
       id: 2,
-      title: 'UI/UX Design',
-      category: 'ui',
-      image: 'https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?q=80&w=2940&auto=format&fit=crop',
-      description: 'Mobile app interface design',
-    },
-    {
-      id: 3,
       title: 'Typography',
       category: 'typography',
       image: 'https://images.unsplash.com/photo-1618004912476-29818d81ae2e?q=80&w=2864&auto=format&fit=crop',
       description: 'Custom typeface for luxury brand',
     },
     {
-      id: 4,
-      title: 'Web Design',
+      id: 3,
+      title: 'Secure Systems',
       category: 'ui',
       image: 'https://images.unsplash.com/photo-1547119957-637f8679db1e?q=80&w=2864&auto=format&fit=crop',
-      description: 'E-commerce platform redesign',
+      description: 'Keep data fully protected',
+    },
+    {
+      id: 4,
+      title: ' Cloud Integration',
+      category: 'motion',
+      image: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=2940&auto=format&fit=crop',
+      description: 'Seamless access across platforms',
     },
     {
       id: 5,
-      title: 'Motion Graphics',
-      category: 'motion',
-      image: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=2940&auto=format&fit=crop',
-      description: 'Product launch animation',
+      title: 'Expert Support',
+      category: 'print',
+      image: 'https://images.unsplash.com/photo-1626785774573-4b799315345d?q=80&w=2942&auto=format&fit=crop',
+      description: 'Help when you need',
     },
     {
       id: 6,
-      title: 'Print Design',
+      title: 'Real-time Monitoring',
       category: 'print',
-      image: 'https://images.unsplash.com/photo-1626785774573-4b799315345d?q=80&w=2942&auto=format&fit=crop',
-      description: 'Editorial design for art magazine',
+      image: 'https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?q=80&w=2940&auto=format&fit=crop',
+      description: 'Track performance and uptime',
     },
   ];
 
@@ -224,38 +227,34 @@ function CardHoverEffectDemo() {
         {/* Design 1 */}
         <section id="process" className="py-20 px-6 ">
           <div className="max-w-7xl mx-auto">
-            <h2 className="text-3xl font-light tracking-tight pb-12">Design Process</h2>
+            <h2 className="text-3xl font-light tracking-tight pb-12">Our Process</h2>
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
               <div className="border-t border-zinc-700 pt-6">
                 <span className="text-zinc-500 text-sm">01</span>
-                <h3 className="text-xl mt-2 mb-4">Discovery</h3>
+                <h3 className="text-xl mt-2 mb-4"> Speed</h3>
                 <p className="text-zinc-400">
-                  Understanding your business, audience, and objectives to establish a
-                  solid foundation.
+                  Experience ultra-fast performance with optimized servers that ensure quick load times and smooth user experiences worldwide.
                 </p>
               </div>
               <div className="border-t border-zinc-700 pt-6">
                 <span className="text-zinc-500 text-sm">02</span>
-                <h3 className="text-xl mt-2 mb-4">Strategy</h3>
+                <h3 className="text-xl mt-2 mb-4">Security</h3>
                 <p className="text-zinc-400">
-                  Developing a clear roadmap that aligns design decisions with your
-                  business goals.
+                  Your data is protected with industry-grade encryption, firewalls, and regular monitoring to prevent breaches and threats.
                 </p>
               </div>
               <div className="border-t border-zinc-700 pt-6">
                 <span className="text-zinc-500 text-sm">03</span>
-                <h3 className="text-xl mt-2 mb-4">Design</h3>
+                <h3 className="text-xl mt-2 mb-4">Uptime</h3>
                 <p className="text-zinc-400">
-                  Creating thoughtful, purposeful designs that solve problems and
-                  engage users.
+                  We guarantee 99.9% uptime with redundant systems, so your website stays online without interruptions or downtime issues.
                 </p>
               </div>
               <div className="border-t border-zinc-700 pt-6">
                 <span className="text-zinc-500 text-sm">04</span>
-                <h3 className="text-xl mt-2 mb-4">Implementation</h3>
+                <h3 className="text-xl mt-2 mb-4">Support</h3>
                 <p className="text-zinc-400">
-                  Bringing designs to life with attention to detail and technical
-                  excellence.
+                Our expert support team is available 24/7 to assist with technical issues, updates, and hosting-related concerns.
                 </p>
               </div>
             </div>
@@ -326,8 +325,8 @@ function CardHoverEffectDemo() {
               </div>
               <div className="flex items-center justify-between max-w-[406px] lg:max-w-full w-full lg:px-0">
                 <div>
-                  <h4 className="text-2xl font-manrope font-semibold text-gray-900 dark:text-white mb-1">Sketch</h4>
-                  <p className="font-medium text-lg text-gray-400 dark:text-gray-300">Content Design, Marketing</p>
+                  <h4 className="text-2xl font-manrope font-semibold text-gray-900 dark:text-white mb-1">Growth</h4>
+                  <p className="font-medium text-lg text-gray-400 dark:text-gray-300"> Expand easily as needed</p>
                 </div>
                 <button className="border border-black dark:border-white py-2 px-3.5 rounded-full transition-all duration-300 group-hover:bg-black dark:group-hover:bg-white">
                   <svg className="stroke-black dark:stroke-white transition-all duration-300 group-hover:stroke-white dark:group-hover:stroke-black"
@@ -346,8 +345,8 @@ function CardHoverEffectDemo() {
               </div>
               <div className="flex items-center justify-between max-w-[406px] lg:max-w-full w-full lg:px-0">
                 <div>
-                  <h4 className="text-2xl font-manrope font-semibold text-gray-900 dark:text-white mb-1">Figma</h4>
-                  <p className="font-medium text-lg text-gray-400 dark:text-gray-300">User Interface Design</p>
+                  <h4 className="text-2xl font-manrope font-semibold text-gray-900 dark:text-white mb-1">Launch</h4>
+                  <p className="font-medium text-lg text-gray-400 dark:text-gray-300">Go live with ease</p>
                 </div>
                 <button className="border border-black dark:border-white py-2 px-3.5 rounded-full transition-all duration-300 group-hover:bg-black dark:group-hover:bg-white">
                   <svg className="stroke-black dark:stroke-white transition-all duration-300 group-hover:stroke-white dark:group-hover:stroke-black"
@@ -366,8 +365,8 @@ function CardHoverEffectDemo() {
               </div>
               <div className="flex items-center justify-between max-w-[406px] lg:max-w-full w-full lg:px-0">
                 <div>
-                  <h4 className="text-2xl font-manrope font-semibold text-gray-900 dark:text-white mb-1">Frame.io</h4>
-                  <p className="font-medium text-lg text-gray-400 dark:text-gray-300">User Interface Design</p>
+                  <h4 className="text-2xl font-manrope font-semibold text-gray-900 dark:text-white mb-1">Stability</h4>
+                  <p className="font-medium text-lg text-gray-400 dark:text-gray-300">Stay online without interruption</p>
                 </div>
                 <button className="border border-black dark:border-white py-2 px-3.5 rounded-full transition-all duration-300 group-hover:bg-black dark:group-hover:bg-white">
                   <svg className="stroke-black dark:stroke-white transition-all duration-300 group-hover:stroke-white dark:group-hover:stroke-black"
@@ -382,9 +381,6 @@ function CardHoverEffectDemo() {
           </div>
         </div>
       </section>
-
-
-
     </>
   )
 }

@@ -5,6 +5,7 @@ import HEADERIT from '@/components/A-header/header';
 import Landingit from '@/components/B-components/LANDING/home';
 import { Footerit } from '@/components/A-header/footer';
 import Features from '@/app/services/website-development/features1';
+import { SmoothCursor } from '@/components/ui/SmoothCursor';
 
 export default function Home() {
 
@@ -29,6 +30,7 @@ export default function Home() {
 
   return (
     <div>
+      {/* <SmoothCursor /> */}
       <Landingit />
     </div>
   );

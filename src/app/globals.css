@@ -27,8 +27,12 @@ a {
     --font-mono: var(--font-geist-mono);
 }
 
-html {
-    scroll-behavior: smooth;
+/* For Firefox */
+* {
+    scrollbar-width: thin;
+    /* "auto" or "thin" */
+    scrollbar-color: transparent transparent;
+    /* thumb color track color */
 }
 
 :root {
