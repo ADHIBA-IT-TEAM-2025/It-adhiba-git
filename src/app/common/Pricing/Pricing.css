@@ -60,7 +60,7 @@
     padding: 40px 30px;
     position: sticky;
     top: 72px;
-    background-color: #000000;
+    /* background-color: #000000; */
     height: 15vh;
 }
 
@@ -84,7 +84,7 @@
 }
 
 .section-2 .price p {
-    color: #b5b5bd;
+    /* color: #b5b5bd; */
     margin: 0;
     font-size: 18px;
 }

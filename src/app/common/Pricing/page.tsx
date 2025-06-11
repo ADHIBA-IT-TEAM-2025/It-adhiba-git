@@ -14,6 +14,33 @@ import { PAYMENT_FREQUENCIES, TIERS } from './PricingHeadings/pricingcontents';
 import { ThemeProvider } from 'next-themes';
 import './Pricing.css'
 
+
+const CrossIcon = () => (
+    <svg
+        className="w-3 h-3 text-gray-400 dark:text-gray-500 mx-auto"
+        viewBox="0 0 8 8"
+        fill="currentColor"
+        xmlns="http://www.w3.org/2000/svg"
+    >
+        <circle cx="4" cy="4" r="4" />
+    </svg>
+);
+
+const CorrectIcon = () => (
+    <svg
+        className="w-6 h-6 text-black dark:text-white mx-auto"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+    >
+        <path
+            d="M16.59 7.58L10 14.17L6.41 10.59L5 12L10 17L18 9L16.59 7.58Z"
+            fill="currentColor"
+        />
+    </svg>
+);
+
+
 export default function PricingPlans() {
     const [selectedPaymentFreq, setSelectedPaymentFreq] = useState(
         PAYMENT_FREQUENCIES[0],
@@ -61,108 +88,137 @@ export default function PricingPlans() {
             <section className="section-2">
                 <div className="container">
                     <h2>Individual Service<br />Pricing</h2>
-                    <div className="full-table table">
-                        <div className="tr">
+                    <div className="full-table table ">
+                        <div className="tr ">
                             <div className="td price"></div>
-                            <div className="td price">
+                            <div className="td price bg-white dark:bg-[#0e0e0e] text-black dark:text-white">
                                 <p>Free</p>
                             </div>
-                            <div className="td price">
+                            <div className="td price bg-white dark:bg-[#0e0e0e] text-black dark:text-white">
                                 <p>Pro</p>
                             </div>
-                            <div className="td price">
+                            <div className="td price bg-white dark:bg-[#0e0e0e] text-black dark:text-white">
                                 <p>Team</p>
                             </div>
-                            <div className="td price">
+                            <div className="td price bg-white dark:bg-[#0e0e0e] text-black dark:text-white">
                                 <p>Team Pro</p>
                             </div>
                         </div>
+
                         <div className="tr">
-                            <div className="td feature">Full Acess Library
+                            <div className="td feature">Full Access Library</div>
+                            <div className="td flex justify-center items-center">
+                                <CrossIcon />
                             </div>
-                            <div className="td cross"></div>
-                            <div className="td cross"></div>
-                            <div className="td correct"></div>
-                            <div className="td correct"></div>
+                            <div className="td flex justify-center items-center">
+                                <CrossIcon />
+                            </div>
+                            <div className="td flex justify-center items-center">
+                                <CorrectIcon />
+                            </div>
+                            <div className="td flex justify-center items-center">
+                                <CorrectIcon />
+                            </div>
                         </div>
+
                         <div className="tr">
                             <div className="td feature">Multiple User</div>
-                            <div className="td cross"></div>
-                            <div className="td correct"></div>
-                            <div className="td correct"></div>
-                            <div className="td correct"></div>
+                            <div className="td flex justify-center items-center"><CrossIcon /></div>
+                            <div className="td flex justify-center items-center"><CorrectIcon /></div>
+                            <div className="td flex justify-center items-center"><CorrectIcon /></div>
+                            <div className="td flex justify-center items-center"><CorrectIcon /></div>
                         </div>
+
                         <div className="tr">
                             <div className="td feature">Multiple Order</div>
-                            <div className="td cross"></div>
-                            <div className="td correct"></div>
-                            <div className="td correct"></div>
-                            <div className="td correct"></div>
+                            <div className="td flex justify-center items-center"><CrossIcon /></div>
+                            <div className="td flex justify-center items-center"><CorrectIcon /></div>
+                            <div className="td flex justify-center items-center"><CorrectIcon /></div>
+                            <div className="td flex justify-center items-center"><CorrectIcon /></div>
+                        </div>
+
+                        <div className="tr">
+                            <div className="td feature">24/7 Support</div>
+                            <div className="td flex justify-center items-center"><CorrectIcon /></div>
+                            <div className="td flex justify-center items-center"><CorrectIcon /></div>
+                            <div className="td flex justify-center items-center"><CorrectIcon /></div>
+                            <div className="td flex justify-center items-center"><CorrectIcon /></div>
+                        </div>
+
+                        <div className="tr">
+                            <div className="td feature">Full Access Library</div>
+                            <div className="td flex justify-center items-center"><CrossIcon /></div>
+                            <div className="td flex justify-center items-center"><CrossIcon /></div>
+                            <div className="td flex justify-center items-center"><CorrectIcon /></div>
+                            <div className="td flex justify-center items-center"><CorrectIcon /></div>
+                        </div>
+
+                        <div className="tr">
+                            <div className="td feature">Multiple User</div>
+                            <div className="td flex justify-center items-center"><CrossIcon /></div>
+                            <div className="td flex justify-center items-center"><CrossIcon /></div>
+                            <div className="td flex justify-center items-center"><CorrectIcon /></div>
+                            <div className="td flex justify-center items-center"><CorrectIcon /></div>
                         </div>
                         <div className="tr">
                             <div className="td feature">24/7 Support</div>
-                            <div className="td correct"></div>
-                            <div className="td correct"></div>
-                            <div className="td correct"></div>
-                            <div className="td correct"></div>
+                            <div className="td flex justify-center items-center"><CorrectIcon /></div>
+                            <div className="td flex justify-center items-center"><CorrectIcon /></div>
+                            <div className="td flex justify-center items-center"><CorrectIcon /></div>
+                            <div className="td flex justify-center items-center"><CorrectIcon /></div>
                         </div>
+
                         <div className="tr">
-                            <div className="td feature">Full Acess Library
-                            </div>
-                            <div className="td cross"></div>
-                            <div className="td cross"></div>
-                            <div className="td correct"></div>
-                            <div className="td correct"></div>
+                            <div className="td feature">Full Access Library</div>
+                            <div className="td flex justify-center items-center"><CrossIcon /></div>
+                            <div className="td flex justify-center items-center"><CrossIcon /></div>
+                            <div className="td flex justify-center items-center"><CorrectIcon /></div>
+                            <div className="td flex justify-center items-center"><CorrectIcon /></div>
                         </div>
+
                         <div className="tr">
                             <div className="td feature">Multiple User</div>
-                            <div className="td cross"></div>
-                            <div className="td correct"></div>
-                            <div className="td correct"></div>
-                            <div className="td correct"></div>
-                        </div>
-                        <div className="tr">
-                            <div className="td feature">Multiple Order</div>
-                            <div className="td cross"></div>
-                            <div className="td correct"></div>
-                            <div className="td correct"></div>
-                            <div className="td correct"></div>
+                            <div className="td flex justify-center items-center"><CrossIcon /></div>
+                            <div className="td flex justify-center items-center"><CrossIcon /></div>
+                            <div className="td flex justify-center items-center"><CorrectIcon /></div>
+                            <div className="td flex justify-center items-center"><CorrectIcon /></div>
                         </div>
                         <div className="tr">
                             <div className="td feature">24/7 Support</div>
-                            <div className="td correct"></div>
-                            <div className="td correct"></div>
-                            <div className="td correct"></div>
-                            <div className="td correct"></div>
+                            <div className="td flex justify-center items-center"><CorrectIcon /></div>
+                            <div className="td flex justify-center items-center"><CorrectIcon /></div>
+                            <div className="td flex justify-center items-center"><CorrectIcon /></div>
+                            <div className="td flex justify-center items-center"><CorrectIcon /></div>
                         </div>
+
                         <div className="tr">
-                            <div className="td feature">Full Acess Library
-                            </div>
-                            <div className="td cross"></div>
-                            <div className="td cross"></div>
-                            <div className="td correct"></div>
-                            <div className="td correct"></div>
+                            <div className="td feature">Full Access Library</div>
+                            <div className="td flex justify-center items-center"><CrossIcon /></div>
+                            <div className="td flex justify-center items-center"><CrossIcon /></div>
+                            <div className="td flex justify-center items-center"><CorrectIcon /></div>
+                            <div className="td flex justify-center items-center"><CorrectIcon /></div>
                         </div>
+
                         <div className="tr">
                             <div className="td feature">Multiple User</div>
-                            <div className="td cross"></div>
-                            <div className="td correct"></div>
-                            <div className="td correct"></div>
-                            <div className="td correct"></div>
+                            <div className="td flex justify-center items-center"><CrossIcon /></div>
+                            <div className="td flex justify-center items-center"><CrossIcon /></div>
+                            <div className="td flex justify-center items-center"><CorrectIcon /></div>
+                            <div className="td flex justify-center items-center"><CorrectIcon /></div>
                         </div>
                         <div className="tr">
                             <div className="td feature">Multiple Order</div>
-                            <div className="td cross"></div>
-                            <div className="td correct"></div>
-                            <div className="td correct"></div>
-                            <div className="td correct"></div>
+                            <div className="td flex justify-center items-center"><CrossIcon /></div>
+                            <div className="td flex justify-center items-center"><CrossIcon /></div>
+                            <div className="td flex justify-center items-center"><CorrectIcon /></div>
+                            <div className="td flex justify-center items-center"><CorrectIcon /></div>
                         </div>
                         <div className="tr">
                             <div className="td feature">24/7 Support</div>
-                            <div className="td correct"></div>
-                            <div className="td correct"></div>
-                            <div className="td correct"></div>
-                            <div className="td correct"></div>
+                            <div className="td flex justify-center items-center"><CrossIcon /></div>
+                            <div className="td flex justify-center items-center"><CrossIcon /></div>
+                            <div className="td flex justify-center items-center"><CorrectIcon /></div>
+                            <div className="td flex justify-center items-center"><CorrectIcon /></div>
                         </div>
                         <div className="tr">
                             <div className="td"></div>

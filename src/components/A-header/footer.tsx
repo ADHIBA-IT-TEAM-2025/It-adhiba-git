@@ -47,87 +47,121 @@ export function Footerit() {
       </div>
 
 
+
+      <div className="w-full px-4 sm:px-6 lg:px-8">
+  {/* Header */}
+  <nav
+    aria-label="Global"
+    className="mx-auto max-w-6xl flex items-center justify-between py-3"
+  >
+    {/* Your header content here */}
+  </nav>
+</div>
+
+{/* Main or other sections */}
+
+<div className="w-full px-4 sm:px-6 lg:px-8">
+  {/* Footer or Gradient Section */}
+  <section
+    className="mx-auto max-w-6xl relative w-full overflow-hidden bg-gradient-to-b from-[#222] to-[#000000] dark:from-[#1a1a1a] dark:to-[#000000] group"
+    style={{ borderRadius: '50px 50px 0 0' }}
+  >
+    {/* Your footer/section content here */}
+  </section>
+</div>
+
+
       <section
-        className="relative w-full overflow-hidden bg-gradient-to-b from-[#222] to-[#000000] dark:from-[#1a1a1a] dark:to-[#000000] group"
-        style={{ borderRadius: '50px 50px 0 0' }}
-      >
-        <div className="relative flex w-full flex-col items-center justify-center overflow-hidden bg-cover bg-center">
-          <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-[#313985] to-transparent dark:from-black"></div>
-          <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-[#313985] to-transparent dark:from-black"></div>
-        </div>
+  className="relative w-full overflow-hidden bg-gradient-to-b from-[#222] to-[#000000] dark:from-[#1a1a1a] dark:to-[#000000] group"
+  style={{ borderRadius: '50px 50px 0 0' }}
+>
+  <div className="relative flex w-full flex-col items-center justify-center overflow-hidden bg-cover bg-center">
+    <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-[#313985] to-transparent dark:from-black"></div>
+    <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-[#313985] to-transparent dark:from-black"></div>
+  </div>
 
-        <section className="container mx-auto mt-12 mb-12 relative bg-cover bg-center" style={{ padding: '0 8%' }}>
-          <div className="flex flex-wrap">
+  <section className="container mx-auto mt-12 mb-12 px-4 sm:px-8">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
 
-            {/* Company */}
-            <div className="w-full lg:w-2/12">
-              <Image src={adhibalogo} className="w-40 mt-4" alt="" />
-            </div>
+      {/* Logo */}<div className="flex justify-center lg:justify-start">
+  <Image
+    src={adhibalogo}
+    alt="Adhiba Logo"
+    className="h-12 sm:h-14 mt-2 sm:mt-4 object-contain"
+  />
+</div>
 
-            <div className="w-full lg:w-2/12 text-white dark:text-gray-400 cursor-pointer">
-              <h4 className="mt-5 mb-3 text-lg font-bold text-white dark:text-gray-200">Company</h4>
-              {['Blog', 'Careers', 'Pricing', 'Customers', 'Contact Us'].map((item) => (
-                <p key={item} className="p-1 pl-0 text-sm hover:text-gray-300 dark:hover:text-white transition duration-300">
-                  {item}
-                </p>
-              ))}
-            </div>
 
-            {/* Products */}
-            <div className="w-full lg:w-2/12 text-white dark:text-gray-400 cursor-pointer">
-              <h4 className="mt-5 mb-3 text-lg font-bold text-white dark:text-gray-200">Products</h4>
-              {[
-                'SEO', 'SEM', 'SMM', 'School LMS', 'Corporate LMS',
-                'Content Writing', 'Email Marketing', 'Video Marketing',
-                'Workforce Management', 'Card Collection & Display',
-                'Fleet Management Solution', 'Feedback Management System'
-              ].map((item) => (
-                <p key={item} className="p-1 pl-0 text-sm hover:text-gray-300 dark:hover:text-white transition duration-300">
-                  {item}
-                </p>
-              ))}
-            </div>
 
-            {/* Solutions */}
-            <div className="w-full lg:w-2/12 text-white dark:text-gray-400 cursor-pointer">
-              <h4 className="mt-5 mb-3 text-lg font-bold text-white dark:text-gray-200">Solutions</h4>
-              {['Card Management', 'PCI Compliance', 'Multi-PSP', 'Card Issuing', 'Wallet Management'].map((item) => (
-                <p key={item} className="p-1 pl-0 text-sm hover:text-gray-300 dark:hover:text-white transition duration-300">
-                  {item}
-                </p>
-              ))}
-            </div>
+      {/* Company */}
+      <div className="text-white dark:text-gray-400">
+        <h4 className="mb-3 text-lg font-bold text-white dark:text-gray-200">Company</h4>
+        {['Blog', 'Careers', 'Pricing', 'Customers', 'Contact Us'].map((item) => (
+          <p key={item} className="p-1 text-sm hover:text-gray-300 dark:hover:text-white transition duration-300">
+            {item}
+          </p>
+        ))}
+      </div>
 
-            {/* Quick Links */}
-            <div className="w-full lg:w-2/12 text-white dark:text-gray-400 cursor-pointer">
-              <h4 className="mt-5 mb-3 text-lg font-bold text-white dark:text-gray-200">Quick Links</h4>
-              {['Terms of Service', 'Privacy Policy', 'Cookies Policy', 'Data Processing'].map((item) => (
-                <p key={item} className="p-1 pl-0 text-sm hover:text-gray-300 dark:hover:text-white transition duration-300">
-                  {item}
-                </p>
-              ))}
-            </div>
+      {/* Products */}
+      <div className="text-white dark:text-gray-400">
+        <h4 className="mb-3 text-lg font-bold text-white dark:text-gray-200">Products</h4>
+        {[
+          'SEO', 'SEM', 'SMM', 'School LMS', 'Corporate LMS',
+          'Content Writing', 'Email Marketing', 'Video Marketing',
+          'Workforce Management', 'Card Collection & Display',
+          'Fleet Management Solution', 'Feedback Management System'
+        ].map((item) => (
+          <p key={item} className="p-1 text-sm hover:text-gray-300 dark:hover:text-white transition duration-300">
+            {item}
+          </p>
+        ))}
+      </div>
 
-            {/* Legal & Compliance */}
-            <div className="w-full lg:w-2/12 text-white dark:text-gray-400 cursor-pointer">
-              <h4 className="mt-5 mb-3 text-lg font-bold text-white dark:text-gray-200">Legal & Compliance</h4>
-              {['Terms of Service', 'Privacy Policy', 'Cookies Policy', 'Data Processing'].map((item) => (
-                <p key={item} className="p-1 pl-0 text-sm hover:text-gray-300 dark:hover:text-white transition duration-300">
-                  {item}
-                </p>
-              ))}
-            </div>
-          </div>
-        </section>
+      {/* Solutions */}
+      <div className="text-white dark:text-gray-400">
+        <h4 className="mb-3 text-lg font-bold text-white dark:text-gray-200">Solutions</h4>
+        {['Card Management', 'PCI Compliance', 'Multi-PSP', 'Card Issuing', 'Wallet Management'].map((item) => (
+          <p key={item} className="p-1 text-sm hover:text-gray-300 dark:hover:text-white transition duration-300">
+            {item}
+          </p>
+        ))}
+      </div>
 
-        <hr className="border-t border-gray-500 dark:border-gray-700" />
+      {/* Quick Links */}
+      <div className="text-white dark:text-gray-400">
+        <h4 className="mb-3 text-lg font-bold text-white dark:text-gray-200">Quick Links</h4>
+        {['Terms of Service', 'Privacy Policy', 'Cookies Policy', 'Data Processing'].map((item) => (
+          <p key={item} className="p-1 text-sm hover:text-gray-300 dark:hover:text-white transition duration-300">
+            {item}
+          </p>
+        ))}
+      </div>
 
-        <div className="flex justify-between items-center container" style={{ padding: '16px 10% 16px 15%' }}>
-          <h6 className="text-white dark:text-gray-400 text-sm">© 2025 Adhiba Technologies All rights reserved.</h6>
-          <h6 className="text-white dark:text-gray-400 text-sm">Built By Adhiba IT</h6>
-        </div>
-      </section>
+      {/* Legal & Compliance */}
+      <div className="text-white dark:text-gray-400">
+        <h4 className="mb-3 text-lg font-bold text-white dark:text-gray-200">Legal & Compliance</h4>
+        {['Terms of Service', 'Privacy Policy', 'Cookies Policy', 'Data Processing'].map((item) => (
+          <p key={item} className="p-1 text-sm hover:text-gray-300 dark:hover:text-white transition duration-300">
+            {item}
+          </p>
+        ))}
+      </div>
 
+    </div>
+  </section>
+
+  <hr className="border-t border-gray-500 dark:border-gray-700 mx-4 sm:mx-8" />
+
+  <div className="flex flex-col sm:flex-row justify-between items-center container px-4 sm:px-8 py-4 gap-2">
+    <h6 className="text-white dark:text-gray-400 text-sm text-center sm:text-left">
+      © 2025 Adhiba Technologies All rights reserved.
+    </h6>
+    <h6 className="text-white dark:text-gray-400 text-sm text-center sm:text-right">
+      Built By Adhiba IT
+    </h6>
+  </div>
+</section>
 
     </>
   );

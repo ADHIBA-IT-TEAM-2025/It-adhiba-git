@@ -34,7 +34,7 @@ export const Tab = ({
       {discount && (
         <Badge
           className={cn(
-            "relative z-10 whitespace-nowrap bg-gray-100 text-xs text-black shadow-none hover:bg-gray-100",
+            "relative z-10 whitespace-nowrap bg-gray-100 text-xs text-black shadow-none hover:bg-gray-100 rounded-full",
             selected
               ? "bg-[#F3F4F6] hover:bg-[#F3F4F6]"
               : "bg-gray-300 hover:bg-gray-300",

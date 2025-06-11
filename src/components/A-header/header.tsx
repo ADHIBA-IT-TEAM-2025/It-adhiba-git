@@ -100,7 +100,7 @@ export function ModeToggle() {
       onClick={toggleTheme}
       variant="outline"
       size="icon"
-      className="relative"
+      className="relative bg-transparent hover:bg-transparent focus:bg-transparent"
     >
       <Moon
         className={`h-[1.2rem] w-[1.2rem] transition-all ${isDark ? "scale-0 rotate-90" : "scale-100 rotate-0"}`}
@@ -161,7 +161,7 @@ export default function HEADERIT() {
       <header className="sticky top-0 z-50 bg-white text-gray-900 dark:bg-gray-900 dark:text-white border-t border-b border-gray-300 dark:border-gray-700 transition-colors duration-300 text-transform: uppercase">
         <nav
           aria-label="Global"
-          className="mx-auto flex max-w-7xl items-center justify-between p-3 lg:px-8 "
+          className="mx-auto flex max-w-6xl items-center justify-between p-3 lg:px-8 "
         >
           <div className="flex lg:flex-1">
             <Link href="/" className="logo-link">

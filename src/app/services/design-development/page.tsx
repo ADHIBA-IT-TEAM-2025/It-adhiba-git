@@ -57,30 +57,64 @@ function AnimatedGradientTextDemo() {
     return (
         <>
 
-            <div className="TeamsHeader_headerContent__ceTPP">
-                <div className="group relative mx-auto flex items-center justify-center rounded-full px-4 py-1.5 shadow-[inset_0_-8px_10px_#8fdfff1f] transition-shadow duration-500 ease-out hover:shadow-[inset_0_-5px_10px_#8fdfff3f] ">
-                    <span
-                        className={cn(
-                            "absolute inset-0 block h-full w-full animate-gradient rounded-[inherit] bg-gradient-to-r from-[#ffaa40]/50 via-[#9c40ff]/50 to-[#ffaa40]/50 bg-[length:300%_100%] p-[1px]",
-                        )}
-                        style={{
-                            WebkitMask:
-                                "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
-                            WebkitMaskComposite: "destination-out",
-                            mask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
-                            maskComposite: "subtract",
-                            WebkitClipPath: "padding-box",
-                        }}
-                    />
-                    🎉 <hr className="mx-2 h-4 w-px shrink-0 bg-neutral-500" />
-                    <AnimatedGradientText className="text-sm font-medium">
-                        Introducing Magic UI
-                    </AnimatedGradientText>
-                    <ChevronRightIcon
-                        className="ml-1 size-4 stroke-neutral-500 transition-transformduration-300 ease-in-out group-hover:translate-x-0.5"
-                    />
-                </div>
-                <h1>Your team, reimagined.</h1><p>Take your team up a level with easy-to-use tools, effortless templates and efficient workflows.</p><a className="Button_button__JJiqJ Button_light__KdYEB" aria-disabled="false" href="/settings/organizations/new?open=true">Get started today</a><a href="#learn-more" className="TeamsHeader_learnMore__Tce6T">Learn more <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16" className="icon TeamsHeader_arrowDown__rKHtB"><path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M9.75 4.75 13.25 8m0 0-3.5 3.25M13.25 8H2.75"></path></svg></a></div>
+<div className="TeamsHeader_headerContent__ceTPP">
+  <div className="group relative mx-auto flex items-center justify-center rounded-full px-4 py-1.5 shadow-[inset_0_-8px_10px_#8fdfff1f] transition-shadow duration-500 ease-out hover:shadow-[inset_0_-5px_10px_#8fdfff3f]">
+    <span
+      className="absolute inset-0 block h-full w-full animate-gradient rounded-[inherit] bg-gradient-to-r from-[#00c6ff]/50 via-[#0072ff]/50 to-[#00c6ff]/50 bg-[length:300%_100%] p-[1px]"
+      style={{
+        WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+        WebkitMaskComposite: "destination-out",
+        mask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+        maskComposite: "subtract",
+        WebkitClipPath: "padding-box",
+      }}
+    />
+    🚀
+    <hr className="mx-2 h-4 w-px shrink-0 bg-neutral-600" />
+    <AnimatedGradientText className="text-sm font-medium text-white">
+      Elevate Your Digital Presence
+    </AnimatedGradientText>
+    <ChevronRightIcon
+      className="ml-1 size-4 stroke-neutral-400 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5"
+    />
+  </div>
+
+  <h1 className="mt-6 text-3xl font-semibold text-white">Expert Design & Development</h1>
+  <p className="mt-2 max-w-xl text-base text-neutral-300">
+    From intuitive UI/UX to robust front-end and backend engineering, we build sleek, scalable,
+    and high-performing digital solutions tailored for your business.
+  </p>
+
+  <a
+    className="Button_button__JJiqJ text-white font-medium px-5 py-2 rounded-lg mt-5 inline-block transition"
+    aria-disabled="false"
+    href="/settings/organizations/new?open=true"
+  >
+    Get Started Today
+  </a>
+
+  <a
+    href="#learn-more"
+    className="TeamsHeader_learnMore__Tce6T mt-1 inline-flex items-center text-blue-400 hover:text-blue-300 transition"
+  >
+    Learn more
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 16 16"
+      className="icon TeamsHeader_arrowDown__rKHtB ml-1 w-4 h-4"
+    >
+      <path
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="1.5"
+        d="M9.75 4.75 13.25 8m0 0-3.5 3.25M13.25 8H2.75"
+      />
+    </svg>
+  </a>
+</div>
+
         </>
     );
 }
@@ -88,81 +122,84 @@ function AnimatedGradientTextDemo() {
 function Featurespoint() {
     return (
         <>
-            <section className='desgin-development-sectioin'>
-                <section className="nh yg qm kr it">
+            <section className="design-development-section bg-[#0f0f0f] text-white py-16">
+                <section className="nh yg qm kr it max-w-7xl mx-auto px-4">
                     <div className="oh jb rm lr qd">
                         <div className="rd jb mi">
                             <p className="oi vi aj yi">
-                                <span className="dj hh eh fh gh"> What's inside </span>
+                                <span className="text-sm uppercase tracking-widest text-[#8fdfff] font-semibold"> What we offer </span>
                             </p>
-                            <h2 className="ob qi vi bj in js pt">Track all customers in a single dashboard</h2>
-                            <p className="ob ri vi cj">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat.</p>
+                            <h2 className="text-3xl font-bold mt-2">Designs that Speak. Experiences that Convert.</h2>
+                            <p className="text-lg text-neutral-300 mt-4">
+                                We craft visually stunning and highly intuitive interfaces tailored to your brand. From concept to final pixels, we ensure every screen delivers clarity, consistency, and impact.
+                            </p>
                         </div>
 
-                        <div className="lc sd cf jb lb mi qf pf vl uq fl qp dm">
-                            <div className="ic df hf">
-                                <div className="w ed qc kg ok">
-                                    <div className="v y wj xj kg pk eh fh gh"></div>
-                                    <div className="w jc hf if ed qc kg zg">
-                                        <svg className="cd oc cj wj xj uk" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1">
-                                            <path strokeLinecap="round" strokeLinejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
-                                        </svg>
-                                    </div>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
+                            <div className="flex flex-col items-start space-y-3">
+                                <div className="p-3 bg-[#1a1a1a] rounded-full">
+                                    <svg className="h-6 w-6 text-[#8fdfff]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
+                                        <path strokeLinecap="round" strokeLinejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                                    </svg>
                                 </div>
-                                <h3 className="ob ri vi bj">Daily Analytics</h3>
+                                <h3 className="text-xl font-semibold">Creative UI Design</h3>
+                                <p className="text-neutral-400">Engaging, responsive designs that ensure seamless user journeys on all devices.</p>
                             </div>
 
-                            <div className="ic df hf">
-                                <div className="w ed qc kg ok">
-                                    <div className="v y wj xj kg pk eh fh gh"></div>
-                                    <div className="w jc hf if ed qc kg zg">
-                                        <svg className="cd oc cj wj xj uk" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1">
-                                            <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path>
-                                        </svg>
-                                    </div>
+                            <div className="flex flex-col items-start space-y-3">
+                                <div className="p-3 bg-[#1a1a1a] rounded-full">
+                                    <svg className="h-6 w-6 text-[#8fdfff]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
+                                        <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm6-1v-1a6 6 0 00-9-5.197"></path>
+                                    </svg>
                                 </div>
-                                <h3 className="ob ri vi bj">Unlimited User</h3>
+                                <h3 className="text-xl font-semibold">UX Strategy</h3>
+                                <p className="text-neutral-400">Data-backed user flow mapping to create intuitive and enjoyable digital experiences.</p>
                             </div>
 
-                            <div className="ic df hf">
-                                <div className="w ed qc kg ok">
-                                    <div className="v y wj xj kg pk eh fh gh"></div>
-                                    <div className="w jc hf if ed qc kg zg">
-                                        <svg className="cd oc cj wj xj uk" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1">
-                                            <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-                                        </svg>
-                                    </div>
+                            <div className="flex flex-col items-start space-y-3">
+                                <div className="p-3 bg-[#1a1a1a] rounded-full">
+                                    <svg className="h-6 w-6 text-[#8fdfff]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
+                                        <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                    </svg>
                                 </div>
-                                <h3 className="ob ri vi bj">Email Alerts</h3>
+                                <h3 className="text-xl font-semibold">Design Systems</h3>
+                                <p className="text-neutral-400">Build scalable, reusable component libraries for consistent branding across products.</p>
                             </div>
 
-                            <div className="ic df hf">
-                                <div className="w ed qc kg ok">
-                                    <div className="v y wj xj kg pk eh fh gh"></div>
-                                    <div className="w jc hf if ed qc kg zg">
-                                        <svg className="cd oc cj wj xj uk" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1">
-                                            <path strokeLinecap="round" strokeLinejoin="round" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"></path>
-                                        </svg>
-                                    </div>
+                            <div className="flex flex-col items-start space-y-3">
+                                <div className="p-3 bg-[#1a1a1a] rounded-full">
+                                    <svg className="h-6 w-6 text-[#8fdfff]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
+                                        <path strokeLinecap="round" strokeLinejoin="round" d="M4 5h16M4 13h6m6 0h4M4 21h16"></path>
+                                    </svg>
                                 </div>
-                                <h3 className="ob ri vi bj">Custom Themes</h3>
+                                <h3 className="text-xl font-semibold">Custom Illustrations</h3>
+                                <p className="text-neutral-400">Unique visual assets that elevate your digital presence and strengthen brand identity.</p>
                             </div>
 
-                            <div className="ic df hf">
-                                <div className="w ed qc kg ok">
-                                    <div className="v y wj xj kg pk eh fh gh"></div>
-                                    <div className="w jc hf if ed qc kg zg">
-                                        <svg className="cd oc cj wj xj uk" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1">
-                                            <path strokeLinecap="round" strokeLinejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
-                                        </svg>
-                                    </div>
+                            <div className="flex flex-col items-start space-y-3">
+                                <div className="p-3 bg-[#1a1a1a] rounded-full">
+                                    <svg className="h-6 w-6 text-[#8fdfff]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
+                                        <path strokeLinecap="round" strokeLinejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+                                    </svg>
                                 </div>
-                                <h3 className="ob ri vi bj">Chat Service</h3>
+                                <h3 className="text-xl font-semibold">Real-time Collaboration</h3>
+                                <p className="text-neutral-400">Work closely with our design team through live feedback and iterative design cycles.</p>
+                            </div>
+
+                            <div className="flex flex-col items-start space-y-3">
+                                <div className="p-3 bg-[#1a1a1a] rounded-full">
+                                    <svg className="h-6 w-6 text-[#8fdfff]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
+                                        <path strokeLinecap="round" strokeLinejoin="round" d="M16 4h2a2 2 0 012 2v2m0 8v2a2 2 0 01-2 2h-2M8 20H6a2 2 0 01-2-2v-2M4 8V6a2 2 0 012-2h2"></path>
+                                    </svg>
+                                </div>
+                                <h3 className="text-xl font-semibold">Cross-platform Design</h3>
+                                <p className="text-neutral-400">Designs optimized for both web and mobile, ensuring pixel-perfect experiences everywhere.</p>
                             </div>
                         </div>
                     </div>
                 </section>
             </section>
+
 
         </>
     );
@@ -454,7 +491,6 @@ const StickyImage = ({ imgUrl }: StickyImageProps) => {
         </motion.div>
     );
 };
-
 
 
 interface OverlayCopyProps {
