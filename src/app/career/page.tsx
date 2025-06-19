@@ -118,7 +118,7 @@ function BlogSlider() {
     return (
         <>
             <section className="py-6 bg-white dark:bg-black transition-colors duration-300">
-                <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div className="container mx-auto  max-w-7xl px-4 ">
                     <div className="flex justify-center flex-wrap md:flex-wrap lg:flex-nowrap lg:flex-row lg:justify-between gap-8">
                         {/* Left Text Block */}
                         <div className="w-full flex justify-between flex-col lg:w-2/5">
@@ -129,12 +129,7 @@ function BlogSlider() {
                                 <p className="text-gray-500 dark:text-gray-300 mb-10 max-lg:max-w-xl max-lg:mx-auto">
                                     At ADHIBA, we believe in talent, innovation, and growth. Explore our current openings and become part of a passionate team that’s shaping the future of IT and design.
                                 </p>
-                                {/* <a
-                                    href="javascript:;"
-                                    className="cursor-pointer border border-gray-300 dark:border-gray-600 shadow-sm rounded-full py-3.5 px-7 w-52 lg:mx-0 mx-auto flex justify-center text-gray-900 dark:text-white font-semibold transition-all duration-300 hover:bg-gray-100 dark:hover:bg-gray-800"
-                                >
-                                    View All
-                                </a> */}
+    
                             </div>
                         </div>
 

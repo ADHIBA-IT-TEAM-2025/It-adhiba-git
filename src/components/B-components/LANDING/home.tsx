@@ -26,7 +26,7 @@ import {
 } from 'lucide-react';
 import { AnimatedList } from '@/components/magicui/animated-list';
 import Workflows from '../../shadcn/ui/workflows';
-
+import Link from 'next/link';
 // MAIN
 export default function Landingit() {
   return (
@@ -177,7 +177,9 @@ function Landing() {
           </motion.p>
 
           <div className="relative justify-center mx-auto mt-12 mb-12">
-            <InteractiveHoverButton />
+            <Link  href="/getintouch">
+              <InteractiveHoverButton />
+            </Link>
           </div>
         </motion.div>
 

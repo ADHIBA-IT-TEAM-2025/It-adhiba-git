@@ -80,18 +80,10 @@ function AnimatedGradientTextDemo() {
   </div>
 
   <h1 className="mt-6 text-3xl font-semibold text-white">Expert Design & Development</h1>
-  <p className="mt-2 max-w-xl text-base text-neutral-300">
+  <p className="mt-1 max-w-xl text-base text-neutral-300">
     From intuitive UI/UX to robust front-end and backend engineering, we build sleek, scalable,
     and high-performing digital solutions tailored for your business.
   </p>
-
-  <a
-    className="Button_button__JJiqJ text-white font-medium px-5 py-2 rounded-lg mt-5 inline-block transition"
-    aria-disabled="false"
-    href="/settings/organizations/new?open=true"
-  >
-    Get Started Today
-  </a>
 
   <a
     href="#learn-more"
@@ -122,6 +114,83 @@ function AnimatedGradientTextDemo() {
 function Featurespoint() {
     return (
         <>
+
+<section className='desgin-development-sectioin'>
+                <section className="nh yg qm kr it">
+                    <div className="oh jb rm lr qd">
+                        <div className="rd jb mi">
+                            <p className="oi vi aj yi">
+                                <span className="dj hh eh fh gh"> What's inside </span>
+                            </p>
+                            <h2 className="ob qi vi bj in js pt">Track all customers in a single dashboard</h2>
+                            <p className="ob ri vi cj">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat.</p>
+                        </div>
+
+                        <div className="lc sd cf jb lb mi qf pf vl uq fl qp dm">
+                            <div className="ic df hf">
+                                <div className="w ed qc kg ok">
+                                    <div className="v y wj xj kg pk eh fh gh"></div>
+                                    <div className="w jc hf if ed qc kg zg">
+                                        <svg className="cd oc cj wj xj uk" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1">
+                                            <path strokeLinecap="round" strokeLinejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <h3 className="ob ri vi bj">Daily Analytics</h3>
+                            </div>
+
+                            <div className="ic df hf">
+                                <div className="w ed qc kg ok">
+                                    <div className="v y wj xj kg pk eh fh gh"></div>
+                                    <div className="w jc hf if ed qc kg zg">
+                                        <svg className="cd oc cj wj xj uk" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1">
+                                            <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <h3 className="ob ri vi bj">Unlimited User</h3>
+                            </div>
+
+                            <div className="ic df hf">
+                                <div className="w ed qc kg ok">
+                                    <div className="v y wj xj kg pk eh fh gh"></div>
+                                    <div className="w jc hf if ed qc kg zg">
+                                        <svg className="cd oc cj wj xj uk" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1">
+                                            <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <h3 className="ob ri vi bj">Email Alerts</h3>
+                            </div>
+
+                            <div className="ic df hf">
+                                <div className="w ed qc kg ok">
+                                    <div className="v y wj xj kg pk eh fh gh"></div>
+                                    <div className="w jc hf if ed qc kg zg">
+                                        <svg className="cd oc cj wj xj uk" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1">
+                                            <path strokeLinecap="round" strokeLinejoin="round" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <h3 className="ob ri vi bj">Custom Themes</h3>
+                            </div>
+
+                            <div className="ic df hf">
+                                <div className="w ed qc kg ok">
+                                    <div className="v y wj xj kg pk eh fh gh"></div>
+                                    <div className="w jc hf if ed qc kg zg">
+                                        <svg className="cd oc cj wj xj uk" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1">
+                                            <path strokeLinecap="round" strokeLinejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <h3 className="ob ri vi bj">Chat Service</h3>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </section> 
+            
             <section className="design-development-section bg-[#0f0f0f] text-white py-16">
                 <section className="nh yg qm kr it max-w-7xl mx-auto px-4">
                     <div className="oh jb rm lr qd">
@@ -198,8 +267,9 @@ function Featurespoint() {
                         </div>
                     </div>
                 </section>
-            </section>
+            </section>          
 
+        
 
         </>
     );
@@ -401,27 +471,28 @@ const Icons = {
 
 const TextParallaxContentExample = () => {
     return (
-        <div className="bg-white">
+        <div className="bg-white dark:bg-black">
             <TextParallaxContent
                 imgUrl="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2671&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 subheading="Collaborate"
                 heading="Built for all of us."
             >
-                <ExampleContent />
+                <ExampleContent1 />
             </TextParallaxContent>
             <TextParallaxContent
                 imgUrl="https://images.unsplash.com/photo-1530893609608-32a9af3aa95c?q=80&w=2564&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 subheading="Quality"
                 heading="Never compromise."
             >
-                <ExampleContent />
+                <ExampleContent2 />
             </TextParallaxContent>
             <TextParallaxContent
                 imgUrl="https://images.unsplash.com/photo-1504610926078-a1611febcad3?q=80&w=2416&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                subheading="Modern"
-                heading="Dress for the best."
+                subheading="Design-forward"
+heading="Style meets substance."
+
             >
-                <ExampleContent />
+                <ExampleContent3 />
             </TextParallaxContent>
         </div>
     );
@@ -525,26 +596,66 @@ const OverlayCopy = ({ subheading, heading }: OverlayCopyProps) => {
     );
 };
 
-const ExampleContent = () => (
-    <div className="mx-auto grid max-w-5xl grid-cols-1 gap-8 px-4 pb-24 pt-12 md:grid-cols-12">
-        <h2 className="col-span-1 text-3xl font-bold md:col-span-4">
-            Additional content explaining the above card here
-        </h2>
-        <div className="col-span-1 md:col-span-8">
-            <p className="mb-4 text-xl text-neutral-600 md:text-2xl">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi,
-                blanditiis soluta eius quam modi aliquam quaerat odit deleniti minima
-                maiores voluptate est ut saepe accusantium maxime doloremque nulla
-                consectetur possimus.
-            </p>
-            <p className="mb-8 text-xl text-neutral-600 md:text-2xl">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
-                reiciendis blanditiis aliquam aut fugit sint.
-            </p>
-            <button className="w-full rounded bg-neutral-900 px-9 py-4 text-xl text-white transition-colors hover:bg-neutral-700 md:w-fit">
-                Learn more <FiArrowUpRight className="inline" />
-            </button>
-        </div>
+
+
+const ExampleContent1 = () => (
+  <div className="mx-auto grid max-w-6xl grid-cols-1 gap-8 px-4 pb-24 pt-12 md:grid-cols-12">
+    <h2 className="col-span-1 text-3xl font-extrabold text-black dark:text-white md:col-span-4">
+      Empowering seamless collaboration
+    </h2>
+    <div className="col-span-1 md:col-span-8">
+      <p className="mb-4 text-lg font-medium text-neutral-700 dark:text-neutral-300 md:text-xl leading-relaxed">
+        Whether you're part of a startup or a global team, our platform brings
+        everyone together. Work smarter, not harder, by leveraging powerful
+        collaboration tools tailored for your needs.
+      </p>
+      <p className="mb-8 text-lg font-medium text-neutral-700 dark:text-neutral-300 md:text-xl leading-relaxed">
+        Designed with flexibility and accessibility in mind, it adapts to your
+        workflow. Dark or light mode — it’s your choice. Experience a new
+        standard of productivity.
+      </p>
+    
     </div>
+  </div>
 );
+
+// HOVER TO SHOW  IMAGE
+const ExampleContent2 = () => (
+    <div className="mx-auto grid max-w-6xl grid-cols-1 gap-8 px-4 pb-24 pt-12 md:grid-cols-12">
+      <h2 className="col-span-1 text-3xl font-extrabold text-black dark:text-white md:col-span-4">
+        Unmatched quality, at every level
+      </h2>
+      <div className="col-span-1 md:col-span-8">
+        <p className="mb-4 text-lg font-medium text-neutral-700 dark:text-neutral-300 md:text-xl leading-relaxed">
+          We believe quality isn’t optional—it’s essential. Every line of code, every design decision, and every feature is crafted to deliver a premium experience you can depend on.
+        </p>
+        <p className="mb-8 text-lg font-medium text-neutral-700 dark:text-neutral-300 md:text-xl leading-relaxed">
+          Our platform is tested for performance, optimized for speed, and built to scale. Whether you're launching a product or managing complex workflows, you'll never have to compromise on excellence.
+        </p>
+       
+      </div>
+    </div>
+  );
+  
+
+// HOVER TO SHOW  IMAGE
+
+const ExampleContent3 = () => (
+    <div className="mx-auto grid max-w-6xl grid-cols-1 gap-8 px-4 pb-24 pt-12 md:grid-cols-12">
+      <h2 className="col-span-1 text-3xl font-extrabold text-black dark:text-white md:col-span-4">
+        Modern aesthetics, timeless confidence
+      </h2>
+      <div className="col-span-1 md:col-span-8">
+        <p className="mb-4 text-lg font-medium text-neutral-700 dark:text-neutral-300 md:text-xl leading-relaxed">
+          First impressions matter. That’s why we combine clean design, intuitive layouts, and refined styling to help you present your brand with modern elegance.
+        </p>
+        <p className="mb-8 text-lg font-medium text-neutral-700 dark:text-neutral-300 md:text-xl leading-relaxed">
+          Whether you're launching a product, designing a profile, or building a portfolio—our visual language speaks clarity and professionalism. Dress your digital presence for success.
+        </p>
+      
+      </div>
+    </div>
+  );
+  
+
 // HOVER TO SHOW  IMAGE

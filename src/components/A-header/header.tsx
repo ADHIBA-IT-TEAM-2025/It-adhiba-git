@@ -76,8 +76,8 @@ const products = [
 ];
 
 const callsToAction = [
-  { name: 'BOOK demo', href: '#', icon: PlayCircleIcon },
-  { name: 'GET IN TOUCH', href: '#', icon: PhoneIcon },
+  { name: 'BOOK demo', href: '/getintouch', icon: PlayCircleIcon },
+  { name: 'GET IN TOUCH', href: '/getintouch', icon: PhoneIcon },
 ];
 
 import { useRouter } from 'next/navigation';
@@ -161,7 +161,7 @@ export default function HEADERIT() {
       <header className="sticky top-0 z-50 bg-white text-gray-900 dark:bg-gray-900 dark:text-white border-t border-b border-gray-300 dark:border-gray-700 transition-colors duration-300 text-transform: uppercase">
         <nav
           aria-label="Global"
-          className="mx-auto flex max-w-6xl items-center justify-between p-3 lg:px-8 "
+          className="mx-auto flex max-w-7xl items-center justify-between py-3  "
         >
           <div className="flex lg:flex-1">
             <Link href="/" className="logo-link">
@@ -209,7 +209,7 @@ export default function HEADERIT() {
             <Popover className="relative">
               {({ open, close }) => (
                 <>
-                  <Popover.Button className="flex items-center gap-x-1 text-sm/6 font-semibold text-gray-900 dark:text-white text-transform: uppercase">
+                  <Popover.Button className="dropdown-it flex items-center gap-x-1 text-sm/6 font-semibold text-gray-900 dark:text-white text-transform: uppercase">
                     What We Do
                     <ChevronDownIcon
                       aria-hidden="true"
@@ -295,7 +295,7 @@ export default function HEADERIT() {
           <div className="hidden lg:flex lg:flex-1 lg:justify-end items-center">
             <ModeToggle />
             <a
-              href="#"
+              href="/getintouch"
               className="text-sm/6 font-semibold text-gray-900 ms-3 dark:text-white"
             >
               Log in <span aria-hidden="true">&rarr;</span>

@@ -14,7 +14,6 @@ import { PAYMENT_FREQUENCIES, TIERS } from './PricingHeadings/pricingcontents';
 import { ThemeProvider } from 'next-themes';
 import './Pricing.css'
 
-
 const CrossIcon = () => (
     <svg
         className="w-3 h-3 text-gray-400 dark:text-gray-500 mx-auto"
@@ -39,7 +38,6 @@ const CorrectIcon = () => (
         />
     </svg>
 );
-
 
 export default function PricingPlans() {
     const [selectedPaymentFreq, setSelectedPaymentFreq] = useState(
@@ -86,8 +84,8 @@ export default function PricingPlans() {
 
             {/* Pricing Table */}
             <section className="section-2">
-                <div className="container">
-                    <h2>Individual Service<br />Pricing</h2>
+                <div className="container mx-auto  max-w-7xl">
+                    <h2 className="text-black dark:text-white">Individual Service<br />Pricing</h2>
                     <div className="full-table table ">
                         <div className="tr ">
                             <div className="td price"></div>

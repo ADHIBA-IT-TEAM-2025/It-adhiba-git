@@ -33,7 +33,7 @@ export const PricingCard = ({
   return (
     <div
       className={cn(
-        "relative flex flex-col gap-8 overflow-hidden rounded-2xl border p-6 shadow",
+        "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-4 py-8 relative flex flex-col gap-8 overflow-hidden rounded-2xl border p-6 shadow",
         isHighlighted ? "bg-foreground text-background" : "bg-dark text-foreground",
         isPopular && "outline outline-[rgba(120,119,198)]",
       )}
@@ -47,7 +47,7 @@ export const PricingCard = ({
         {tier.name}
         {isPopular && (
           <Badge className="mt-1 bg-orange-900 px-1 py-0 text-white hover:bg-orange-900">
-            🔥 Most Popular
+            Most Popular
           </Badge>
         )}
       </h2>

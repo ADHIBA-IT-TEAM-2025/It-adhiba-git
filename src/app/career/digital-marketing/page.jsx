@@ -1,6 +1,6 @@
 export default function DigitalMarketingJob() {
     return (
-      <section className="py-16 px-6 max-w-4xl mx-auto">
+      <section className="py-16 max-w-7xl mx-auto">
       <h1 className="text-4xl font-bold text-indigo-600 dark:text-indigo-400 mb-6">
         Digital Marketing Executive
       </h1>

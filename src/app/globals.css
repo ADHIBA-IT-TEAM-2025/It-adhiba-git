@@ -18,7 +18,7 @@ body {
     font-family: 'Kabob', sans-serif;
 }
 
-a {
+a,button ,.dropdown-it{
     cursor: pointer;
 }
 
@@ -27,13 +27,6 @@ a {
     --font-mono: var(--font-geist-mono);
 }
 
-/* For Firefox */
-* {
-    scrollbar-width: thin;
-    /* "auto" or "thin" */
-    scrollbar-color: transparent transparent;
-    /* thumb color track color */
-}
 
 :root {
     --card: oklch(1 0 0);
