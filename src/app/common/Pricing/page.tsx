@@ -1,5 +1,5 @@
 "use client";
-import React, {  useState } from "react";
+import React, { useState } from "react";
 import { Check, ChevronRightIcon, LinkIcon } from "lucide-react";
 import { OrbitingCircles } from "@/components/ui/OrbitingCircles";
 import { cn } from "@/lib/utils";
@@ -45,18 +45,16 @@ export default function PricingPlans() {
     );
     return (
         <>
-            <div className="relative mt-15">
-                <ThemeProvider
-                    attribute="class"
-                    defaultTheme="system"
-                    disableTransitionOnChange
-                >
-                    <div className="inset-0 bg-dark">
+            {/* Pricing */}
+            <div className="relative mt-10">
+                <ThemeProvider attribute="class" defaultTheme="system" disableTransitionOnChange>
+                    <div className="absolute inset-0 z-0 bg-dark">
                         <div className="h-full w-full bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:35px_35px] opacity-30 [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)]" />
                     </div>
-                    <div className="relative">
-                        <div className="container mx-auto px-4">
-                            <section className="flex flex-col items-center gap-10 py-10 ">
+
+                    <div className="relative z-10">
+                        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                            <section className="flex flex-col items-center gap-10 py-10">
                                 {/* Section Header */}
                                 <PricingHeader
                                     title="Level up with Adhiba IT Solution"
@@ -67,7 +65,7 @@ export default function PricingPlans() {
                                 />
 
                                 {/* Pricing Cards */}
-                                <div className="grid w-[1300px] max-w-6xl mx-auto gap-6 sm:grid-cols-3 xl:grid-cols-3">
+                                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-screen-xl">
                                     {TIERS.map((tier, i) => (
                                         <PricingCard
                                             key={i}
@@ -84,163 +82,142 @@ export default function PricingPlans() {
 
             {/* Pricing Table */}
             <section className="section-2">
-                <div className="container mx-auto  max-w-7xl">
+                <div className="mx-auto max-w-7xl">
                     <h2 className="text-black dark:text-white">Individual Service<br />Pricing</h2>
-                    <div className="full-table table ">
-                        <div className="tr ">
-                            <div className="td price"></div>
-                            <div className="td price bg-white dark:bg-[#0e0e0e] text-black dark:text-white">
-                                <p>Free</p>
-                            </div>
-                            <div className="td price bg-white dark:bg-[#0e0e0e] text-black dark:text-white">
-                                <p>Pro</p>
-                            </div>
-                            <div className="td price bg-white dark:bg-[#0e0e0e] text-black dark:text-white">
-                                <p>Team</p>
-                            </div>
-                            <div className="td price bg-white dark:bg-[#0e0e0e] text-black dark:text-white">
-                                <p>Team Pro</p>
-                            </div>
-                        </div>
 
-                        <div className="tr">
-                            <div className="td feature">Full Access Library</div>
-                            <div className="td flex justify-center items-center">
-                                <CrossIcon />
+                    <div className="table-wrapper">
+                        <div className="full-table table">
+                            {/* <!-- Header Row --> */}
+                            <div className="tr">
+                                <div className="td price"></div>
+                                <div className="td price bg-white dark:bg-[#0e0e0e] text-black dark:text-white">
+                                    <h4>Basic</h4>
+                                </div>
+                                <div className="td price bg-white dark:bg-[#0e0e0e] text-black dark:text-white">
+                                    <h4>Standard</h4>
+                                </div>
+                                <div className="td price bg-white dark:bg-[#0e0e0e] text-black dark:text-white">
+                                    <h4>Premium</h4>
+                                </div>
+                                <div className="td price bg-white dark:bg-[#0e0e0e] text-black dark:text-white">
+                                    <h4>Team</h4>
+                                </div>
                             </div>
-                            <div className="td flex justify-center items-center">
-                                <CrossIcon />
+
+                            {/* <!-- Feature Row 1 --> */}
+                            <div className="tr">
+                                <div className="td feature">Installation</div>
+                                <div className="td "><CrossIcon /></div>
+                                <div className="td "><CorrectIcon /></div>
+                                <div className="td "><CorrectIcon /></div>
+                                <div className="td "><CrossIcon /></div>
                             </div>
-                            <div className="td flex justify-center items-center">
-                                <CorrectIcon />
+
+                            {/* <!-- Feature Row 2 --> */}
+                            <div className="tr">
+                                <div className="td feature">Maintenance</div>
+                                <div className="td "><CrossIcon /></div>
+                                <div className="td "><CorrectIcon /></div>
+                                <div className="td "><CorrectIcon /></div>
+                                <div className="td "><CrossIcon /></div>
                             </div>
-                            <div className="td flex justify-center items-center">
-                                <CorrectIcon />
+
+                            {/* <!-- Feature Row 3 --> */}
+                            <div className="tr">
+                                <div className="td feature">Warranty</div>
+                                <div className="td "><CrossIcon /></div>
+                                <div className="td "><CorrectIcon /></div>
+                                <div className="td "><CorrectIcon /></div>
+                                <div className="td "><CrossIcon /></div>
                             </div>
-                        </div>
 
-                        <div className="tr">
-                            <div className="td feature">Multiple User</div>
-                            <div className="td flex justify-center items-center"><CrossIcon /></div>
-                            <div className="td flex justify-center items-center"><CorrectIcon /></div>
-                            <div className="td flex justify-center items-center"><CorrectIcon /></div>
-                            <div className="td flex justify-center items-center"><CorrectIcon /></div>
-                        </div>
-
-                        <div className="tr">
-                            <div className="td feature">Multiple Order</div>
-                            <div className="td flex justify-center items-center"><CrossIcon /></div>
-                            <div className="td flex justify-center items-center"><CorrectIcon /></div>
-                            <div className="td flex justify-center items-center"><CorrectIcon /></div>
-                            <div className="td flex justify-center items-center"><CorrectIcon /></div>
-                        </div>
-
-                        <div className="tr">
-                            <div className="td feature">24/7 Support</div>
-                            <div className="td flex justify-center items-center"><CorrectIcon /></div>
-                            <div className="td flex justify-center items-center"><CorrectIcon /></div>
-                            <div className="td flex justify-center items-center"><CorrectIcon /></div>
-                            <div className="td flex justify-center items-center"><CorrectIcon /></div>
-                        </div>
-
-                        <div className="tr">
-                            <div className="td feature">Full Access Library</div>
-                            <div className="td flex justify-center items-center"><CrossIcon /></div>
-                            <div className="td flex justify-center items-center"><CrossIcon /></div>
-                            <div className="td flex justify-center items-center"><CorrectIcon /></div>
-                            <div className="td flex justify-center items-center"><CorrectIcon /></div>
-                        </div>
-
-                        <div className="tr">
-                            <div className="td feature">Multiple User</div>
-                            <div className="td flex justify-center items-center"><CrossIcon /></div>
-                            <div className="td flex justify-center items-center"><CrossIcon /></div>
-                            <div className="td flex justify-center items-center"><CorrectIcon /></div>
-                            <div className="td flex justify-center items-center"><CorrectIcon /></div>
-                        </div>
-                        <div className="tr">
-                            <div className="td feature">24/7 Support</div>
-                            <div className="td flex justify-center items-center"><CorrectIcon /></div>
-                            <div className="td flex justify-center items-center"><CorrectIcon /></div>
-                            <div className="td flex justify-center items-center"><CorrectIcon /></div>
-                            <div className="td flex justify-center items-center"><CorrectIcon /></div>
-                        </div>
-
-                        <div className="tr">
-                            <div className="td feature">Full Access Library</div>
-                            <div className="td flex justify-center items-center"><CrossIcon /></div>
-                            <div className="td flex justify-center items-center"><CrossIcon /></div>
-                            <div className="td flex justify-center items-center"><CorrectIcon /></div>
-                            <div className="td flex justify-center items-center"><CorrectIcon /></div>
-                        </div>
-
-                        <div className="tr">
-                            <div className="td feature">Multiple User</div>
-                            <div className="td flex justify-center items-center"><CrossIcon /></div>
-                            <div className="td flex justify-center items-center"><CrossIcon /></div>
-                            <div className="td flex justify-center items-center"><CorrectIcon /></div>
-                            <div className="td flex justify-center items-center"><CorrectIcon /></div>
-                        </div>
-                        <div className="tr">
-                            <div className="td feature">24/7 Support</div>
-                            <div className="td flex justify-center items-center"><CorrectIcon /></div>
-                            <div className="td flex justify-center items-center"><CorrectIcon /></div>
-                            <div className="td flex justify-center items-center"><CorrectIcon /></div>
-                            <div className="td flex justify-center items-center"><CorrectIcon /></div>
-                        </div>
-
-                        <div className="tr">
-                            <div className="td feature">Full Access Library</div>
-                            <div className="td flex justify-center items-center"><CrossIcon /></div>
-                            <div className="td flex justify-center items-center"><CrossIcon /></div>
-                            <div className="td flex justify-center items-center"><CorrectIcon /></div>
-                            <div className="td flex justify-center items-center"><CorrectIcon /></div>
-                        </div>
-
-                        <div className="tr">
-                            <div className="td feature">Multiple User</div>
-                            <div className="td flex justify-center items-center"><CrossIcon /></div>
-                            <div className="td flex justify-center items-center"><CrossIcon /></div>
-                            <div className="td flex justify-center items-center"><CorrectIcon /></div>
-                            <div className="td flex justify-center items-center"><CorrectIcon /></div>
-                        </div>
-                        <div className="tr">
-                            <div className="td feature">Multiple Order</div>
-                            <div className="td flex justify-center items-center"><CrossIcon /></div>
-                            <div className="td flex justify-center items-center"><CrossIcon /></div>
-                            <div className="td flex justify-center items-center"><CorrectIcon /></div>
-                            <div className="td flex justify-center items-center"><CorrectIcon /></div>
-                        </div>
-                        <div className="tr">
-                            <div className="td feature">24/7 Support</div>
-                            <div className="td flex justify-center items-center"><CrossIcon /></div>
-                            <div className="td flex justify-center items-center"><CrossIcon /></div>
-                            <div className="td flex justify-center items-center"><CorrectIcon /></div>
-                            <div className="td flex justify-center items-center"><CorrectIcon /></div>
-                        </div>
-                        <div className="tr">
-                            <div className="td"></div>
-                            <div className="td action" style={{ cursor: "pointer" }}>
-                                <button className="w-full">Choose Plan</button>
-                                <p>Get your 30 day free trial</p>
+                            {/* <!-- Feature Row 4 --> */}
+                            <div className="tr">
+                                <div className="td feature"> 24/7 Support</div>
+                                <div className="td "><CrossIcon /></div>
+                                <div className="td "><CorrectIcon /></div>
+                                <div className="td "><CorrectIcon /></div>
+                                <div className="td "><CrossIcon /></div>
                             </div>
-                            <div className="td action" style={{ cursor: "pointer" }}>
-                                <button className="w-full">Choose Plan</button>
-                                <p>Get your 30 day free trial</p>
+
+                            {/* <!-- Feature Row 5 --> */}
+                            <div className="tr">
+                                <div className="td feature">Full Access Library</div>
+                                <div className="td "><CrossIcon /></div>
+                                <div className="td "><CorrectIcon /></div>
+                                <div className="td "><CorrectIcon /></div>
+                                <div className="td "><CrossIcon /></div>
                             </div>
-                            <div className="td action" style={{ cursor: "pointer" }}>
-                                <button className="w-full">Choose Plan</button>
-                                <p>Get your 30 day free trial</p>
+
+                            {/* <!-- Feature Row 6 --> */}
+                            <div className="tr">
+                                <div className="td feature">Multiple User</div>
+                                <div className="td "><CrossIcon /></div>
+                                <div className="td "><CorrectIcon /></div>
+                                <div className="td "><CorrectIcon /></div>
+                                <div className="td "><CrossIcon /></div>
                             </div>
-                            <div className="td action" style={{ cursor: "pointer" }}>
-                                <button className="w-full">Choose Plan</button>
-                                <p>Get your 30 day free trial</p>
+
+                            {/* <!-- Feature Row 7 --> */}
+                            <div className="tr">
+                                <div className="td feature">Multiple Order</div>
+                                <div className="td "><CrossIcon /></div>
+                                <div className="td "><CorrectIcon /></div>
+                                <div className="td "><CorrectIcon /></div>
+                                <div className="td "><CrossIcon /></div>
                             </div>
+
+                            {/* <!-- Feature Row 8 --> */}
+                            <div className="tr">
+                                <div className="td feature">Warranty</div>
+                                <div className="td "><CrossIcon /></div>
+                                <div className="td "><CorrectIcon /></div>
+                                <div className="td "><CorrectIcon /></div>
+                                <div className="td "><CrossIcon /></div>
+                            </div>
+
+                            {/* <!-- Feature Row 9 --> */}
+                            <div className="tr">
+                                <div className="td feature">Warranty</div>
+                                <div className="td "><CrossIcon /></div>
+                                <div className="td "><CorrectIcon /></div>
+                                <div className="td "><CorrectIcon /></div>
+                                <div className="td "><CrossIcon /></div>
+                            </div>
+
+                            {/* <!-- Feature Row 10 --> */}
+                            <div className="tr">
+                                <div className="td feature">Warranty</div>
+                                <div className="td "><CrossIcon /></div>
+                                <div className="td "><CorrectIcon /></div>
+                                <div className="td "><CorrectIcon /></div>
+                                <div className="td "><CrossIcon /></div>
+                            </div>
+
+                            <div className="tr">
+                                <div className="td"></div>
+                                <div className="td action" style={{ cursor: "pointer" }}>
+                                    <button className="w-full">Choose Plan</button>
+                                    <p>Get your 30 day free trial</p>
+                                </div>
+                                <div className="td action" style={{ cursor: "pointer" }}>
+                                    <button className="w-full">Choose Plan</button>
+                                    <p>Get your 30 day free trial</p>
+                                </div>
+                                <div className="td action" style={{ cursor: "pointer" }}>
+                                    <button className="w-full">Choose Plan</button>
+                                    <p>Get your 30 day free trial</p>
+                                </div>
+                                <div className="td action" style={{ cursor: "pointer" }}>
+                                    <button className="w-full">Choose Plan</button>
+                                    <p>Get your 30 day free trial</p>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
             </section>
-
         </>
     )
 }

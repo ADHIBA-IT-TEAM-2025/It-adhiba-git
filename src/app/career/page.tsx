@@ -86,7 +86,7 @@ const Logoscrollexport = () => {
     ];
     return (
         <>
-            <section className="dark:bg-black w-[1300px] mx-auto text-black dark:text-white py-[42px] md:py-12">
+            <section className="dark:bg-black max-w-7xl mx-auto text-black dark:text-white mt-12 mb-12">
                 <div className="container">
                     <h2 className="text-xl text-center text-gray-600 dark:text-gray-300">
                         Trusted by the world&apos;s most innovative teams

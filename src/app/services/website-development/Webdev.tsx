@@ -14,7 +14,7 @@ import './videosec.css';
 
 export function CardHoverEffectDemo() {
     return (
-        <div className="max-w-7xl mx-auto mt-5 mb-10">
+        <div className="max-w-7xl mx-auto mt-2 ">
             <HoverEffect items={projects} />
         </div>
     );
@@ -82,7 +82,7 @@ export const HoverEffect = ({
     return (
         <div
             className={cn(
-                "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-10",
+                "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ",
                 className
             )}
         >
@@ -193,7 +193,6 @@ export function Landingtwo() {
     return (
         <>
 
-
             <section
                 className="pt-8 lg:pt-32 bg-[url('https://pagedone.io/asset/uploads/1691055810.png')] bg-center bg-cover transition-colors duration-500 dark:bg-gray-900"
             >
@@ -204,7 +203,7 @@ export function Landingtwo() {
                             Explore how to use for brands.
                         </span>
                         <a
-                            href="#"
+                            href="/gallery"
                             className="w-8 h-8 rounded-full flex justify-center items-center bg-indigo-600 hover:bg-indigo-700 transition-colors"
                         >
                             <svg
@@ -241,7 +240,7 @@ export function Landingtwo() {
                         href="#"
                         className="w-full md:w-auto mb-14 inline-flex items-center justify-center py-3 px-7 text-base font-semibold text-center text-white rounded-full bg-indigo-600 shadow-xs hover:bg-indigo-700 transition-all duration-500"
                     >
-                        Know More
+                        Scroll down
                         <svg
                             className="ml-2"
                             width="20"
@@ -251,13 +250,14 @@ export function Landingtwo() {
                             xmlns="http://www.w3.org/2000/svg"
                         >
                             <path
-                                d="M7.5 15L11.0858 11.4142C11.7525 10.7475 12.0858 10.4142 12.0858 10C12.0858 9.58579 11.7525 9.25245 11.0858 8.58579L7.5 5"
+                                d="M5 7L10 12L15 7"
                                 stroke="white"
                                 strokeWidth="2"
                                 strokeLinecap="round"
                                 strokeLinejoin="round"
                             />
                         </svg>
+
                     </a>
 
                     {/* Image */}
@@ -271,11 +271,9 @@ export function Landingtwo() {
                 </div>
             </section>
 
-
-
-            <section className="py-24 bg-white dark:bg-[#000] transition-colors duration-500">
+            <section className="mt-12 mb-12 bg-white dark:bg-[#000] transition-colors duration-500">
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                    <div className="mb-10 lg:mb-16 flex justify-center items-center flex-col gap-x-0 gap-y-6 lg:gap-y-0 lg:flex-row lg:justify-between max-md:max-w-lg max-md:mx-auto">
+                    <div className="mb-10 lg:mb-12 flex justify-center items-center flex-col gap-x-0 gap-y-6 lg:gap-y-0 lg:flex-row lg:justify-between max-md:max-w-lg max-md:mx-auto">
                         <div className="relative w-full text-center lg:text-left lg:w-2/4">
                             <h2 className="text-4xl font-bold text-gray-900 dark:text-white leading-[3.25rem] lg:mb-6 mx-auto max-w-max lg:max-w-md lg:mx-0">
                                 Enjoy the finest features with our solutions
@@ -285,7 +283,7 @@ export function Landingtwo() {
                             <p className="text-lg font-normal text-gray-500 dark:text-gray-300 mb-5">
                                 We build modern, feature-rich websites and applications designed to enhance user experience, boost engagement, and simplify your business operations
                             </p>
-                            <a href="#" className="flex flex-row items-center justify-center gap-2 text-base font-semibold text-indigo-600 dark:text-indigo-400 lg:justify-start hover:text-indigo-700 dark:hover:text-indigo-300">
+                            <a href="/getintouch" className="flex flex-row items-center justify-center gap-2 text-base font-semibold text-indigo-600 dark:text-indigo-400 lg:justify-start hover:text-indigo-700 dark:hover:text-indigo-300">
                                 Button CTA
                                 <svg width="20" height="20" fill="none" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M7.5 15L11.0858 11.4142C11.7525 10.7475 12.0858 10.4142 12.0858 10C12.0858 9.58579 11.7525 9.25245 11.0858 8.58579L7.5 5"
@@ -300,9 +298,9 @@ export function Landingtwo() {
                 </div>
             </section>
 
-            <section className="py-24 bg-white dark:bg-black transition-colors duration-500">
+            <section className=" mb-12 bg-white dark:bg-black transition-colors duration-500">
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                    <div className="mb-10 lg:mb-16 flex justify-center items-center flex-col gap-x-0 gap-y-6 lg:gap-y-0 lg:flex-row lg:justify-between max-md:max-w-lg max-md:mx-auto">
+                    <div className="mb-10 lg:mb-12 flex justify-center items-center flex-col gap-x-0 gap-y-6 lg:gap-y-0 lg:flex-row lg:justify-between max-md:max-w-lg max-md:mx-auto">
                         <div className="relative w-full text-center lg:text-left lg:w-2/4">
                             <h2 className="text-4xl font-bold text-gray-900 dark:text-white leading-[3.25rem] lg:mb-6 mx-auto max-w-max lg:max-w-md lg:mx-0">
                                 Seamless digital experiences, built for results
@@ -312,7 +310,7 @@ export function Landingtwo() {
                             <p className="text-lg font-normal text-gray-500 dark:text-gray-300 mb-5">
                                 Our web solutions are crafted for speed, scalability, and efficiency—making your online presence not just look great but perform flawlessly across all devices and browsers.
                             </p>
-                            <a href="#" className="flex flex-row items-center justify-center gap-2 text-base font-semibold text-indigo-600 dark:text-indigo-400 lg:justify-start hover:text-indigo-700 dark:hover:text-indigo-300">
+                            <a href="/getintouch" className="flex flex-row items-center justify-center gap-2 text-base font-semibold text-indigo-600 dark:text-indigo-400 lg:justify-start hover:text-indigo-700 dark:hover:text-indigo-300">
                                 Button CTA
                                 <svg width="20" height="20" fill="none" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M7.5 15L11.0858 11.4142C11.7525 10.7475 12.0858 10.4142 12.0858 10C12.0858 9.58579 11.7525 9.25245 11.0858 8.58579L7.5 5"
@@ -324,52 +322,54 @@ export function Landingtwo() {
 
                     <div className="flex justify-center items-center gap-x-5 gap-y-8 lg:gap-y-0 flex-wrap md:flex-wrap lg:flex-nowrap lg:flex-row lg:justify-between lg:gap-x-8">
 
-                        <div className="group relative w-full bg-gray-100 dark:bg-gray-800 rounded-2xl p-4 transition-all duration-500 max-md:max-w-md max-md:mx-auto md:w-2/5 md:h-64 xl:p-7 xl:w-1/4 hover:bg-indigo-600">
+                        <div className="group relative w-full bg-gray-100 dark:bg-gray-800 rounded-2xl p-4 transition-all duration-500 max-md:max-w-md max-md:mx-auto md:w-2/5 md:h-64 xl:p-7 xl:w-1/4 hover:bg-indigo-600 dark:hover:bg-indigo-600 dark:hover:bg-indigo-600">
                             <div className="bg-white dark:bg-gray-700 rounded-full flex justify-center items-center mb-5 w-14 h-14">
 
-                                <svg width="30" height="30" fill="none" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M24.7222 11.6667V7.22225C24.7222 5.99495 23.7273 5 22.5 5H4.72222C3.49492 5 2.5 5.99492 2.5 7.22222V22.7778C2.5 24.0051 3.49492 25 4.72222 25H22.5C23.7273 25 24.7222 24.005 24.7222 22.7777V17.7778M20.8333 17.7778H25.2778C26.5051 17.7778 27.5 16.7829 27.5 15.5556V13.8889C27.5 12.6616 26.5051 11.6667 25.2778 11.6667H20.8333C19.606 11.6667 18.6111 12.6616 18.6111 13.8889V15.5556C18.6111 16.7829 19.606 17.7778 20.8333 17.7778Z"
-                                        stroke="#4F46E5" strokeWidth="2" />
+                                <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#4F46E5" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                    <path d="M13 2 L3 14 H12 L11 22 L21 10 H13 Z" />
                                 </svg>
+
                             </div>
                             <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-3 capitalize transition-all duration-500 group-hover:text-white">Speed</h4>
                             <p className="text-sm font-normal text-gray-500 dark:text-gray-300 transition-all duration-500 leading-5 group-hover:text-white">
                                 Experience lightning-fast transactions designed to save your time and increase efficiency.
                             </p>
                         </div>
-                        <div className="group relative w-full bg-gray-100 dark:bg-gray-800 rounded-2xl p-4 transition-all duration-500 max-md:max-w-md max-md:mx-auto md:w-2/5 md:h-64 xl:p-7 xl:w-1/4 hover:bg-indigo-600">
+                        <div className="group relative w-full bg-gray-100 dark:bg-gray-800 rounded-2xl p-4 transition-all duration-500 max-md:max-w-md max-md:mx-auto md:w-2/5 md:h-64 xl:p-7 xl:w-1/4 hover:bg-indigo-600 dark:hover:bg-indigo-600">
                             <div className="bg-white dark:bg-gray-700 rounded-full flex justify-center items-center mb-5 w-14 h-14">
 
-                                <svg width="30" height="30" fill="none" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M24.7222 11.6667V7.22225C24.7222 5.99495 23.7273 5 22.5 5H4.72222C3.49492 5 2.5 5.99492 2.5 7.22222V22.7778C2.5 24.0051 3.49492 25 4.72222 25H22.5C23.7273 25 24.7222 24.005 24.7222 22.7777V17.7778M20.8333 17.7778H25.2778C26.5051 17.7778 27.5 16.7829 27.5 15.5556V13.8889C27.5 12.6616 26.5051 11.6667 25.2778 11.6667H20.8333C19.606 11.6667 18.6111 12.6616 18.6111 13.8889V15.5556C18.6111 16.7829 19.606 17.7778 20.8333 17.7778Z"
-                                        stroke="#4F46E5" strokeWidth="2" />
+                                <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#4F46E5" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                    <circle cx="7" cy="17" r="4" />
+                                    <path d="M7 17L17 7M17 7H22M17 7V12" />
                                 </svg>
+
                             </div>
                             <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-3 capitalize transition-all duration-500 group-hover:text-white">Access</h4>
                             <p className="text-sm font-normal text-gray-500 dark:text-gray-300 transition-all duration-500 leading-5 group-hover:text-white">
                                 Enjoy secure access to your data anytime, anywhere, with complete peace of mind.
                             </p>
                         </div>
-                        <div className="group relative w-full bg-gray-100 dark:bg-gray-800 rounded-2xl p-4 transition-all duration-500 max-md:max-w-md max-md:mx-auto md:w-2/5 md:h-64 xl:p-7 xl:w-1/4 hover:bg-indigo-600">
+                        <div className="group relative w-full bg-gray-100 dark:bg-gray-800 rounded-2xl p-4 transition-all duration-500 max-md:max-w-md max-md:mx-auto md:w-2/5 md:h-64 xl:p-7 xl:w-1/4 hover:bg-indigo-600 dark:hover:bg-indigo-600">
                             <div className="bg-white dark:bg-gray-700 rounded-full flex justify-center items-center mb-5 w-14 h-14">
 
-                                <svg width="30" height="30" fill="none" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M24.7222 11.6667V7.22225C24.7222 5.99495 23.7273 5 22.5 5H4.72222C3.49492 5 2.5 5.99492 2.5 7.22222V22.7778C2.5 24.0051 3.49492 25 4.72222 25H22.5C23.7273 25 24.7222 24.005 24.7222 22.7777V17.7778M20.8333 17.7778H25.2778C26.5051 17.7778 27.5 16.7829 27.5 15.5556V13.8889C27.5 12.6616 26.5051 11.6667 25.2778 11.6667H20.8333C19.606 11.6667 18.6111 12.6616 18.6111 13.8889V15.5556C18.6111 16.7829 19.606 17.7778 20.8333 17.7778Z"
-                                        stroke="#4F46E5" strokeWidth="2" />
+                                <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#4F46E5" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                    <path d="M15 4L19 8M8 15L4 19M14 14L21 21M3 3L14 14" />
                                 </svg>
+
                             </div>
                             <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-3 capitalize transition-all duration-500 group-hover:text-white">Simplicity</h4>
                             <p className="text-sm font-normal text-gray-500 dark:text-gray-300 transition-all duration-500 leading-5 group-hover:text-white">
                                 Our solutions are easy to use, making complex financial processes feel effortless.
                             </p>
                         </div>
-                        <div className="group relative w-full bg-gray-100 dark:bg-gray-800 rounded-2xl p-4 transition-all duration-500 max-md:max-w-md max-md:mx-auto md:w-2/5 md:h-64 xl:p-7 xl:w-1/4 hover:bg-indigo-600">
+                        <div className="group relative w-full bg-gray-100 dark:bg-gray-800 rounded-2xl p-4 transition-all duration-500 max-md:max-w-md max-md:mx-auto md:w-2/5 md:h-64 xl:p-7 xl:w-1/4 hover:bg-indigo-600 dark:hover:bg-indigo-600">
                             <div className="bg-white dark:bg-gray-700 rounded-full flex justify-center items-center mb-5 w-14 h-14">
 
-                                <svg width="30" height="30" fill="none" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M24.7222 11.6667V7.22225C24.7222 5.99495 23.7273 5 22.5 5H4.72222C3.49492 5 2.5 5.99492 2.5 7.22222V22.7778C2.5 24.0051 3.49492 25 4.72222 25H22.5C23.7273 25 24.7222 24.005 24.7222 22.7777V17.7778M20.8333 17.7778H25.2778C26.5051 17.7778 27.5 16.7829 27.5 15.5556V13.8889C27.5 12.6616 26.5051 11.6667 25.2778 11.6667H20.8333C19.606 11.6667 18.6111 12.6616 18.6111 13.8889V15.5556C18.6111 16.7829 19.606 17.7778 20.8333 17.7778Z"
-                                        stroke="#4F46E5" strokeWidth="2" />
+                                <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#4F46E5" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                    <path d="M3 18V10A9 9 0 0 1 21 10V18" />
+                                    <path d="M21 18a3 3 0 0 1-6 0v-3a3 3 0 0 1 6 0zM3 18a3 3 0 0 0 6 0v-3a3 3 0 0 0-6 0z" />
                                 </svg>
+
                             </div>
                             <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-3 capitalize transition-all duration-500 group-hover:text-white">Support</h4>
                             <p className="text-sm font-normal text-gray-500 dark:text-gray-300 transition-all duration-500 leading-5 group-hover:text-white">
@@ -382,15 +382,14 @@ export function Landingtwo() {
                 </div>
             </section>
 
-
-            <section className="py-24 relative xl:mr-0 lg:mr-5 mr-0 bg-white dark:bg-black transition-colors duration-500">
+            <section className="  relative xl:mr-0 lg:mr-5 mr-0 bg-white dark:bg-black transition-colors duration-500">
                 <div className="w-full max-w-7xl px-4 md:px-5 lg:px-5 mx-auto">
                     <div className="w-full justify-start items-center xl:gap-12 gap-10 grid lg:grid-cols-2 grid-cols-1">
 
                         <div className="w-full flex-col justify-center lg:items-start items-center gap-10 inline-flex">
                             <div className="w-full flex-col justify-center items-start gap-8 flex">
                                 <div className="flex-col justify-start lg:items-start items-center gap-4 flex">
-                                    <h6 className="text-gray-400 dark:text-gray-400 text-base font-normal leading-relaxed">About Us</h6>
+                                    <h6 className="text-gray-400 dark:text-gray-400 text-base font-normal leading-relaxed">website-development</h6>
                                     <div className="w-full flex-col justify-start lg:items-start items-center gap-3 flex">
                                         <h2 className="text-indigo-700 dark:text-indigo-400 text-4xl font-bold font-manrope leading-normal lg:text-start text-center">
                                             The Tale of Our Achievement Story
@@ -427,24 +426,24 @@ export function Landingtwo() {
                                         <div className="w-full h-full p-3.5 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-700 ease-in-out flex-col justify-start items-start gap-2.5 inline-flex">
                                             <h4 className="text-gray-900 dark:text-white text-2xl font-bold font-manrope leading-9">Scalable Solutions</h4>
                                             <p className="text-gray-500 dark:text-gray-300 text-base font-normal leading-relaxed">
-                                               We build to grow with your future needs.
+                                                We build to grow with your future needs.
                                             </p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
-                            <button className="sm:w-fit w-full group px-3.5 py-2 bg-indigo-50 dark:bg-indigo-800 hover:bg-indigo-100 dark:hover:bg-indigo-700 rounded-lg shadow transition-all duration-700 ease-in-out justify-center items-center flex">
+                            {/* <button className="sm:w-fit w-full group px-3.5 py-2 bg-indigo-50 dark:bg-indigo-800 hover:bg-indigo-100 dark:hover:bg-indigo-700 rounded-lg shadow transition-all duration-700 ease-in-out justify-center items-center flex">
                                 <span className="px-1.5 text-indigo-600 dark:text-white text-sm font-medium leading-6 group-hover:-translate-x-0.5 transition-all duration-700 ease-in-out">
                                     Read More
                                 </span>
                                 <svg className="group-hover:translate-x-0.5 transition-all duration-700 ease-in-out" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
                                     <path d="M6.75265 4.49658L11.2528 8.99677L6.75 13.4996" stroke="#4F46E5" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
                                 </svg>
-                            </button>
+                            </button> */}
                         </div>
 
-                        <div className="w-full lg:justify-start justify-center items-start flex">
+                        <div className="w-full lg:justify-start justify-center items-start flex mt-12 mb-12">
                             <div className="sm:w-[564px] w-full sm:h-[646px] h-full sm:bg-gray-100 dark:sm:bg-gray-800 rounded-3xl sm:border border-gray-200 dark:border-gray-700 relative">
                                 <img className="sm:mt-5 sm:ml-5 w-full h-full rounded-3xl object-cover" src="https://pagedone.io/asset/uploads/1717742431.png" alt="about Us image" />
                             </div>
@@ -452,8 +451,6 @@ export function Landingtwo() {
                     </div>
                 </div>
             </section>
-
-
 
         </>
     )

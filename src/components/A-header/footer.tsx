@@ -3,6 +3,10 @@ import * as React from 'react';
 import Image from 'next/image';
 import adhibalogo from '../../assets/adhiba.png';
 import network from '../../assets/cardfooter.png';
+import Link from 'next/link';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faWhatsapp, faFacebookF, faInstagram, faYoutube } from '@fortawesome/free-brands-svg-icons'
+
 
 export function Footerit() {
   return (
@@ -54,86 +58,138 @@ export function Footerit() {
           <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-[#313985] to-transparent dark:from-black"></div>
         </div>
 
-        <section className="container mx-auto max-w-7xl mt-12 mb-12 px-4 sm:px-8">
+        <section className=" mx-auto max-w-7xl mt-12 mb-12 ">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
 
-            {/* Logo */}<div className="flex justify-center lg:justify-start">
+            {/* Logo */}<div className="flex  lg:justify-start">
               <Image
                 src={adhibalogo}
                 alt="Adhiba Logo"
-                className="h-12 sm:h-14 mt-2 sm:mt-4 object-contain"
+                className="h-12 sm:h-14  object-contain"
               />
             </div>
-
-
 
             {/* Company */}
             <div className="text-white dark:text-gray-400">
               <h4 className="mb-3 text-lg font-bold text-white dark:text-gray-200">Company</h4>
-              {['Blog', 'Careers', 'Pricing', 'Customers', 'Contact Us'].map((item) => (
-                <p key={item} className="p-1 text-sm hover:text-gray-300 dark:hover:text-white transition duration-300">
-                  {item}
-                </p>
+              {[
+                { name: 'About Us', route: '/knowus' },
+                { name: 'Careers', route: '/career' },
+                { name: 'Pricing', route: '/common/Pricing' },
+                { name: 'Portfolio', route: '/gallery' },
+                { name: 'Contact Us', route: '/getintouch' }
+              ].map((item) => (
+                <Link key={item.name} href={item.route}>
+                  <p className="p-1 text-sm hover:text-gray-300 dark:hover:text-white transition duration-300">{item.name}</p>
+                </Link>
               ))}
             </div>
 
-            {/* Products */}
+            {/* Services */}
             <div className="text-white dark:text-gray-400">
-              <h4 className="mb-3 text-lg font-bold text-white dark:text-gray-200">Products</h4>
+              <h4 className="mb-3 text-lg font-bold text-gray-200 dark:text-gray-200">Services</h4>
               {[
-                'SEO', 'SEM', 'SMM', 'School LMS', 'Corporate LMS',
-                'Content Writing', 'Email Marketing', 'Video Marketing',
-                'Workforce Management'
+                { name: 'Website Development', route: '/services/website-development' },
+                { name: 'UI/UX Design', route: '/services/design-development' },
+                { name: 'Graphic Designing', route: '/services/design-development' },
+                { name: 'Digital Marketing', route: '/services/digital-marketing' },
+                { name: 'Application Development', route: '/services/app-development' },
+                { name: 'Software Development', route: '/services/software-development' },
+                { name: 'Web / Cloud Hosting', route: '/services/WEB-CLOUD-HOSTING' },
+                { name: 'Branding & Identity', route: '/services/digital-marketing' },
+                { name: 'E-Commerce Development', route: '/services/website-development' }
               ].map((item) => (
-                <p key={item} className="p-1 text-sm hover:text-gray-300 dark:hover:text-white transition duration-300">
-                  {item}
-                </p>
+                <Link key={item.name} href={item.route}>
+                  <p className="p-1 text-sm hover:text-white dark:hover:text-white dark:text-gray-200 transition duration-300">{item.name}</p>
+                </Link>
               ))}
             </div>
+
 
             {/* Solutions */}
             <div className="text-white dark:text-gray-400">
               <h4 className="mb-3 text-lg font-bold text-white dark:text-gray-200">Solutions</h4>
-              {['Card Management', 'PCI Compliance', 'Multi-PSP', 'Card Issuing', 'Wallet Management'].map((item) => (
-                <p key={item} className="p-1 text-sm hover:text-gray-300 dark:hover:text-white transition duration-300">
-                  {item}
-                </p>
+              {[
+                { name: 'E-Commerce Solutions', route: '/services/website-development' },
+                { name: 'ERP Solutions', route: '/services/software-development' },
+                { name: 'CRM Solutions', route: '/services/software-development' },
+                { name: 'Cloud Solutions', route: '/services/WEB-CLOUD-HOSTING' },
+                { name: 'Security Solutions', route: '/services/digital-marketing' }
+              ].map((item) => (
+                <Link key={item.name} href={item.route}>
+                  <p className="p-1 text-sm hover:text-gray-300 dark:hover:text-white transition duration-300">{item.name}</p>
+                </Link>
               ))}
             </div>
 
             {/* Quick Links */}
             <div className="text-white dark:text-gray-400">
               <h4 className="mb-3 text-lg font-bold text-white dark:text-gray-200">Quick Links</h4>
-              {['Terms of Service', 'Privacy Policy', 'Cookies Policy', 'Data Processing'].map((item) => (
-                <p key={item} className="p-1 text-sm hover:text-gray-300 dark:hover:text-white transition duration-300">
-                  {item}
-                </p>
+              {[
+                { name: 'Terms of Service', route: '/getintouch' },
+                { name: 'Privacy Policy', route: '/getintouch' },
+                { name: 'Cookies Policy', route: '/getintouch' },
+                { name: 'Refund Policy', route: '/getintouch' },
+                { name: 'Support Policy', route: '/getintouch' }
+              ].map((item) => (
+                <Link key={item.name} href={item.route}>
+                  <p className="p-1 text-sm hover:text-gray-300 dark:hover:text-white transition duration-300">{item.name}</p>
+                </Link>
               ))}
             </div>
 
-            {/* Legal & Compliance */}
+            {/* Support */}
             <div className="text-white dark:text-gray-400">
-              <h4 className="mb-3 text-lg font-bold text-white dark:text-gray-200">Legal & Compliance</h4>
-              {['Terms of Service', 'Privacy Policy', 'Cookies Policy', 'Data Processing'].map((item) => (
-                <p key={item} className="p-1 text-sm hover:text-gray-300 dark:hover:text-white transition duration-300">
-                  {item}
-                </p>
+              <h4 className="mb-3 text-lg font-bold text-white dark:text-gray-200">Support</h4>
+              {[
+                { name: 'FAQ', route: '/getintouch' },
+                { name: 'Help Center', route: '/getintouch' },
+                { name: 'Technical Support', route: '/getintouch' },
+                { name: 'Customer Portal', route: '/getintouch' },
+                { name: 'System Status', route: '/getintouch' }
+              ].map((item) => (
+                <Link key={item.name} href={item.route}>
+                  <p className="p-1 text-sm hover:text-gray-300 dark:hover:text-white transition duration-300">{item.name}</p>
+                </Link>
               ))}
             </div>
+
+
 
           </div>
         </section>
 
         <hr className="border-t border-gray-500 dark:border-gray-700 mx-4 sm:mx-8" />
 
-        <div className="mx-auto max-w-7xl flex flex-col sm:flex-row justify-between items-center container px-4 sm:px-8 py-4 gap-2">
+        <div className="mx-auto max-w-7xl flex flex-col sm:flex-row justify-between items-center container py-4 gap-4">
           <h6 className="text-white dark:text-gray-400 text-sm text-center sm:text-left">
             © 2025 Adhiba Technologies All rights reserved.
           </h6>
+
+          {/* Social Media Icons Center */}
+          <div className="flex justify-center items-center space-x-6">
+            <a href="https://wa.me/your-number" target="_blank" rel="noopener noreferrer" className="text-gray-200 text-xl hover:scale-125 transition-transform duration-300">
+              <FontAwesomeIcon icon={faWhatsapp} />
+            </a>
+
+            <a href="https://facebook.com/your-page" target="_blank" rel="noopener noreferrer" className="text-gray-200 text-xl hover:scale-125 transition-transform duration-300">
+              <FontAwesomeIcon icon={faFacebookF} />
+            </a>
+
+            <a href="https://instagram.com/your-page" target="_blank" rel="noopener noreferrer" className="text-gray-200 text-xl hover:scale-125 transition-transform duration-300">
+              <FontAwesomeIcon icon={faInstagram} />
+            </a>
+
+            <a href="https://youtube.com/your-channel" target="_blank" rel="noopener noreferrer" className="text-gray-200 text-xl hover:scale-125 transition-transform duration-300">
+              <FontAwesomeIcon icon={faYoutube} />
+            </a>
+          </div>
+
           <h6 className="text-white dark:text-gray-400 text-sm text-center sm:text-right">
             Built By Adhiba IT
           </h6>
         </div>
+
       </section>
 
     </>

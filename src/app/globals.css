@@ -359,7 +359,7 @@ a,button ,.dropdown-it{
 
 /* service */
 
-@keyframes scroll {
+/* @keyframes scroll {
     from {
         transform: translateX(0);
     }
@@ -370,7 +370,7 @@ a,button ,.dropdown-it{
 
 .animate-scroll {
     animation: scroll var(--animation-duration, 20s) linear infinite var(--animation-direction, forwards);
-}
+} */
 
 /*  */
 

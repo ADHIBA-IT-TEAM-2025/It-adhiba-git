@@ -35,22 +35,24 @@ function Parallaloppimg() {
   return (
     <>
       <section>
-        <div className="mt-12 relative z-20 flex flex-col items-center justify-center space-y-6 px-6 md:py-14">
+        <div className="mt-12 relative z-20 flex flex-col items-center justify-center space-y-6 px-6 ">
           <motion.h1
-            className="text-3xl md:text-6xl font-semibold text-center bg-gradient-to-r from-purple-50 via-neutral-400 to-transparent bg-clip-text text-transparent max-w-3xl"
+            className="text-3xl md:text-6xl font-semibold text-center bg-gradient-to-r from-purple-500 via-purple-400 to-purple-300 bg-clip-text text-transparent max-w-3xl"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
             Custom App Development for Businesses
           </motion.h1>
+
+
           <motion.p
             className="text-sm md:text-base text-center text-purple-50 max-w-md"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
           >
-           We design and develop apps that deliver seamless performance and intuitive user experiences.
+            We design and develop apps that deliver seamless performance and intuitive user experiences.
 
 
           </motion.p>
@@ -68,18 +70,18 @@ function Parallaloppimg() {
         </div>
       </section>
 
-      
-      <section className="py-24">
-  <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-    <div className="mb-14 text-center">
-    <h2 className="text-4xl font-bold leading-[3.25rem] mb-6 text-gray-900 dark:text-white lg:max-w-3xl mx-auto">
-  Built from the ground up for App innovation
-</h2>
-<p className="text-base font-normal text-gray-500 dark:text-gray-300 lg:max-w-2xl mx-auto mb-8">
-  Empowering businesses with scalable mobile and web apps that are intuitive, agile, and future-ready.
-</p>
 
-      {/* <div className="flex flex-col justify-center md:flex-row gap-5 max-w-lg mx-auto md:max-w-2xl lg:max-w-full">
+      <section className="mt-12">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mb-14 text-center">
+            <h2 className="text-4xl font-bold leading-[3.25rem] mb-6 text-gray-900 dark:text-white lg:max-w-3xl mx-auto">
+              Built from the ground up for App innovation
+            </h2>
+            <p className="text-base font-normal text-gray-500 dark:text-gray-300 lg:max-w-2xl mx-auto mb-8">
+              Empowering businesses with scalable mobile and web apps that are intuitive, agile, and future-ready.
+            </p>
+
+            {/* <div className="flex flex-col justify-center md:flex-row gap-5 max-w-lg mx-auto md:max-w-2xl lg:max-w-full">
         <a
           href="javascript:;"
           className="cursor-pointer bg-indigo-600 py-3 px-6 rounded-full flex items-center justify-center text-sm font-semibold text-white transition-all duration-500 focus:outline-none hover:bg-indigo-700"
@@ -93,107 +95,107 @@ function Parallaloppimg() {
           Learn more
         </a>
       </div> */}
-    </div>
+          </div>
 
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-lg mx-auto md:max-w-2xl lg:max-w-full">
-      <div className="relative w-full h-auto md:col-span-2">
-        <div className="bg-gray-800 dark:bg-gray-900 rounded-2xl flex flex-wrap">
-          <div className="p-5 xl:p-8 w-full md:w-1/2">
-            <div className="block">
-              <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M15 12.5V18.75M18.75 2.5L11.25 2.5M15 28.75C8.7868 28.75 3.75 23.7132 3.75 17.5C3.75 11.2868 8.7868 6.25 15 6.25C21.2132 6.25 26.25 11.2868 26.25 17.5C26.25 23.7132 21.2132 28.75 15 28.75Z"
-                  stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
-                />
-              </svg>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-lg mx-auto md:max-w-2xl lg:max-w-full">
+            <div className="relative w-full h-auto md:col-span-2">
+              <div className="bg-gray-800 dark:bg-gray-900 rounded-2xl flex flex-wrap">
+                <div className="p-5 xl:p-8 w-full md:w-1/2">
+                  <div className="block">
+                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M15 12.5V18.75M18.75 2.5L11.25 2.5M15 28.75C8.7868 28.75 3.75 23.7132 3.75 17.5C3.75 11.2868 8.7868 6.25 15 6.25C21.2132 6.25 26.25 11.2868 26.25 17.5C26.25 23.7132 21.2132 28.75 15 28.75Z"
+                        stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
+                      />
+                    </svg>
+                  </div>
+                  <h3 className="text-lg font-bold xl:text-xl text-white py-5 w-full xl:w-64">
+                    Tailored App Development for Every Business
+                  </h3>
+                  <p className="text-xs font-normal text-gray-300 w-full mb-8 xl:w-64">
+                    We create powerful mobile and web apps that align with your business goals and deliver seamless user experiences.
+                  </p>
+
+                  <a href="/gallery" className="py-2 px-5 border border-gray-300 rounded-full gap-2 text-xs text-white font-semibold flex items-center justify-between transition-all duration-500 hover:bg-white/5">
+                    View More
+                    <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M1 9L3.58579 6.41421C4.25245 5.74755 4.58579 5.41421 4.58579 5C4.58579 4.58579 4.25245 4.25245 3.58579 3.58579L1 1"
+                        stroke="white" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"
+                      />
+                    </svg>
+                  </a>
+                </div>
+                <div className="relative hidden md:block md:w-1/2">
+                  <img
+                    src="https://pagedone.io/asset/uploads/1695028873.png"
+                    alt="Header"
+                    className="h-full object-cover rounded-r-2xl"
+                  />
+                </div>
+              </div>
             </div>
-            <h3 className="text-lg font-bold xl:text-xl text-white py-5 w-full xl:w-64">
-  Tailored App Development for Every Business
-</h3>
-<p className="text-xs font-normal text-gray-300 w-full mb-8 xl:w-64">
-  We create powerful mobile and web apps that align with your business goals and deliver seamless user experiences.
-</p>
 
-            <button className="py-2 px-5 border border-gray-300 rounded-full gap-2 text-xs text-white font-semibold flex items-center justify-between transition-all duration-500 hover:bg-white/5">
-              View More
-              <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M1 9L3.58579 6.41421C4.25245 5.74755 4.58579 5.41421 4.58579 5C4.58579 4.58579 4.25245 4.25245 3.58579 3.58579L1 1"
-                  stroke="white" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"
-                />
-              </svg>
-            </button>
-          </div>
-          <div className="relative hidden md:block md:w-1/2">
-            <img
-              src="https://pagedone.io/asset/uploads/1695028873.png"
-              alt="Header"
-              className="h-full object-cover rounded-r-2xl"
-            />
+            <div className="relative w-full h-auto">
+              <div className="bg-indigo-500 rounded-2xl p-5 xl:p-8 h-full">
+                <div className="block">
+                  <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M24.6429 11.4286C24.6429 14.3872 20.2457 16.7857 14.8214 16.7857C9.3972 16.7857 5 14.3872 5 11.4286M24.6429 16.7857C24.6429 19.7444 20.2457 22.1429 14.8214 22.1429C9.3972 22.1429 5 19.7444 5 16.7857M24.6429 22.1429C24.6429 25.1015 20.2457 27.5 14.8214 27.5C9.3972 27.5 5 25.1015 5 22.1429M24.6429 6.96429C24.6429 9.42984 20.2457 11.4286 14.8214 11.4286C9.3972 11.4286 5 9.42984 5 6.96429C5 4.49873 9.3972 2.5 14.8214 2.5C20.2457 2.5 24.6429 4.49873 24.6429 6.96429Z"
+                      stroke="white" strokeWidth="2" strokeLinecap="round"
+                    />
+                  </svg>
+                </div>
+                <h3 className="py-5 text-white text-lg font-bold xl:text-xl">High-Performance Apps Across All Platforms</h3>
+                <p className="text-xs font-normal text-white mb-8">
+                  Built for speed, scalability, and seamless performance on Android, iOS, and the web.
+                </p>
+
+                <a  href="/gallery" className="py-2 px-5 border border-gray-300 rounded-full gap-2 text-xs text-white font-semibold flex items-center justify-between transition-all duration-500 hover:bg-white/5">
+                  View More
+                  <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M1 9L3.58579 6.41421C4.25245 5.74755 4.58579 5.41421 4.58579 5C4.58579 4.58579 4.25245 4.25245 3.58579 3.58579L1 1"
+                      stroke="white" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            <div className="relative w-full h-auto">
+              <div className="bg-violet-500 rounded-2xl p-5 xl:p-8 h-full">
+                <div className="block">
+                  <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M26.7301 15.661C26.7301 22.1995 21.306 27.5 14.6151 27.5C7.9241 27.5 2.5 22.1995 2.5 15.661C2.5 9.1225 7.9241 3.822 14.6151 3.822M18.1313 10.1507L18.1313 4.85383C18.1313 3.22503 19.6455 2.00299 21.1519 2.70013C23.7608 3.90751 26.6177 6.25557 27.456 10.2563C27.7542 11.6798 26.4931 12.8563 25.0064 12.8368L20.7873 12.7814C19.3147 12.762 18.1313 11.5899 18.1313 10.1507Z"
+                      stroke="white" strokeWidth="2" strokeLinecap="round"
+                    />
+                  </svg>
+                </div>
+                <h3 className="py-5 text-white text-lg font-bold xl:text-xl">
+                  Secure Architecture for App Protection
+                </h3>
+                <p className="text-xs font-normal text-white mb-8">
+                  We implement robust security standards to safeguard your data and ensure user trust across all devices.
+                </p>
+
+                <a href="/gallery" className="py-2 px-5 border border-gray-300 rounded-full gap-2 text-xs text-white font-semibold flex items-center justify-between transition-all duration-500 hover:bg-white/5">
+                  View More
+                  <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M1 9L3.58579 6.41421C4.25245 5.74755 4.58579 5.41421 4.58579 5C4.58579 4.58579 4.25245 4.25245 3.58579 3.58579L1 1"
+                      stroke="white" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div className="relative w-full h-auto">
-        <div className="bg-indigo-500 rounded-2xl p-5 xl:p-8 h-full">
-          <div className="block">
-            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M24.6429 11.4286C24.6429 14.3872 20.2457 16.7857 14.8214 16.7857C9.3972 16.7857 5 14.3872 5 11.4286M24.6429 16.7857C24.6429 19.7444 20.2457 22.1429 14.8214 22.1429C9.3972 22.1429 5 19.7444 5 16.7857M24.6429 22.1429C24.6429 25.1015 20.2457 27.5 14.8214 27.5C9.3972 27.5 5 25.1015 5 22.1429M24.6429 6.96429C24.6429 9.42984 20.2457 11.4286 14.8214 11.4286C9.3972 11.4286 5 9.42984 5 6.96429C5 4.49873 9.3972 2.5 14.8214 2.5C20.2457 2.5 24.6429 4.49873 24.6429 6.96429Z"
-                stroke="white" strokeWidth="2" strokeLinecap="round"
-              />
-            </svg>
-          </div>
-          <h3 className="py-5 text-white text-lg font-bold xl:text-xl">High-Performance Apps Across All Platforms</h3>
-<p className="text-xs font-normal text-white mb-8">
-  Built for speed, scalability, and seamless performance on Android, iOS, and the web.
-</p>
 
-          <button className="py-2 px-5 border border-gray-300 rounded-full gap-2 text-xs text-white font-semibold flex items-center justify-between transition-all duration-500 hover:bg-white/5">
-            View More
-            <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M1 9L3.58579 6.41421C4.25245 5.74755 4.58579 5.41421 4.58579 5C4.58579 4.58579 4.25245 4.25245 3.58579 3.58579L1 1"
-                stroke="white" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"
-              />
-            </svg>
-          </button>
-        </div>
-      </div>
-
-      <div className="relative w-full h-auto">
-        <div className="bg-violet-500 rounded-2xl p-5 xl:p-8 h-full">
-          <div className="block">
-            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M26.7301 15.661C26.7301 22.1995 21.306 27.5 14.6151 27.5C7.9241 27.5 2.5 22.1995 2.5 15.661C2.5 9.1225 7.9241 3.822 14.6151 3.822M18.1313 10.1507L18.1313 4.85383C18.1313 3.22503 19.6455 2.00299 21.1519 2.70013C23.7608 3.90751 26.6177 6.25557 27.456 10.2563C27.7542 11.6798 26.4931 12.8563 25.0064 12.8368L20.7873 12.7814C19.3147 12.762 18.1313 11.5899 18.1313 10.1507Z"
-                stroke="white" strokeWidth="2" strokeLinecap="round"
-              />
-            </svg>
-          </div>
-          <h3 className="py-5 text-white text-lg font-bold xl:text-xl">
-  Secure Architecture for App Protection
-</h3>
-<p className="text-xs font-normal text-white mb-8">
-  We implement robust security standards to safeguard your data and ensure user trust across all devices.
-</p>
-
-          <button className="py-2 px-5 border border-gray-300 rounded-full gap-2 text-xs text-white font-semibold flex items-center justify-between transition-all duration-500 hover:bg-white/5">
-            View More
-            <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M1 9L3.58579 6.41421C4.25245 5.74755 4.58579 5.41421 4.58579 5C4.58579 4.58579 4.25245 4.25245 3.58579 3.58579L1 1"
-                stroke="white" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"
-              />
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-      
       <section className="app-development-section mt-12">
         <section className="w qf eg">
           <div className="v ab db le ke in jn tp eq">
@@ -219,25 +221,25 @@ function Parallaloppimg() {
           <div className="w ug hb id kl oo">
             <div className="fc re co ho">
               <div className="gh rl xo">
-              <h2 className="oh th zh tl ep cq">Cutting-Edge App Development Solutions</h2>
-<p className="qb ph th zh ck yl">
-  Delivering scalable, high-performance mobile apps tailored to your business needs.
-</p>
-<p className="pb ph th zh yl dk">Why choose us for your app development?</p>
-<ul className="ob mf">
-  <li className="cc ve ph th di">
-    <span className="ac ph">💸</span>Seamless Integration Across Platforms
-  </li>
-  <li className="cc ve ph th di">
-    <span className="ac ph">🎁</span>User-Centric Design and Experience
-  </li>
-  <li className="cc ve ph th di">
-    <span className="ac ph">⌛️</span>Ongoing Support & Maintenance
-  </li>
-</ul>
+                <h2 className="oh th zh tl ep cq">Cutting-Edge App Development Solutions</h2>
+                <p className="qb ph th zh ck yl">
+                  Delivering scalable, high-performance mobile apps tailored to your business needs.
+                </p>
+                <p className="pb ph th zh yl dk">Why choose us for your app development?</p>
+                <ul className="ob mf">
+                  <li className="cc ve ph th di">
+                    <span className="ac ph">💸</span>Seamless Integration Across Platforms
+                  </li>
+                  <li className="cc ve ph th di">
+                    <span className="ac ph">🎁</span>User-Centric Design and Experience
+                  </li>
+                  <li className="cc ve ph th di">
+                    <span className="ac ph">⌛️</span>Ongoing Support & Maintenance
+                  </li>
+                </ul>
 
 
-                <div className="cc te xe ye pb if dm sk cl dl vk">
+                {/* <div className="cc te xe ye pb if dm sk cl dl vk">
                   <a href="#" title="App Store" className="w cc ti ui le yi" role="button">
                     <div className="v tf kg lg mg x"></div>
                     <img
@@ -254,7 +256,7 @@ function Parallaloppimg() {
                       alt="Play Store"
                     />
                   </a>
-                </div>
+                </div> */}
               </div>
 
               <div className="pf jb sn">
@@ -269,7 +271,7 @@ function Parallaloppimg() {
         </section>
       </section>
 
-      <section className="py-24 bg-white dark:bg-black transition-colors duration-300">
+      <section className="mt-12 bg-white dark:bg-black transition-colors duration-300">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div
             className="flex flex-col justify-center items-center gap-x-16 gap-y-5 xl:gap-28 lg:flex-row lg:justify-between max-lg:max-w-2xl mx-auto max-w-full"
@@ -289,7 +291,7 @@ function Parallaloppimg() {
                     faqs
                   </h6> */}
                   <h2
-                    className="text-4xl text-center font-bold text-gray-900 dark:text-white leading-[3.25rem] mb-5 lg:text-left"
+                    className="text-4xl font-bold text-gray-900 dark:text-white leading-[3.25rem] mb-5 lg:text-left"
                   >
                     Looking for answers?
                   </h2>
@@ -299,7 +301,7 @@ function Parallaloppimg() {
 
                   <div className="accordion pb-8 border-b border-gray-200 dark:border-gray-700 active">
                     <button
-                      className="accordion-toggle group inline-flex items-center justify-between text-xl font-normal leading-8 text-gray-600 dark:text-gray-300 w-full transition duration-500 hover:text-indigo-600 dark:hover:text-indigo-400 accordion-active:text-indigo-600 accordion-active:font-medium"
+                      className="accordion-toggle group text-left text-xl font-normal leading-8 text-gray-600 dark:text-gray-300 w-full transition duration-500 hover:text-indigo-600 dark:hover:text-indigo-400 accordion-active:text-indigo-600 accordion-active:font-medium"
                     >
                       <h5>How do I start app development?</h5>
                       <svg
@@ -310,10 +312,9 @@ function Parallaloppimg() {
                         viewBox="0 0 22 22"
                         xmlns="http://www.w3.org/2000/svg"
                       >
-                     
                       </svg>
                     </button>
-                    <div className="accordion-content w-full px-0 overflow-hidden pr-4 active" style={{maxHeight: "100px"}}>
+                    <div className="accordion-content w-full px-0 overflow-hidden pr-4 active" style={{ maxHeight: "100px" }}>
                       <p className="text-base font-normal text-gray-600 dark:text-gray-400">
                         To begin, contact us via the inquiry form or call. We discuss your requirements, plan the project, and start designing your custom app solution.
                       </p>
@@ -321,7 +322,7 @@ function Parallaloppimg() {
                   </div>
                   <div className="accordion py-8 border-b border-gray-200 dark:border-gray-700">
                     <button
-                      className="accordion-toggle group inline-flex items-center justify-between text-xl font-normal leading-8 text-gray-600 dark:text-gray-300 w-full transition duration-500 hover:text-indigo-600 dark:hover:text-indigo-400 accordion-active:font-medium"
+                      className="accordion-toggle group text-left text-xl font-normal leading-8 text-gray-600 dark:text-gray-300 w-full transition duration-500 hover:text-indigo-600 dark:hover:text-indigo-400 accordion-active:font-medium"
                     >
                       <h5>Can I trust your development process?</h5>
                       <svg
@@ -332,19 +333,19 @@ function Parallaloppimg() {
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
                       >
-                     
+
                       </svg>
                     </button>
                     <div className="accordion-content w-full px-0 overflow-hidden pr-4">
                       <p className="text-base font-normal text-gray-600 dark:text-gray-400">
-                       Absolutely! We follow industry best practices, maintain transparent communication, and ensure your app is delivered on time with full quality assurance.
+                        Absolutely! We follow industry best practices, maintain transparent communication, and ensure your app is delivered on time with full quality assurance.
                       </p>
                     </div>
                   </div>
 
                   <div className="accordion py-8 border-b border-gray-200 dark:border-gray-700">
                     <button
-                      className="accordion-toggle group inline-flex items-center justify-between text-xl font-normal leading-8 text-gray-600 dark:text-gray-300 w-full transition duration-500 hover:text-indigo-600 dark:hover:text-indigo-400 accordion-active:font-medium"
+                      className="accordion-toggle group text-left text-xl font-normal leading-8 text-gray-600 dark:text-gray-300 w-full transition duration-500 hover:text-indigo-600 dark:hover:text-indigo-400 accordion-active:font-medium"
                     >
                       <h5>How do I request changes or updates?</h5>
                       <svg
@@ -355,7 +356,7 @@ function Parallaloppimg() {
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
                       >
-                     
+
                       </svg>
                     </button>
                     <div className="accordion-content w-full px-0 overflow-hidden pr-4">
@@ -365,10 +366,10 @@ function Parallaloppimg() {
                     </div>
                   </div>
 
-              
+
                   <div className="accordion py-8">
                     <button
-                      className="accordion-toggle group inline-flex items-center justify-between text-xl font-normal leading-8 text-gray-600 dark:text-gray-300 w-full transition duration-500 hover:text-indigo-600 dark:hover:text-indigo-400 accordion-active:font-medium"
+                      className="accordion-toggle group text-left text-xl font-normal leading-8 text-gray-600 dark:text-gray-300 w-full transition duration-500 hover:text-indigo-600 dark:hover:text-indigo-400 accordion-active:font-medium"
                     >
                       <h5>What is the payment process?</h5>
                       <svg
@@ -379,12 +380,12 @@ function Parallaloppimg() {
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
                       >
-                     
+
                       </svg>
                     </button>
                     <div className="accordion-content w-full px-0 overflow-hidden pr-4">
                       <p className="text-base font-normal text-gray-600 dark:text-gray-400">
-                       Payments are made via secure channels, typically in milestones. You receive invoices and receipts for every transaction for full transparency.
+                        Payments are made via secure channels, typically in milestones. You receive invoices and receipts for every transaction for full transparency.
                       </p>
                     </div>
                   </div>

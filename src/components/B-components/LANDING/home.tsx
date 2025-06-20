@@ -277,109 +277,7 @@ function Whyus() {
   }, []);
   return (
     <>
-      <section className="relative four-card-it  styles_background__rbhqc styles_section__h_NXB">
-        <div className="flex flex-col items-center justify-center max-w-[680px] text-center text-base leading-7 mx-auto mb-6">
-          <h2
-            className="mx-auto text-center text-[3.25rem] leading-none tracking-[-0.02em] mb-6 last:mb-0 bg-clip-text text-transparent bg-gradient-to-b from-black via-black/70 to-black/40 dark:from-[#f0f0f0] dark:via-[#f0f0f080] dark:to-[#f0f0f04d]"
-            style={{ paddingTop: '5rem' }}
-          >
-            Why Trust Us?
-          </h2>
-
-          <div className="text-[#333] dark:text-[#d1d5db]">
-            We deliver reliable, high-quality digital solutions with transparent communication, on-time delivery, and a strong focus on client satisfaction.
-          </div>
-        </div>
-
-
-        <div className="mx-auto my-12 w-fit max-w-full rounded-[24px] px-4 py-16 backdrop-blur-md bg-gradient-to-b from-[#f8f9ff] to-[#e8ebf5] dark:from-[#1c1c2b] dark:to-[#0a0622] shadow-[0_8px_16px_-4px_rgba(0,0,0,0.25),0_4px_8px_-2px_rgba(0,0,0,0.25),0_1px_2px_rgba(0,0,0,0.2),inset_0_0_0_1px_rgba(190,167,255,0.24)]">
-          <div className="mx-auto relative max-w-full md:max-w-[850px] lg:max-w-[850px]">
-            {/* Testimonial Image */}
-            <div className="relative h-32">
-              <div className="pointer-events-none absolute left-1/2 top-0 h-[480px] w-[480px] -translate-x-1/2 before:absolute before:inset-0 before:-z-10 before:rounded-full before:bg-gradient-to-b before:from-[#8b95ff]/25 before:via-[#8b95ff]/5 before:via-25% before:to-[#8b95ff]/0 before:to-75%">
-                <div className="h-32 [mask-image:_linear-gradient(0deg,transparent,theme(colors.white)_20%,theme(colors.white))]">
-                  {testimonials.map((testimonial, index) => (
-                    <Transition
-                      as="div"
-                      key={index}
-                      show={active === index}
-                      className="absolute inset-0 -z-10 h-full"
-                      enter="transition ease-[cubic-bezier(0.68,-0.3,0.32,1)] duration-700 order-first"
-                      enterFrom="opacity-0 -rotate-[60deg]"
-                      enterTo="opacity-100 rotate-0"
-                      leave="transition ease-[cubic-bezier(0.68,-0.3,0.32,1)] duration-700"
-                      leaveFrom="opacity-100 rotate-0"
-                      leaveTo="opacity-0 rotate-[60deg]"
-                      beforeEnter={() => heightFix()}
-                    >
-                      <Image
-                        className="relative left-1/2 top-11 -translate-x-1/2 rounded-full"
-                        src={
-                          typeof testimonial.img === 'string'
-                            ? testimonial.img
-                            : testimonial.img.src
-                        }
-                        width={56}
-                        height={56}
-                        alt={testimonial.name}
-                      />
-                    </Transition>
-                  ))}
-                </div>
-              </div>
-            </div>
-
-            {/* Testimonial Text */}
-            <div className="mb-9 transition-all delay-300 duration-150 ease-in-out">
-              <div className="relative flex flex-col h-[100px] overflow-hidden" ref={testimonialsRef}>
-                {testimonials.map((testimonial, index) => (
-                  <Transition
-                    key={index}
-                    show={active === index}
-                    enter="transition ease-in-out duration-700"
-                    enterFrom="opacity-0 translate-y-2 absolute"
-                    enterTo="opacity-100 translate-y-0 absolute"
-                    leave="transition ease-out duration-500"
-                    leaveFrom="opacity-100 translate-y-0 absolute"
-                    leaveTo="opacity-0 translate-y-2 absolute"
-                  >
-                    <div className="absolute inset-0 flex items-center justify-center text-2xl font-bold text-[#333374] dark:text-[#cdd1ff] before:content-['\201C'] after:content-['\201D']">
-                      {testimonial.quote}
-                    </div>
-                  </Transition>
-                ))}
-              </div>
-            </div>
-
-            {/* Buttons */}
-            <div className="-m-1.5 flex flex-wrap justify-center">
-              {testimonials.map((testimonial, index) => (
-                <button
-                  key={index}
-                  className={`m-1.5 inline-flex justify-center whitespace-nowrap rounded-full px-3 py-1.5 text-xs shadow-sm transition-colors duration-150 focus-visible:outline-none focus-visible:ring focus-visible:ring-[#313985]/50 dark:focus-visible:ring-[#aab0ff] ${active === index
-                    ? 'bg-[#313985] text-white shadow-[#313985]/10 dark:bg-[#aab0ff] dark:text-[#313985]'
-                    : 'bg-white text-[#313985] hover:bg-[#e0e3ff] dark:bg-[#1c1c2b] dark:text-[#aab0ff] dark:hover:bg-[#313985]/20'
-                    }`}
-                  onClick={() => {
-                    setActive(index);
-                    setAutorotate(false);
-                  }}
-                >
-                  <span>{testimonial.name}</span>
-                  <span
-                    className={`${active === index ? 'text-[#e0e3ff]' : 'text-[#aab0ff]'
-                      }`}
-                  >
-                    &nbsp;-&nbsp;
-                  </span>
-                  <span>{testimonial.role}</span>
-                </button>
-              ))}
-            </div>
-          </div>
-        </div>
-
-      </section>
+   
     </>
   );
 }
@@ -535,7 +433,7 @@ function Whatweoffer() {
 
           {/* Right Animated Testimonials */}
           <div className="lg:w-1/2 w-full flex justify-center">
-            <AnimatedTestimonials testimonials={Offerimages} autoplay={true} />
+            {/* <AnimatedTestimonials testimonials={Offerimages} autoplay={true} /> */}
           </div>
         </div>
       </div>
@@ -548,7 +446,7 @@ function Index() {
   return (
     <>
 
-      <section id="process" className="py-20 px-6 ">
+      <section id="process" className="mt-12 mb-12 px-6 ">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-light tracking-tight pb-12">Our Process</h2>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -585,7 +483,7 @@ function Index() {
       </section>
 
       <div className="h-fit overflow-hidden bg-black">
-        <div className="mx-auto mt-35 w-fit max-w-2xl">
+        <div className="mx-auto mt-12 w-fit max-w-2xl">
           <div className="text-center text-3xl">
             <span className="text-indigo-200">
               Clients Believe in
@@ -655,7 +553,7 @@ const FeaturesSection = () => {
     <>
       <div className="bg-black " style={{ borderRadius: "0px 0px 50px 50px " }}>
 
-        <div className=" relative rounded-[50px] bg-[radial-gradient(130%_130%_at_50%_20%,transparent_40%,#6633EE_100%,#FFFFFF_0px)] p-5 pt-0 pb-32 mb-25">
+        <div className=" relative rounded-[50px] bg-[radial-gradient(130%_130%_at_50%_20%,transparent_40%,#6633EE_100%,#FFFFFF_0px)] p-5 pt-0 pb-12 mb-12">
           <div className="container mx-auto max-w-7xl">
 
             <div className="flex flex-col items-center justify-center text-center mb-[44.8px]">

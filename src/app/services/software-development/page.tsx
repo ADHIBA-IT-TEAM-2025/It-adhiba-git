@@ -15,10 +15,10 @@ import { motion } from "motion/react";
 const Softwaredevelopment = () => {
   return (
     <>
-      
+
       <HeroSectionOne />
 
-      <section className="software-development-body">
+      <section className="software-development-body mt-12">
         <section className="jh dg ug mm er at">
           <div className="w">
             <div className="jp hq fr sp sq mq vq">
@@ -81,7 +81,7 @@ export default Softwaredevelopment;
 function FeatureCarouselDemo() {
   return (
     <>
-      <div className="w-full max-w-5xl mx-auto mt-25">
+      <div className="w-full max-w-5xl mx-auto mt-12">
         <div className="rounded-[34px] bg-neutral-700 p-2">
           <div className="relative z-10 grid w-full gap-8 rounded-[28px] bg-neutral-950 p-2">
             <FeatureCarousel
@@ -130,10 +130,10 @@ function FeatureCarouselDemo() {
         </div>
       </div>
 
-      <div className="relative flex flex-col items-center justify-center mt-20">
-        <div className="flex flex-col items-center text-center space-y-4">
-          <h2 className="text-white" style={{ fontSize: "40px" }}>Agile Development Process That Ensures Quality</h2>
-          <p className="text-lg text-gray-400">Fast, adaptive, and collaborative development for better product outcomes.</p>
+      <div className="relative flex flex-col items-center justify-center mt-15">
+        <div className="flex flex-col items-center text-center space-y-4 mb-5">
+          <h2 className="text-black dark:text-white text-[40px]">Agile Development Process That Ensures Quality</h2>
+          <p className="text-lg text-gray-700 dark:text-gray-400">Fast, adaptive, and collaborative development for better product outcomes.</p>
         </div>
         <CardHoverEffectDemo />
       </div>
@@ -143,7 +143,7 @@ function FeatureCarouselDemo() {
 }
 
 
- function HeroSectionOne() {
+function HeroSectionOne() {
   return (
     <div className="relative mx-auto my-10 flex max-w-7xl flex-col items-center justify-center">
       <div className="absolute inset-y-0 left-0 h-full w-px bg-neutral-200/80 dark:bg-neutral-800/80">
@@ -203,12 +203,14 @@ function FeatureCarouselDemo() {
           }}
           className="relative z-10 mt-8 flex flex-wrap items-center justify-center gap-4"
         >
-          <button className="w-60 transform rounded-lg bg-black px-6 py-2 font-medium text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200">
+          <a href="/gallery" className="w-60 transform rounded-full bg-black px-6 py-2 font-medium text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200 text-center block">
             Explore Now
-          </button>
-          <button className="w-60 transform rounded-lg border border-gray-300 bg-white px-6 py-2 font-medium text-black transition-all duration-300 hover:-translate-y-0.5 hover:bg-gray-100 dark:border-gray-700 dark:bg-black dark:text-white dark:hover:bg-gray-900">
+          </a>
+
+          <a href="/getintouch" className="w-60 transform rounded-full border border-gray-300 bg-white px-6 py-2 font-medium text-black transition-all duration-300 hover:-translate-y-0.5 hover:bg-gray-100 dark:border-gray-700 dark:bg-black dark:text-white dark:hover:bg-gray-900 text-center block">
             Contact Support
-          </button>
+          </a>
+
         </motion.div>
         <motion.div
           initial={{

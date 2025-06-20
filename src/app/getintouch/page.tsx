@@ -1,7 +1,7 @@
 'use client';
 import '../../styles/home.css';
 import { motion } from 'framer-motion';
-import React from 'react';
+import React, { useState } from 'react';
 import { Label } from '../../components/ui/label';
 import { Input } from '../../components/ui/input';
 import { cn } from '@/lib/utils';
@@ -15,6 +15,7 @@ import {
   Youtube,
 } from 'lucide-react';
 import dynamic from 'next/dynamic';
+import emailjs from 'emailjs-com';
 
 
 export default function GetInTouch() {
@@ -25,7 +26,6 @@ export default function GetInTouch() {
     </>
   );
 }
-
 
 function Supportleft() {
   return (
@@ -141,94 +141,234 @@ function Supportleft() {
   );
 }
 
+
+
 function SignupFormDemo() {
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    console.log('Form submitted');
+  const [formData, setFormData] = useState({
+    firstname: '',
+    lastname: '',
+    email: '',
+    mobile: '',
+    services: '',
+    message: ''
+  });
+
+  // Store validation error messages per field
+  const [errors, setErrors] = useState({});
+
+  const handleChange = (e) => {
+    const { id, value } = e.target;
+
+    // Live prevent numbers for firstname/lastname
+    if ((id === 'firstname' || id === 'lastname') && /[^A-Za-z]/.test(value)) {
+      return; // Ignore invalid input
+    }
+
+    setFormData({ ...formData, [id]: id === 'email' ? value.toLowerCase() : value });
   };
+
+  const validateForm = () => {
+    const nameRegex = /^[A-Za-z]{2,30}$/;
+    const emailRegex = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/;
+    const mobileRegex = /^[0-9]{10,15}$/;
+
+    const newErrors = {};
+
+    if (!nameRegex.test(formData.firstname)) {
+      newErrors.firstname = 'First name should be 2-30 alphabets.';
+    }
+    if (!nameRegex.test(formData.lastname)) {
+      newErrors.lastname = 'Last name should be 2-30 alphabets.';
+    }
+    if (!emailRegex.test(formData.email)) {
+      newErrors.email = 'Enter a valid email address.';
+    }
+    if (!mobileRegex.test(formData.mobile)) {
+      newErrors.mobile = 'Mobile number should be 10-15 digits.';
+    }
+    if (formData.services.length < 3 || formData.services.length > 50) {
+      newErrors.services = 'Service field must be 3-50 characters.';
+    }
+    if (formData.message.length < 5 || formData.message.length > 200) {
+      newErrors.message = 'Message should be 5-200 characters.';
+    }
+
+    setErrors(newErrors);
+
+    return Object.keys(newErrors).length === 0;
+  };
+
+ 
+
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    if (!validateForm()) return;
+
+    // Replace these with your actual EmailJS IDs
+    const serviceID = 'YOUR_SERVICE_ID';
+    const templateID = 'YOUR_TEMPLATE_ID';
+    const publicKey = 'YOUR_PUBLIC_KEY';
+
+    const templateParams = {
+      firstname: formData.firstname,
+      lastname: formData.lastname,
+      email: formData.email,
+      mobile: formData.mobile,
+      services: formData.services,
+      message: formData.message,
+      to_email: 'sanjeev@adhiba.com' // Recipient email for your template
+    };
+
+    try {
+      await emailjs.send(serviceID, templateID, templateParams, publicKey);
+      alert("Form submitted and email sent successfully!");
+      setFormData({
+        firstname: '', lastname: '', email: '', mobile: '', services: '', message: ''
+      });
+      setErrors({});
+    } catch (err) {
+      console.error('EmailJS error:', err);
+      alert("Failed to send email. Please try again later.");
+    }
+  };
+
   return (
-    <div className="max-w-md w-fit mx-auto rounded-none md:rounded-2xl p-7  shadow-input bg-white dark:bg-black">
-      <h2 className="uppercase text-[55px] text-gray-900 dark:text-white">
-        Let's Connect
-      </h2>
-      <h4 className="text-[20px] text-white/80 dark:text-gray-400">
-        Fill out the form, and we'll get back to you shortly
-      </h4>
+    <div className="max-w-md w-fit mx-auto rounded-none md:rounded-2xl p-7 shadow-input bg-white dark:bg-black">
+      <h2 className="uppercase text-[55px] text-gray-900 dark:text-white">Let's Connect</h2>
+      <h4 className="text-[20px] text-white/80 dark:text-gray-400">Fill out the form, and we'll get back to you shortly</h4>
 
-      <form className="my-8" onSubmit={handleSubmit}>
+      <form className="my-8" onSubmit={handleSubmit} noValidate>
         <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4">
-          <LabelInputContainer>
-            <Label htmlFor="firstname">First name</Label>
-            <Input
+          <div className="flex-1">
+            <label htmlFor="firstname" className="block mb-1 font-medium text-gray-900 dark:text-gray-200">
+              First Name
+            </label>
+            <input
               id="firstname"
-              className="placeholder-gray-900 dark:placeholder-gray-600"
+              value={formData.firstname}
+              onChange={handleChange}
+              type="text"
               placeholder="First name"
-              type="text"
+              className={`w-full p-2 rounded border placeholder-gray-400 dark:placeholder-gray-600
+                ${errors.firstname ? 'border-red-500' : 'border-gray-300'}`}
+              required
             />
-          </LabelInputContainer>
-
-          <LabelInputContainer>
-            <Label htmlFor="lastname">Last name</Label>
-            <Input
+            {errors.firstname && <p className="text-red-500 text-sm mt-1">{errors.firstname}</p>}
+          </div>
+          <div className="flex-1">
+            <label htmlFor="lastname" className="block mb-1 font-medium text-gray-900 dark:text-gray-200">
+              Last Name
+            </label>
+            <input
               id="lastname"
-              placeholder="Last name"
+              value={formData.lastname}
+              onChange={handleChange}
               type="text"
-              className="placeholder-gray-900 dark:placeholder-gray-600"
+              placeholder="Last name"
+              className={`w-full p-2 rounded border placeholder-gray-400 dark:placeholder-gray-600
+                ${errors.lastname ? 'border-red-500' : 'border-gray-300'}`}
+              required
             />
-          </LabelInputContainer>
+            {errors.lastname && <p className="text-red-500 text-sm mt-1">{errors.lastname}</p>}
+          </div>
         </div>
 
-        <LabelInputContainer className="mb-4">
-          <Label htmlFor="email">Email Address</Label>
-          <Input
+        <div className="mb-4">
+          <label htmlFor="email" className="block mb-1 font-medium text-gray-900 dark:text-gray-200">Email Address</label>
+          <input
             id="email"
-            className="placeholder-gray-900 dark:placeholder-gray-600"
-            placeholder="projectmayhem@fc.com"
+            value={formData.email}
+            onChange={handleChange}
             type="email"
+            placeholder="projectmayhem@fc.com"
+            className={`w-full p-2 rounded border placeholder-gray-400 dark:placeholder-gray-600
+              ${errors.email ? 'border-red-500' : 'border-gray-300'}`}
+            required
           />
-        </LabelInputContainer>
+          {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
+        </div>
 
-        <LabelInputContainer className="mb-4">
-          <Label htmlFor="mobile">Mobile Number</Label>
-          <Input
+        <div className="mb-4">
+          <label htmlFor="mobile" className="block mb-1 font-medium text-gray-900 dark:text-gray-200">Mobile Number</label>
+          <input
             id="mobile"
-            className="placeholder-gray-900 dark:placeholder-gray-600"
-            placeholder="+1234567890"
+            value={formData.mobile}
+            onChange={handleChange}
+            onKeyDown={(e) => {
+              // Allow control keys: backspace, delete, arrows, tab
+              if (
+                e.key === 'Backspace' ||
+                e.key === 'Delete' ||
+                e.key === 'ArrowLeft' ||
+                e.key === 'ArrowRight' ||
+                e.key === 'Tab'
+              ) {
+                return;
+              }
+              // Allow digits only (0-9)
+              if (!/^\d$/.test(e.key)) {
+                e.preventDefault();
+              }
+            }}
             type="tel"
+            placeholder="1234567890"
+            className={`w-full p-2 rounded border placeholder-gray-400 dark:placeholder-gray-600
+              ${errors.mobile ? 'border-red-500' : 'border-gray-300'}`}
+            required
           />
-        </LabelInputContainer>
+          {errors.mobile && <p className="text-red-500 text-sm mt-1">{errors.mobile}</p>}
+        </div>
 
-        <LabelInputContainer className="mb-4">
-          <Label htmlFor="services">Services looking for?*</Label>
-          <Input
+        <div className="mb-4">
+          <label htmlFor="services" className="block mb-1 font-medium text-gray-900 dark:text-gray-200">Services Looking For</label>
+          <input
             id="services"
-            className="placeholder-gray-900 dark:placeholder-gray-600"
-            placeholder="Website, Digital marketing, etc."
+            value={formData.services}
+            onChange={handleChange}
             type="text"
+            placeholder="Website, Digital Marketing, etc."
+            className={`w-full p-2 rounded border placeholder-gray-400 dark:placeholder-gray-600
+              ${errors.services ? 'border-red-500' : 'border-gray-300'}`}
+            required
           />
-        </LabelInputContainer>
+          {errors.services && <p className="text-red-500 text-sm mt-1">{errors.services}</p>}
+        </div>
 
-        <LabelInputContainer className="mb-8">
-          <Label htmlFor="message">Enter your message*</Label>
-          <Input
+        <div className="mb-8">
+          <label htmlFor="message" className="block mb-1 font-medium text-gray-900 dark:text-gray-200">Your Message</label>
+          <textarea
             id="message"
-            className="placeholder-gray-900 dark:placeholder-gray-600"
+            value={formData.message}
+            onChange={handleChange}
             placeholder="Type your message here..."
-            type="text"
+            className={`w-full p-2 rounded border placeholder-gray-400 dark:placeholder-gray-600
+              ${errors.message ? 'border-red-500' : 'border-gray-300'}`}
+            rows="4"
+            required
           />
-        </LabelInputContainer>
+          {errors.message && <p className="text-red-500 text-sm mt-1">{errors.message}</p>}
+        </div>
 
         <button
-          className="bg-gradient-to-br relative group/btn from-black dark:from-zinc-900 dark:to-zinc-900 to-neutral-600 block dark:bg-zinc-800 w-full text-white rounded-md h-10 font-medium shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]"
           type="submit"
+          className="w-full bg-gradient-to-br from-black to-neutral-700 dark:from-zinc-900 dark:to-zinc-900 text-white rounded-md h-10 font-medium shadow-md transition-transform duration-300 hover:scale-105"
         >
-          Sign up &rarr;
-          <BottomGradient />
+          Sign Up →
         </button>
       </form>
+
+      <div className="flex justify-center space-x-4">
+        <button onClick={() => window.location.href = '/signup'} className="text-blue-600 underline">Signup</button>
+        <button onClick={() => window.location.href = '/login'} className="text-blue-600 underline">Login</button>
+      </div>
     </div>
   );
 }
+
+
+
 
 const BottomGradient = () => {
   return (

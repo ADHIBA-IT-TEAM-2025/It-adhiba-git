@@ -95,15 +95,15 @@ export default function DigitalMarketingPage() {
                     }`}
                 >
                   <div>
-                    <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#313985]"></span>
-                    <div className="mt-6">
-                      <h2 className="text-3xl font-bold tracking-tight text-white">{feature.title}</h2>
-                      <p className="mt-4 text-lg text-gray-300">{feature.text}</p>
-                      <div className="mt-6">
+                    {/* <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#313985]"></span> */}
+                    <div className="mt-1">
+                      <h2 className="text-3xl font-bold tracking-tight  text-black dark:text-white">{feature.title}</h2>
+                      <p className="mt-4 text-lg text-gray dark:text-gray-400">{feature.text}</p>
+                      {/* <div className="mt-6">
                         <p className="inline-flex rounded-lg bg-[#313985] px-4 py-1.5 text-base font-semibold leading-7 text-white shadow-sm">
                           Learn More
                         </p>
-                      </div>
+                      </div> */}
                     </div>
                   </div>
                 </div>

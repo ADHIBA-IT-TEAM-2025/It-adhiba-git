@@ -1,6 +1,6 @@
 export default function GraphicDesignerJob() {
     return (
-        <section className="py-16 max-w-7xl mx-auto">
+        <section className="mt-12 mb-12 px-2 md:px-2 max-w-7xl mx-auto">  
             <h1 className="text-4xl font-bold text-indigo-600 dark:text-indigo-400 mb-6">
                 Graphic Designer
             </h1>

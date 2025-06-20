@@ -21,7 +21,7 @@ export function InteractiveHoverButton({
         <span>{text}</span>
         <ArrowRight />
       </div>
-        <div className="absolute left-[20%] top-[40%] h-2 w-2 scale-[1] rounded-lg bg-[#313985] transition-all duration-300 group-hover:left-[0%] group-hover:top-[0%] group-hover:h-full group-hover:w-full group-hover:scale-[1.8] group-hover:bg-[#313985] dark:group-hover:bg-[#313985]"></div>
+      <div className="absolute left-[20%] top-[40%] h-2 w-2 scale-[1] rounded-lg bg-[#000] dark:bg-white transition-all duration-300 group-hover:left-[0%] group-hover:top-[0%] group-hover:h-full  dark:hover:text-white group-hover:w-full group-hover:scale-[1.8] group-hover:bg-[#313985] dark:group-hover:bg-[#313985]"></div>
     </div>
   );
 }

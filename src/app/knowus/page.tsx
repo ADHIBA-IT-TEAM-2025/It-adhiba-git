@@ -171,7 +171,7 @@ function TimelineDemo() {
     return (
         <>
 
-            <section className="py-24 relative xl:mr-0 lg:mr-5 mr-0 bg-white dark:bg-black text-black dark:text-white transition-colors duration-500">
+            <section className="py-12 relative xl:mr-0 lg:mr-5 mr-0 bg-white dark:bg-black text-black dark:text-white transition-colors duration-500">
                 <div className="w-full max-w-7xl px-4 md:px-5 lg:px-5 mx-auto">
                     <div className="w-full justify-start items-center xl:gap-12 gap-10 grid lg:grid-cols-2 grid-cols-1">
 
@@ -259,8 +259,8 @@ function TimelineDemo() {
                 <Timeline data={data} />
             </div>
 
-            <section className="mb-5">
-                <div className="py-12 bg-white dark:bg-black">
+            <section className="mb-12 mt-12">
+                <div className=" bg-white dark:bg-black">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="lg:text-center">
                             <h2 className="font-heading mb-4 bg-orange-100 dark:bg-orange-900 text-orange-800 dark:text-orange-200 px-4 py-2 rounded-lg md:w-64 md:mx-auto text-xs font-semibold tracking-widest uppercase">
@@ -278,7 +278,7 @@ function TimelineDemo() {
                             <dl className="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
                                 <div className="relative">
                                     <dt>
-                                        <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-600 text-white">
+                                        <div className="absolute flex items-center justify-center h-12 w-12 rounded-md  text-white">
                                             <img src="https://www.svgrepo.com/show/503163/api-settings.svg" alt="API Icon" />
                                         </div>
                                         <p className="font-heading ml-16 text-lg leading-6 font-bold text-gray-700 dark:text-white">
@@ -292,7 +292,7 @@ function TimelineDemo() {
 
                                 <div className="relative">
                                     <dt>
-                                        <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-600 text-white">
+                                        <div className="absolute flex items-center justify-center h-12 w-12 rounded-md  text-white">
                                             <img src="https://www.svgrepo.com/show/503138/webpack.svg" alt="SDK Icon" />
                                         </div>
                                         <p className="font-heading ml-16 text-lg leading-6 font-bold text-gray-700 dark:text-white">
@@ -306,7 +306,7 @@ function TimelineDemo() {
 
                                 <div className="relative">
                                     <dt>
-                                        <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-600 text-white">
+                                        <div className="absolute flex items-center justify-center h-12 w-12 rounded-md  text-white">
                                             <img src="https://www.svgrepo.com/show/511771/dashboard-671.svg" alt="Transaction Icon" />
                                         </div>
                                         <p className="font-heading ml-16 text-lg leading-6 font-bold text-gray-700 dark:text-white">
@@ -320,7 +320,7 @@ function TimelineDemo() {
 
                                 <div className="relative">
                                     <dt>
-                                        <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-600 text-white">
+                                        <div className="absolute flex items-center justify-center h-12 w-12 rounded-md  text-white">
                                             <img src="https://www.svgrepo.com/show/76267/free-commercial-label.svg" alt="Dashboard Icon" />
                                         </div>
                                         <p className="font-heading ml-16 text-lg leading-6 font-bold text-gray-700 dark:text-white">
@@ -349,12 +349,12 @@ function BlogSlider() {
     return (
         <>
 
-<section className="py-24 bg-white dark:bg-black">
+<section className="mt-12 mb-12 bg-white dark:bg-black">
   <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
     <div className="flex justify-center flex-wrap md:flex-wrap lg:flex-nowrap lg:flex-row lg:justify-between gap-8">
 
       {/* Left Text Section */}
-      <div className="w-full flex justify-between flex-col lg:w-2/5">
+      <div className="w-full flex justify-between flex-col lg:w-2/5 mt-12">
         <div className="block lg:text-left text-center">
           <h2 className="text-4xl font-bold text-gray-900 dark:text-white leading-[3.25rem] mb-5">
             Our latest <span className="text-indigo-600 dark:text-indigo-400">blogs</span>
@@ -362,9 +362,9 @@ function BlogSlider() {
           <p className="text-gray-500 dark:text-gray-400 mb-10 max-lg:max-w-xl max-lg:mx-auto">
             Welcome to our blog section, where knowledge meets inspiration. Explore insightful articles, expert tips, and the latest trends in our field.
           </p>
-          <a href="javascript:;" className="cursor-pointer border border-gray-300 dark:border-gray-600 shadow-sm rounded-full py-3.5 px-7 w-52 lg:mx-0 mx-auto flex justify-center text-gray-900 dark:text-white font-semibold transition-all duration-300 hover:bg-gray-100 dark:hover:bg-gray-800">
+          {/* <a href="javascript:;" className="cursor-pointer border border-gray-300 dark:border-gray-600 shadow-sm rounded-full py-3.5 px-7 w-52 lg:mx-0 mx-auto flex justify-center text-gray-900 dark:text-white font-semibold transition-all duration-300 hover:bg-gray-100 dark:hover:bg-gray-800">
             View All
-          </a>
+          </a> */}
         </div>
       </div>
 
@@ -383,13 +383,13 @@ function BlogSlider() {
             <p className="text-gray-500 dark:text-gray-400 leading-6 mb-6">
               Discover smart investment strategies to streamline and organize your portfolio...
             </p>
-            <a href="#" className="cursor-pointer flex items-center gap-2 text-lg text-indigo-700 dark:text-indigo-400 font-semibold">
+            {/* <a href="#" className="cursor-pointer flex items-center gap-2 text-lg text-indigo-700 dark:text-indigo-400 font-semibold">
               Read more
               <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M1.25 6L13.25 6M9.5 10.5L13.4697 6.53033C13.7197 6.28033 13.8447 6.15533 13.8447 6C13.8447 5.84467 13.7197 5.71967 13.4697 5.46967L9.5 1.5"
                       stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
-            </a>
+            </a> */}
           </div>
 
           {/* Blog Card 2 */}
@@ -403,13 +403,13 @@ function BlogSlider() {
             <p className="text-gray-500 dark:text-gray-400 leading-6 mb-6">
               Unlock the power of systematic investment with us and watch your profits soar...
             </p>
-            <a href="#" className="cursor-pointer flex items-center gap-2 text-lg text-indigo-700 dark:text-indigo-400 font-semibold">
+            {/* <a href="#" className="cursor-pointer flex items-center gap-2 text-lg text-indigo-700 dark:text-indigo-400 font-semibold">
               Read more
               <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M1.25 6L13.25 6M9.5 10.5L13.4697 6.53033C13.7197 6.28033 13.8447 6.15533 13.8447 6C13.8447 5.84467 13.7197 5.71967 13.4697 5.46967L9.5 1.5"
                       stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
-            </a>
+            </a> */}
           </div>
 
         </div>
